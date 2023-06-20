@@ -1,26 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import ScrollableWidgetPanel from './components/ScrollableWidgetPanel';
+import WidgetComponent from './components/WidgetComponent';
+import GeometryWidgetView from './components/GeometryWidgetView';
+import { Widget } from './types';
 
-function App() {
+const App: React.FC = () => {
+  const widgetData: Widget[] = [
+    { title: 'Project Portfolio', subtitle: 'Full list of writeups', link: 'https://www.google.com' },
+    { title: 'Technical Skills', subtitle: 'Includes relevant experiences', link: 'https://www.google.com' },
+    { title: 'Games', subtitle: 'I like to make obnoxious games', link: 'https://www.google.com' },
+    { title: 'About Me', subtitle: 'Bio, Contact', link: 'https://www.google.com' },
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <GeometryWidgetView scrollWidgets={<ScrollableWidgetPanel title="Michael Bryant">
+        {widgetData.map((widget) => (
+          <WidgetComponent title={widget.title} subtitle={widget.subtitle} link={widget.link} />
+        ))}
+      </ScrollableWidgetPanel>} />
+
+      {/* <ScrollableWidgetPanel>
+        {widgetData.map((widget) => (
+          <WidgetComponent title={widget.title} subtitle={widget.subtitle} link={widget.link} />
+        ))}
+      </ScrollableWidgetPanel> */}
     </div>
   );
-}
+};
 
 export default App;
