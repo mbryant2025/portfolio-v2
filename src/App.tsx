@@ -6,8 +6,8 @@ import { Widget } from './types';
 
 const App: React.FC = () => {
   const widgetData: Widget[] = [
-    { title: 'Project Portfolio', subtitle: 'Full list of writeups', link: 'https://www.google.com' },
-    { title: 'Technical Skills', subtitle: 'Includes relevant experiences', link: 'https://www.google.com' },
+    { title: 'Project Portfolio', subtitle: 'Includes writeups', link: 'https://www.google.com' },
+    { title: 'Technical Skills', subtitle: 'Plus relevant experiences', link: '' },
     { title: 'Games', subtitle: 'I like to make obnoxious games', link: 'https://www.google.com' },
     { title: 'About Me', subtitle: 'Bio, Contact', link: 'https://www.google.com' },
   ];
@@ -18,15 +18,10 @@ const App: React.FC = () => {
         {widgetData.map((widget) => (
           <WidgetComponent title={widget.title} subtitle={widget.subtitle} link={widget.link} />
         ))}
-      </ScrollableWidgetPanel>} />
-
-      {/* <ScrollableWidgetPanel>
-        {widgetData.map((widget) => (
-          <WidgetComponent title={widget.title} subtitle={widget.subtitle} link={widget.link} />
-        ))}
-      </ScrollableWidgetPanel> */}
+      </ScrollableWidgetPanel>} shape='cube'/>
     </div>
   );
 };
 
 export default App;
+

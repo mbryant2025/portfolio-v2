@@ -12,8 +12,10 @@
     "@types/react-dom": "^18.2.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.13.0",
     "react-scripts": "5.0.1",
     "styled-components": "^6.0.0-rc.3",
+    "three": "^0.153.0",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
@@ -42,6 +44,7 @@
     ]
   },
   "devDependencies": {
+    "@types/three": "^0.152.1",
     "css-loader": "^6.8.1",
     "style-loader": "^3.3.3"
   }

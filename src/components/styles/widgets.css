@@ -26,6 +26,8 @@
 
 .widget-title {
     font-size: 30px;
+    position: relative;
+    top: 10px;
 }
 
 .widget-subtitle {
