@@ -1,0 +1,85 @@
+
+{
+  "imageCommonPathPrefix": "./img/project-thumbnails/",
+  "peekCommonPathPrefix": "/img/skill-categories/",
+  "peekExtension": ".png",
+  "widgetData": [
+    {
+      "title": "Flight Tracker",
+      "subtitle": "Ground plane antenna and SDR to decode ADS-B transmissions",
+      "link": "https://www.google.com",
+      "image": "flight-tracker.png",
+      "peek": ["python", "raspberry-pi", "js", "html", "css"]
+    },
+    {
+      "title": "Plane GAN",
+      "subtitle": "GAN to generate images of planes",
+      "link": "https://www.google.com",
+      "image": "plane-gan.png",
+      "peek": ["python", "tensorflow"]
+    },
+    {
+      "title": "Ball Balancing Robot",
+      "subtitle": "Computer vision ball tracking, dual PID controllers",
+      "link": "https://www.google.com",
+      "image": "ball-balancing.png",
+      "peek": ["cc", "opencv", "arduino"]
+    },
+    {
+      "title": "Vision Guided Robot",
+      "subtitle": "Autonomous obstacle avoidance",
+      "link": "https://www.google.com",
+      "image": "vision-guided-robot.JPG",
+      "peek": ["python", "tensorflow", "opencv", "raspberry-pi"]
+    },
+    {
+      "title": "PyEquations",
+      "subtitle": "Python Package for solving a lot of equations with a lot of unknowns",
+      "link": "https://www.google.com",
+      "image": "pyequations.png",
+      "peek": ["python", "pypi"]
+    },
+    {
+      "title": "michaelcbryant.com",
+      "subtitle": "You're looking at it!",
+      "link": "https://www.google.com",
+      "image": "website.png",
+      "peek": ["react", "typescript"]
+    },
+    {
+      "title": "Super Meme Bros.",
+      "subtitle": "Meme-hunting game where the memes have implications",
+      "link": "https://www.google.com",
+      "image": "super-meme-bros.png",
+      "peek": ["unity", "csharp"]
+    },
+    {
+      "title": "Banagrams Bot",
+      "subtitle": "I would never have thought of these monster words",
+      "link": "https://www.google.com",
+      "image": "banana.JPG",
+      "peek": ["rust"]
+    },
+    {
+      "title": "Ngram",
+      "subtitle": "Analyzes Google Books NGram data for patterns",
+      "link": "https://www.google.com",
+      "image": "ngram.png",
+      "peek": ["java"]
+    },
+    {
+      "title": "Filler Bot",
+      "subtitle": "I was tired of losing at this game so I combated my skill issue with cheating",
+      "link": "https://www.google.com",
+      "image": "filler.png",
+      "peek": ["rust"]
+    },
+    {
+      "title": "Mandebrot Generator",
+      "subtitle": "Generates images of the Mandelbrot set",
+      "link": "https://www.google.com",
+      "image": "mandelbrot.png",
+      "peek": ["python"]
+    }
+  ]
+}
