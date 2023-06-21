@@ -1,24 +1,20 @@
 import React from 'react';
-import ScrollableWidgetPanel from './components/ScrollableWidgetPanel';
-import WidgetComponent from './components/WidgetComponent';
-import GeometryWidgetView from './components/GeometryWidgetView';
-import { Widget } from './types';
+import { Routes, Route } from 'react-router-dom';
+
+import Homepage from './pages/Homepage';
+import Skills from './pages/Skills';
+import Projects from './pages/Projects';
+
 
 const App: React.FC = () => {
-  const widgetData: Widget[] = [
-    { title: 'Project Portfolio', subtitle: 'Includes writeups', link: 'https://www.google.com' },
-    { title: 'Technical Skills', subtitle: 'Plus relevant experiences', link: '' },
-    { title: 'Games', subtitle: 'I like to make obnoxious games', link: 'https://www.google.com' },
-    { title: 'About Me', subtitle: 'Bio, Contact', link: 'https://www.google.com' },
-  ];
 
   return (
     <div>
-      <GeometryWidgetView scrollWidgets={<ScrollableWidgetPanel title="Michael Bryant">
-        {widgetData.map((widget) => (
-          <WidgetComponent title={widget.title} subtitle={widget.subtitle} link={widget.link} />
-        ))}
-      </ScrollableWidgetPanel>} shape='cube'/>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="skills" element={<Skills />} />
+        <Route path="projects" element={<Projects />} />
+      </Routes>
     </div>
   );
 };

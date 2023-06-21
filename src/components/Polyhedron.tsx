@@ -36,6 +36,10 @@ const Polyhedron: React.FC<PolyhedronProps> = ({ type }) => {
         poly.position.y = 0;
         poly.position.z = 0;
 
+        poly.rotation.x = -0.1;
+        poly.rotation.y = -0.2;
+        poly.rotation.z = 0.2;
+
         scene.add(poly);
   
         camera.position.z = 5;

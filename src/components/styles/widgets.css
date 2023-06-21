@@ -56,7 +56,48 @@
     margin: auto;
     max-height: 150px;
     max-width: 150px;
-    border-radius: 14px;
+    border-radius: 8px;
+    position: relative;   
+}
+
+.link {
+    text-decoration: none;
+}
+
+.peeking-image {
+    max-height: 35px;
+    max-width: 35px;
+    margin-left: 25px;
+    margin-bottom: 10px;
+}
+
+.peeking-images {
     position: relative;
-    
+    height: 100%;
+    width: 100%;
+    margin-top: 20px;
+    transition: transform 0.2s ease;
+}
+
+.peeking-image:hover {
+    transform: scale(1.15);
+  }
+
+.peek-widget {
+    width: 66%;
+    margin: auto;
+}
+
+.peek-widget-inner:hover {
+    background-color: #2d2d2d;
+}
+
+.peek-widget-inner {
+    background-color: #212121;
+    border-radius: 14px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    min-height: 175px;
+    margin-bottom: 25px;
 }
