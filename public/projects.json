@@ -9,7 +9,7 @@
       "subtitle": "Ground plane antenna and SDR to decode ADS-B transmissions",
       "link": "https://www.google.com",
       "image": "flight-tracker.png",
-      "peek": ["python", "raspberry-pi", "js", "html", "css"]
+      "peek": ["python", "raspberry-pi", "js", "html", "css", "3d-printing"]
     },
     {
       "title": "Plane GAN",
@@ -23,18 +23,18 @@
       "subtitle": "Computer vision ball tracking, dual PID controllers",
       "link": "https://www.google.com",
       "image": "ball-balancing.png",
-      "peek": ["cc", "opencv", "arduino"]
+      "peek": ["cc", "opencv", "arduino", "3d-printing"]
     },
     {
       "title": "Vision Guided Robot",
       "subtitle": "Autonomous obstacle avoidance",
       "link": "https://www.google.com",
       "image": "vision-guided-robot.JPG",
-      "peek": ["python", "tensorflow", "opencv", "raspberry-pi"]
+      "peek": ["python", "tensorflow", "opencv", "raspberry-pi", "3d-printing"]
     },
     {
       "title": "PyEquations",
-      "subtitle": "Python Package for solving a lot of equations with a lot of unknowns",
+      "subtitle": "Python Package for solving a bunch of equations with a lot of unknowns",
       "link": "https://www.google.com",
       "image": "pyequations.png",
       "peek": ["python", "pypi"]
@@ -54,11 +54,32 @@
       "peek": ["unity", "csharp"]
     },
     {
+      "title": "RC Forklift",
+      "subtitle": "Two stage lift; controllable with PS3 controller",
+      "link": "https://www.google.com",
+      "image": "rc-forklift.JPG",
+      "peek": ["cc", "arduino","metalworking", "3d-printing"]
+    },
+    {
       "title": "Banagrams Bot",
       "subtitle": "I would never have thought of these monster words",
       "link": "https://www.google.com",
       "image": "banana.JPG",
       "peek": ["rust"]
+    },
+    {
+      "title": "Ping Pong Robot",
+      "subtitle": "Scans area and auto-aims balls at targets",
+      "link": "https://www.google.com",
+      "image": "ping-pong-robot.JPG",
+      "peek": ["cc", "arduino","metalworking", "3d-printing"]
+    },
+    {
+      "title": "Self-Balancing Robot",
+      "subtitle": "IMU and PID to keep balance",
+      "link": "https://www.google.com",
+      "image": "self-balancing-robot.JPG",
+      "peek": ["cc", "arduino", "3d-printing"]
     },
     {
       "title": "Ngram",
@@ -68,6 +89,27 @@
       "peek": ["java"]
     },
     {
+      "title": "Evolved Antenna",
+      "subtitle": "Evolutionarily Designed Antenna",
+      "link": "https://www.google.com",
+      "image": "evolved-antenna.JPG",
+      "peek": ["python"]
+    },
+    {
+      "title": "Pointillism",
+      "subtitle": "Genetic algorithm to approximate images with circles",
+      "link": "https://www.google.com",
+      "image": "pointillism.png",
+      "peek": ["python"]
+    },
+    {
+      "title": "Wordler",
+      "subtitle": "Bot for solving Wordle",
+      "link": "https://www.google.com",
+      "image": "wordler.png",
+      "peek": ["python"]
+    },
+    {
       "title": "Filler Bot",
       "subtitle": "I was tired of losing at this game so I combated my skill issue with cheating",
       "link": "https://www.google.com",
@@ -75,7 +117,70 @@
       "peek": ["rust"]
     },
     {
-      "title": "Mandebrot Generator",
+      "title": "Baseball Simulator",
+      "subtitle": "Simulates an entire baseball season. I put myself on Babe Ruth's team.",
+      "link": "https://www.google.com",
+      "image": "baseball.png",
+      "peek": ["cc"]
+    },
+    {
+      "title": "Snake+++",
+      "subtitle": "Various games of snake with increasing level of curse",
+      "link": "https://www.google.com",
+      "image": "snake.png",
+      "peek": ["js", "html", "css"]
+    },
+    {
+      "title": "Maze Solver",
+      "subtitle": "Solves using A*, GUI to create mazes",
+      "link": "https://www.google.com",
+      "image": "maze-solver.png",
+      "peek": ["python"]
+    },
+    {
+      "title": "Speed of Light Model",
+      "subtitle": "Earth, Moon, and speed of light all to scale",
+      "link": "https://www.google.com",
+      "image": "light-model.JPG",
+      "peek": ["electronics-design", "3d-printing"]
+    },
+    {
+      "title": "3D Printer Enclosure",
+      "subtitle": "Includes ventilation and lighting",
+      "link": "https://www.google.com",
+      "image": "enclosure.JPG",
+      "peek": ["woodworking", "electronics-design"]
+    },
+    {
+      "title": "Bird Feeder",
+      "subtitle": "Miter-saw-only design",
+      "link": "https://www.google.com",
+      "image": "bird-feeder.JPG",
+      "peek": ["woodworking"]
+    },
+    {
+      "title": "Countdown Timer",
+      "subtitle": "Timer to track an awaited date",
+      "link": "https://www.google.com",
+      "image": "countdown-timer.jpeg",
+      "peek": ["arduino"]
+    },
+    {
+      "title": "Duke D",
+      "subtitle": "Handcrafted steel display piece",
+      "link": "https://www.google.com",
+      "image": "duke-d.JPG",
+      "peek": ["metalworking"]
+    },
+    {
+      "title": "WiFi Yagi Antenna",
+      "subtitle": "Highly directional 2.4 GHz antenna",
+      "link": "https://www.google.com",
+      "image": "yagi.JPG",
+      "peek": ["electronics-design"]
+    },
+    {
+      "title": "Mandelbrot Generator",
       "subtitle": "Generates images of the Mandelbrot set",
       "link": "https://www.google.com",
       "image": "mandelbrot.png",
