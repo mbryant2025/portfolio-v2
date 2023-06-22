@@ -145,6 +145,13 @@
       "peek": ["js", "html", "css"]
     },
     {
+    "title": "Bee Bot",
+    "subtitle": "Solves the New York Times Spelling Bee",
+    "link": "https://www.google.com",
+    "image": "spelling-bee.jpeg",
+    "peek": ["c"]
+    },
+    {
       "title": "Maze Solver",
       "subtitle": "Solves using A*, GUI to create mazes",
       "link": "https://www.google.com",
@@ -191,6 +198,13 @@
       "subtitle": "Highly directional 2.4 GHz antenna",
       "link": "https://www.google.com",
       "image": "yagi.JPG",
+      "peek": ["electronics-design"]
+    },
+    {
+      "title": "Leyden Jar",
+      "subtitle": "Homemade high-Voltage capacitor",
+      "link": "https://www.google.com",
+      "image": "leyden-jar.JPG",
       "peek": ["electronics-design"]
     },
     {

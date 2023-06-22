@@ -32,6 +32,12 @@ const Projects: React.FC = () => {
     }, []);
 
     const handlePeekClick = (peek: string | undefined) => {
+
+        if (peek === selectedPeek) {
+            setSelectedPeek(undefined);
+            return;
+        }
+
         setSelectedPeek(peek);
     };
 
