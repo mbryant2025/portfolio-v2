@@ -47,6 +47,20 @@
       "peek": ["react", "typescript"]
     },
     {
+    "title": "Step Stats",
+    "subtitle": "iOS app to plot workouts and calculate statistics",
+    "link": "https://www.google.com",
+    "image": "step-stats.png",
+    "peek": ["swift"]
+    },
+    {
+      "title": "Satellite Antenna",
+      "subtitle": "Receives and decodes broadcatsts from NOAA weather satellites",
+      "link": "https://www.google.com",
+      "image": "noaa.jpg",
+      "peek": ["electronics-design"]
+    },
+    {
       "title": "Super Meme Bros.",
       "subtitle": "Meme-hunting game where the memes have implications",
       "link": "https://www.google.com",

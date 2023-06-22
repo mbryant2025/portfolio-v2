@@ -3,16 +3,30 @@ import { PeekWidget } from '../types';
 import { Link } from 'react-router-dom';
 import './styles/widgets.css';
 
-const WidgetPeekComponent: React.FC<PeekWidget> = ({ title, subtitle, link, image, peek }) => {
+const WidgetPeekComponent: React.FC<PeekWidget> = ({ title, subtitle, link, image, peekImages, onClick }) => {
     return (
         <div className="peek-widget">
 
             <div className="peeking-images">
-                {/* <img src="./img/skill-categories/python.png" alt="" /> */}
-                {peek.map((peekImage: string | undefined) => (
-                    <img src={peekImage} alt="" className="peeking-image" />
+                {peekImages.map((peekImage: string | undefined) => (
+                    peekImage && (
+                        <img
+                            src={peekImage}
+                            alt=""
+                            className="peeking-image"
+                            onClick={() =>
+                                onClick(
+                                    peekImage.substring(
+                                        peekImage.lastIndexOf('/') + 1,
+                                        peekImage.lastIndexOf('.')
+                                    )
+                                )
+                            }
+                        />
+                    )
                 ))}
             </div>
+
 
             <Link to={link} className="link">
 
