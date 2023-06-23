@@ -1,0 +1,25 @@
+{
+    "tensorflow": "TensorFlow",
+    "python": "Python",
+    "js": "JavaScript",
+    "java": "Java",
+    "c": "C",
+    "cc": "C++",
+    "3d-printing": "3D Printing",
+    "arduino": "Arduino",
+    "csharp": "C#",
+    "css": "CSS",
+    "electronics-design": "Electronics Design",
+    "html": "HTML",
+    "metalworking": "Metalworking",
+    "opencv": "OpenCV",
+    "pypi": "PyPI",
+    "raspberry-pi": "Raspberry Pi",
+    "react": "React",
+    "rust": "Rust",
+    "swift": "Swift",
+    "typescript": "TypeScript",
+    "unity": "Unity",
+    "woodworking": "Woodworking"
+}
+  

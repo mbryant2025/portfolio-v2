@@ -101,3 +101,50 @@
     margin-bottom: 25px;
 }
 
+.widget-bar {
+    background-color: #32a852;
+    border-radius: 14px;
+    font-size: 30px;
+    margin: auto;
+    width: 66%;
+    color: white;
+    cursor: pointer;
+    min-height: 65px;
+    max-height: 100px;
+    margin-bottom: 25px;
+    font-size: 20px;
+    font-family:'Courier New', Courier, monospace;
+    display: flex;
+}
+
+.widget-bar:hover {
+    background-color: #36d661;
+}
+
+.widget-bar-left {
+    width: 50%;
+    display: flex;
+}
+
+.widget-bar-right {
+    width: 50%;
+}
+
+.widget-bar-image {
+    display: flex;
+    width: 50%;
+    margin: auto;    
+}
+
+.widget-bar-title {
+    width: 50%;
+    display: flex;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.peeking-image-bar {
+    max-height: 35px;
+    margin-left: 25px;
+}
+

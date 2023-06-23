@@ -2,77 +2,97 @@ import React, { useEffect, useState } from 'react';
 import ScrollableWidgetPanel from '../components/ScrollableWidgetPanel';
 import WidgetPeekComponent from '../components/WidgetPeekComponent';
 import GeometryWidgetView from '../components/GeometryWidgetView';
+import WidgetBar from '../components/WidgetBar';
 import { PeekWidget } from '../types';
+import getFormattedName from '../mapNames';
 
-const Projects: React.FC = () => {
-    const [widgetData, setWidgetData] = useState<PeekWidget[]>([]);
-    const [selectedPeek, setSelectedPeek] = useState<string | undefined>(undefined);
+interface ProjectsProps {
+  filter: string | undefined;
+}
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await fetch('/projects.json');
-                const jsonData = await response.json();
+const Projects: React.FC<ProjectsProps> = ({ filter }) => {
+  const [widgetData, setWidgetData] = useState<PeekWidget[]>([]);
+  const [selectedPeek, setSelectedPeek] = useState<string | undefined>(filter);
+  const [formattedSelectedPeek, setFormattedSelectedPeek] = useState<string>('');
+  const [peekCommonPathPrefix, setPeekCommonPathPrefix] = useState<string>('');
+  const [peekExtension, setPeekExtension] = useState<string>('');
 
-                const { imageCommonPathPrefix, peekCommonPathPrefix, peekExtension, widgetData } = jsonData;
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('/projects.json');
+        const jsonData = await response.json();
 
-                const modifiedWidgetData = widgetData.map((widget: PeekWidget) => ({
-                    ...widget,
-                    image: imageCommonPathPrefix + widget.image,
-                    peekImages: widget.peek.map((peekPath: string) => peekCommonPathPrefix + peekPath + peekExtension),
-                  }));
+        const { imageCommonPathPrefix, peekCommonPathPrefix, peekExtension, widgetData } = jsonData;
 
-                setWidgetData(modifiedWidgetData);
-            } catch (error) {
-                console.error('Error fetching JSON:', error);
-            }
-        };
+        const modifiedWidgetData = widgetData.map((widget: PeekWidget) => ({
+          ...widget,
+          image: imageCommonPathPrefix + widget.image,
+          peekImages: widget.peek.map((peekPath: string) => peekCommonPathPrefix + peekPath + peekExtension),
+        }));
 
-        fetchData();
-    }, []);
-
-    const handlePeekClick = (peek: string | undefined) => {
-
-        if (peek === selectedPeek) {
-            setSelectedPeek(undefined);
-            return;
-        }
-
-        setSelectedPeek(peek);
+        setWidgetData(modifiedWidgetData);
+        setPeekCommonPathPrefix(peekCommonPathPrefix);
+        setPeekExtension(peekExtension);
+      } catch (error) {
+        console.error('Error fetching JSON:', error);
+      }
     };
 
-    const filteredWidgets = selectedPeek
-        ? widgetData.filter((widget) => widget.peek.includes(selectedPeek))
-        : widgetData;
+    fetchData();
+  }, []);
 
-    //log all widget images
-    widgetData.forEach((widget) => {
-        console.log(widget.image);
-    });
-    
-    return (
-        <div>
-            <GeometryWidgetView
-                scrollWidgets={
-                    <ScrollableWidgetPanel title='Projects'>
-                        {filteredWidgets.map((widget) => (
-                            <WidgetPeekComponent
-                                key={widget.title}
-                                title={widget.title}
-                                subtitle={widget.subtitle}
-                                link={widget.link}
-                                image={widget.image}
-                                peek={widget.peek}
-                                peekImages={widget.peekImages}
-                                onClick={handlePeekClick}
-                            />
-                        ))}
-                    </ScrollableWidgetPanel>
-                }
-                shape='tetrahedron'
-            />
-        </div>
-    );
+  const handlePeekClick = async (peek: string | undefined) => {
+    if (peek === selectedPeek) {
+      setSelectedPeek(undefined);
+      return;
+    }
+  
+    const mappedTitle = await getFormattedName(peek);
+    setSelectedPeek(peek);
+    setFormattedSelectedPeek(mappedTitle);
+
+    console.log('Mapped title:', mappedTitle)
+  };
+  
+
+  const filteredWidgets = selectedPeek
+    ? widgetData.filter((widget) => widget.peek.includes(selectedPeek))
+    : widgetData;
+
+  // Log all widget images
+  widgetData.forEach((widget) => {
+    console.log(widget.image);
+  });
+
+  const peekImage = peekCommonPathPrefix + selectedPeek + peekExtension
+
+  return (
+    <div>
+      {selectedPeek !== undefined && (
+        <WidgetBar image={peekImage} title={formattedSelectedPeek} onClick={() => handlePeekClick(undefined)} />
+      )}
+      <GeometryWidgetView
+        scrollWidgets={
+          <ScrollableWidgetPanel title='Projects'>
+            {filteredWidgets.map((widget) => (
+              <WidgetPeekComponent
+                key={widget.title}
+                title={widget.title}
+                subtitle={widget.subtitle}
+                link={widget.link}
+                image={widget.image}
+                peek={widget.peek}
+                peekImages={widget.peekImages}
+                onClick={handlePeekClick}
+              />
+            ))}
+          </ScrollableWidgetPanel>
+        }
+        shape='tetrahedron'
+      />
+    </div>
+  );
 };
 
 export default Projects;
