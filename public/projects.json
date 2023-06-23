@@ -12,13 +12,6 @@
       "peek": ["python", "raspberry-pi", "js", "html", "css", "3d-printing"]
     },
     {
-      "title": "Plane GAN",
-      "subtitle": "GAN to generate images of planes",
-      "link": "https://www.google.com",
-      "image": "plane-gan.png",
-      "peek": ["python", "tensorflow"]
-    },
-    {
       "title": "Ball Balancing Robot",
       "subtitle": "Computer vision ball tracking, dual PID controllers",
       "link": "https://www.google.com",
@@ -31,6 +24,13 @@
       "link": "https://www.google.com",
       "image": "vision-guided-robot.JPG",
       "peek": ["python", "tensorflow", "opencv", "raspberry-pi", "3d-printing"]
+    },
+    {
+      "title": "Plane GAN",
+      "subtitle": "GAN to generate images of planes",
+      "link": "https://www.google.com",
+      "image": "plane-gan.png",
+      "peek": ["python", "tensorflow"]
     },
     {
       "title": "PyEquations",

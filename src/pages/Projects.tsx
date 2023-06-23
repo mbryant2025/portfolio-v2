@@ -60,21 +60,16 @@ const Projects: React.FC<ProjectsProps> = ({ filter }) => {
     ? widgetData.filter((widget) => widget.peek.includes(selectedPeek))
     : widgetData;
 
-  // Log all widget images
-  widgetData.forEach((widget) => {
-    console.log(widget.image);
-  });
-
   const peekImage = peekCommonPathPrefix + selectedPeek + peekExtension
 
   return (
     <div>
-      {selectedPeek !== undefined && (
-        <WidgetBar image={peekImage} title={formattedSelectedPeek} onClick={() => handlePeekClick(undefined)} />
-      )}
       <GeometryWidgetView
         scrollWidgets={
           <ScrollableWidgetPanel title='Projects'>
+            {selectedPeek !== undefined && (
+                <WidgetBar image={peekImage} title={formattedSelectedPeek} onClick={() => handlePeekClick(undefined)} />
+            )}
             {filteredWidgets.map((widget) => (
               <WidgetPeekComponent
                 key={widget.title}
