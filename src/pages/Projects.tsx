@@ -52,7 +52,7 @@ const Projects: React.FC<ProjectsProps> = ({ filter }) => {
     setSelectedPeek(peek);
     setFormattedSelectedPeek(mappedTitle);
 
-    console.log('Mapped title:', mappedTitle)
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
   
 
