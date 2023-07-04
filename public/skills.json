@@ -1,109 +1,190 @@
 {
     "skills": [
-        {
-            "name": "eating",
-            "category": "electronics",
-            "start_year": 2003
-        },
-        {
-            "name": "python",
-            "category": "software",
-            "start_year": 2023
-        },
-        {
-            "name": "cc",
-            "category": "software",
-            "start_year": 2020
-        },
-        {
-            "name": "java",
-            "category": "software",
-            "start_year": 2020
-        },
-        {
-            "name": "c",
-            "category": "software",
-            "start_year": 2020
-        },
-        {
-            "name": "js",
-            "category": "software",
-            "start_year": 2020
-        },
-        {
-            "name": "html",
-            "category": "software",
-            "start_year": 2020
-        },
-        {
-            "name": "css",
-            "category": "software",
-            "start_year": 2020
-        },
-        {
-            "name": "sql",
-            "category": "software",
-            "start_year": 2020
-        },
-        {
-            "name": "git",
-            "category": "software",
-            "start_year": 2020
-        },
-        {
-            "name": "linux",
-            "category": "software",
-            "start_year": 2020
-        },
-        {
-            "name": "bash",
-            "category": "software",
-            "start_year": 2020
-        },
-        {
-            "name": "docker",
-            "category": "software",
-            "start_year": 2020
-        },
-        {
-            "name": "kubernetes",
-            "category": "software",
-            "start_year": 2020
-        },
-        {
-            "name": "aws",
-            "category": "software",
-            "start_year": 2020
-        },
-        {
-            "name": "azure",
-            "category": "software",
-            "start_year": 2020
-        },
-        {
-            "name": "gcp",
-            "category": "software",
-            "start_year": 2020
-        },
-        {
-            "name": "terraform",
-            "category": "software",
-            "start_year": 2020
-        },
-        {
-            "name": "ansible",
-            "category": "software",
-            "start_year": 2020
-        },
-        {
-            "name": "puppet",
-            "category": "software",
-            "start_year": 2020
-        },
-        {
-            "name": "chef",
-            "category": "software",
-            "start_year": 2020
-        }
+      {
+        "name": "python",
+        "category": "software",
+        "start_year": 2018
+      },
+      {
+        "name": "cc",
+        "category": "software",
+        "start_year": 2020
+      },
+      {
+        "name": "ros",
+        "category": "software",
+        "start_year": 2021
+      },
+      {
+        "name": "raspberry-pi",
+        "category": "electronics",
+        "start_year": 2020
+      },
+      {
+        "name": "linux",
+        "category": "software",
+        "start_year": 2019
+      },
+      {
+        "name": "git",
+        "category": "software",
+        "start_year": 2019
+      },
+      {
+        "name": "bash",
+        "category": "software",
+        "start_year": 2020
+      },
+      {
+        "name": "docker",
+        "category": "software",
+        "start_year": 2021
+      },
+      {
+        "name": "tensorflow",
+        "category": "software",
+        "start_year": 2021
+      },
+      {
+        "name": "opencv",
+        "category": "software",
+        "start_year": 2020
+      },
+      {
+        "name": "c",
+        "category": "software",
+        "start_year": 2020
+      },
+      {
+        "name": "rust",
+        "category": "software",
+        "start_year": 2022
+      },
+      {
+        "name": "arduino",
+        "category": "electronics",
+        "start_year": 2018
+      },
+      {
+        "name": "java",
+        "category": "software",
+        "start_year": 2019
+      },
+      {
+        "name": "altium",
+        "category": "electronics",
+        "start_year": 2022
+      },
+      {
+        "name": "react",
+        "category": "software",
+        "start_year": 2023
+      },
+      {
+        "name": "typescript",
+        "category": "software",
+        "start_year": 2023
+      },
+      {
+        "name": "js",
+        "category": "software",
+        "start_year": 2022
+      },
+      {
+        "name": "html",
+        "category": "software",
+        "start_year": 2022
+      },
+      {
+        "name": "css",
+        "category": "software",
+        "start_year": 2022
+      },
+      {
+        "name": "pypi",
+        "category": "software",
+        "start_year": 2023
+      },
+      {
+        "name": "swift",
+        "category": "software",
+        "start_year": 2022
+      },
+      {
+        "name": "csharp",
+        "category": "software",
+        "start_year": 2021
+      },
+      {
+        "name": "unity",
+        "category": "software",
+        "start_year": 2021
+      },
+      {
+        "name": "computer",
+        "category": "electronics",
+        "start_year": 2020
+      },
+      {
+        "name": "oscilloscopes",
+        "category": "electronics",
+        "start_year": 2019
+      },
+      {
+        "name": "spice",
+        "category": "electronics",
+        "start_year": 2020
+      },
+      {
+        "name": "soldering",
+        "category": "electronics",
+        "start_year": 2016
+      },
+      {
+        "name": "smt",
+        "category": "electronics",
+        "start_year": 2021
+      },
+      {
+        "name": "saleae",
+        "category": "electronics",
+        "start_year": 2021
+      },
+      {
+        "name": "eagle",
+        "category": "electronics",
+        "start_year": 2021
+      },
+      {
+        "name": "sdr",
+        "category": "electronics",
+        "start_year": 2019
+      },
+      {
+        "name": "3d-printing",
+        "category": "mechanical",
+        "start_year": 2019
+      },
+      {
+        "name": "metalworking",
+        "category": "mechanical",
+        "start_year": 2017
+      },
+      {
+        "name": "milling",
+        "category": "mechanical",
+        "start_year": 2016
+      },
+      {
+        "name": "lathes",
+        "category": "mechanical",
+        "start_year": 2016
+      },
+      {
+        "name": "woodworking",
+        "category": "mechanical",
+        "start_year": 2017
+      }
     ]
-}
+  }
+  
