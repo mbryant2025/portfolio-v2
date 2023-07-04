@@ -6,10 +6,9 @@ import { Widget } from '../types';
 
 const Homepage: React.FC = () => {
   const widgetData: Widget[] = [
-    { title: 'Project Portfolio', subtitle: 'Includes writeups', link: '/projects', image: './src/img/project-thumbnails/flight-tracker.png' },
-    { title: 'Technical Skills', subtitle: 'Plus relevant experiences', link: '/skills', image: './src/img/skills-thumbnails/programming.png' },
-    { title: 'Games', subtitle: 'I like to make obnoxious games', link: 'https://www.google.com', image: './src/img/games-thumbnails/pong.png' },
-    { title: 'About Me', subtitle: 'Bio, Contact', link: 'https://www.google.com', image: './src/img/about-me-thumbnails/face.png' },
+    { title: 'Project Portfolio', subtitle: 'Includes writeups', link: '/projects', image: './img/project-thumbnails/vision-guided-robot.JPG' },
+    { title: 'About Me', subtitle: 'Technical skills', link: '/skills', image: './src/img/skills-thumbnails/programming.png' },
+    { title: 'Games', subtitle: 'I like to make obnoxious games', link: '/games', image: './src/img/games-thumbnails/pong.png' }
   ];
 
   return (

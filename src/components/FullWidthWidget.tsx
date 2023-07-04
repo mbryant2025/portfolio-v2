@@ -1,19 +1,15 @@
 import React from 'react';
 import './styles/full-widget.css'
 
-interface WidgetComponentProps {
-    title: string;
+
+interface FullWidthWidgetProps {
+    children: React.ReactNode;
 }
 
-const FullWidthWidget: React.FC<WidgetComponentProps> = ({ title }) => {
+const FullWidthWidget: React.FC<FullWidthWidgetProps> = ( {children} ) => {
     return (
         <div className="full-widget">
-            <div className="full-widget-title">
-                <h1>{title}</h1>
-            </div>
-            <div className="full-widget-content">
-                <p>Content goes here</p>
-            </div>
+            {children}
         </div>
     );
 };

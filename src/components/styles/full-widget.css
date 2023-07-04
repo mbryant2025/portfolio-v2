@@ -1,0 +1,10 @@
+.full-widget {
+    background-color: #212121;
+    border-radius: 14px;
+    font-size: 30px;
+    margin: auto;
+    width: 75%;
+    color: white;
+    min-height: 175px;
+    margin-bottom: 25px;
+}

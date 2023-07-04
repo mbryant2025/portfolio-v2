@@ -1,0 +1,104 @@
+{
+    "skills": [
+        {
+            "name": "python",
+            "category": "software",
+            "start_year": 2023
+        },
+        {
+            "name": "cc",
+            "category": "software",
+            "start_year": 2020
+        },
+        {
+            "name": "java",
+            "category": "software",
+            "start_year": 2020
+        },
+        {
+            "name": "c",
+            "category": "software",
+            "start_year": 2020
+        },
+        {
+            "name": "javascript",
+            "category": "software",
+            "start_year": 2020
+        },
+        {
+            "name": "html",
+            "category": "software",
+            "start_year": 2020
+        },
+        {
+            "name": "css",
+            "category": "software",
+            "start_year": 2020
+        },
+        {
+            "name": "sql",
+            "category": "software",
+            "start_year": 2020
+        },
+        {
+            "name": "git",
+            "category": "software",
+            "start_year": 2020
+        },
+        {
+            "name": "linux",
+            "category": "software",
+            "start_year": 2020
+        },
+        {
+            "name": "bash",
+            "category": "software",
+            "start_year": 2020
+        },
+        {
+            "name": "docker",
+            "category": "software",
+            "start_year": 2020
+        },
+        {
+            "name": "kubernetes",
+            "category": "software",
+            "start_year": 2020
+        },
+        {
+            "name": "aws",
+            "category": "software",
+            "start_year": 2020
+        },
+        {
+            "name": "azure",
+            "category": "software",
+            "start_year": 2020
+        },
+        {
+            "name": "gcp",
+            "category": "software",
+            "start_year": 2020
+        },
+        {
+            "name": "terraform",
+            "category": "software",
+            "start_year": 2020
+        },
+        {
+            "name": "ansible",
+            "category": "software",
+            "start_year": 2020
+        },
+        {
+            "name": "puppet",
+            "category": "software",
+            "start_year": 2020
+        },
+        {
+            "name": "chef",
+            "category": "software",
+            "start_year": 2020
+        }
+    ]
+}
