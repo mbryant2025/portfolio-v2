@@ -5,7 +5,6 @@ body {
 .button {
   background-color: #32a852;
   border-radius: 14px;
-  font-size: 30px;
   margin: auto;
   width: 66%;
   color: white;
@@ -16,6 +15,43 @@ body {
   font-family: 'Courier New', Courier, monospace;
   white-space:nowrap;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.button-small {
+  background-color: #32a852;
+  border-radius: 14px;
+  margin: auto;
+  width: 66%;
+  color: white;
+  cursor: pointer;
+  min-height: 45px;
+  max-height: 80px;
+  font-size: 15px;
+  font-family: 'Courier New', Courier, monospace;
+  white-space:nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.button-small:hover {
+  background-color: #36d661;
+}
+
+.button-neutral {
+  background-color: #212121;
+}
+
+.button-neutral:hover {
+  background-color: #32a852;
+}
+
+.button p {
+  text-decoration: none;
 }
 
 .button:hover {

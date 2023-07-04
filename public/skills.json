@@ -1,6 +1,11 @@
 {
     "skills": [
         {
+            "name": "eating",
+            "category": "electronics",
+            "start_year": 2003
+        },
+        {
             "name": "python",
             "category": "software",
             "start_year": 2023
@@ -21,7 +26,7 @@
             "start_year": 2020
         },
         {
-            "name": "javascript",
+            "name": "js",
             "category": "software",
             "start_year": 2020
         },

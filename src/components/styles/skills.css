@@ -7,11 +7,21 @@
     margin-bottom: 50px;
 }
 
+.table-container {
+    width: 90%;
+    margin: auto;
+}
+
+.skill {
+    vertical-align: center;
+}
+
 .skill-table {
     font-family: 'Courier New', Courier, monospace;
     font-size: 20px;
     table-layout: fixed;
     width: 100%;
+    border-collapse: collapse;
 }
 
 .skill-table td {
@@ -19,17 +29,36 @@
     text-align: center;
 }
 
-.skill-table tr:hover {
-    background-color: #2e2d2d;
+.skill-table tr {
+    border-radius: 20px;
 }
 
-.skill-table td img {
+.skill-image {
     max-height: 40px;
     max-width: 40px;
+    vertical-align: middle;
 }
 
 .skill-title {
-    width: 50%;
     float: right;
     text-align: left;
+    width: 50%;
+    position: relative;
+    top: 50%;
+    transform: translateY(25%);
+}
+
+.skill-table th {
+    padding: 10px;
+    text-align: center;
+}
+
+.skill-table tbody tr:hover {
+    background-color: #403e3e;
+}
+
+.button-row {
+    width: 100%;
+    display: flex;
+    margin-bottom: 50px;
 }
