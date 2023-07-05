@@ -8,7 +8,7 @@ const Homepage: React.FC = () => {
   const widgetData: Widget[] = [
     { title: 'Project Portfolio', subtitle: 'Includes writeups', link: '/projects', image: './img/project-thumbnails/vision-guided-robot.JPG' },
     { title: 'About Me', subtitle: 'Technical skills', link: '/skills', image: './src/img/skills-thumbnails/programming.png' },
-    { title: 'Games', subtitle: 'I like to make obnoxious games', link: '/games', image: './src/img/games-thumbnails/pong.png' }
+    // { title: 'Games', subtitle: 'I like to make obnoxious games', link: '/games', image: './src/img/games-thumbnails/pong.png' }
   ];
 
   return (

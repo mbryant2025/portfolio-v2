@@ -19,4 +19,3 @@ async function getFormattedName(item: string | undefined): Promise<string> {
   }
 
 export default getFormattedName;
-  

@@ -12,6 +12,7 @@ interface Skill {
 const SkillsTable: React.FC = () => {
   const [skills, setSkills] = useState<Skill[]>([]);
   const [filter, setFilter] = useState<string | undefined>(undefined);
+  const [formattedNames, setFormattedNames] = useState<{ [key: string]: string }>({});
 
   useEffect(() => {
     const fetchData = async () => {
@@ -27,6 +28,21 @@ const SkillsTable: React.FC = () => {
     fetchData();
   }, []);
 
+  useEffect(() => {
+    const fetchFormattedNames = async () => {
+      const formattedNamesMap: { [key: string]: string } = {};
+      for (const skill of skills) {
+        if (!formattedNamesMap[skill.name]) {
+          const formattedName = await getFormattedName(skill.name);
+          formattedNamesMap[skill.name] = formattedName;
+        }
+      }
+      setFormattedNames(formattedNamesMap);
+    };
+
+    fetchFormattedNames();
+  }, [skills]);
+
   const displaySkills = skills.filter((skill) => {
     if (filter === undefined) {
       return true;
@@ -37,6 +53,10 @@ const SkillsTable: React.FC = () => {
 
   const isButtonSelected = (category: string | undefined) => {
     return filter === category ? 'button-small' : 'button-small button-neutral';
+  };
+
+  const formatSkillName = (name: string): string => {
+    return formattedNames[name] || name;
   };
 
   return (
@@ -69,7 +89,7 @@ const SkillsTable: React.FC = () => {
             <tr key={index}>
               <td className="skill">
                 <img className="skill-image" src={`/img/skill-categories/${skill.name}.png`} alt={''} />
-                <div className="skill-title">{skill.name}</div>
+                <div className="skill-title">{formatSkillName(skill.name)}</div>
               </td>
               <td>
                 {new Date().getFullYear() - skill.start_year + 1}{' '}

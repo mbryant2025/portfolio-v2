@@ -16,11 +16,6 @@
         "start_year": 2021
       },
       {
-        "name": "raspberry-pi",
-        "category": "electronics",
-        "start_year": 2020
-      },
-      {
         "name": "linux",
         "category": "software",
         "start_year": 2019
@@ -39,6 +34,11 @@
         "name": "docker",
         "category": "software",
         "start_year": 2021
+      },
+      {
+        "name": "raspberry-pi",
+        "category": "electronics",
+        "start_year": 2020
       },
       {
         "name": "tensorflow",

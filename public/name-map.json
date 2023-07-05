@@ -22,6 +22,22 @@
     "unity": "Unity",
     "woodworking": "Woodworking",
     "delphi-pascal": "Delphi/Pascal",
-    "sdr": "Software-Defined Radio"
+    "sdr": "Software-Defined Radio",
+    "ros": "ROS",
+    "linux": "Linux",
+    "git": "Git",
+    "bash": "Bash",
+    "docker": "Docker",
+    "altium": "Altium",
+    "computer": "Computer Hardware",
+    "oscilloscopes": "Oscilloscopes",
+    "spice": "SPICE",
+    "soldering": "Soldering",
+    "smt": "SMT",
+    "saleae": "Saleae",
+    "eagle": "EAGLE",
+    "milling": "Milling",
+    "lathes": "Lathes"
+
 }
   

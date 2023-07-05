@@ -45,7 +45,8 @@
     width: 50%;
     position: relative;
     top: 50%;
-    transform: translateY(25%);
+    transform: translateY(25%) translateX(-15%);
+    white-space: nowrap;
 }
 
 .skill-table th {
