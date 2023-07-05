@@ -66,8 +66,10 @@
 
 .peeking-image {
     max-height: 35px;
+    max-width: 45px;
     margin-left: 25px;
     margin-bottom: 10px;
+    vertical-align: middle;
 }
 
 .peeking-images {
@@ -139,4 +141,5 @@
 .peeking-image-bar {
     max-height: 35px;
     margin-left: 25px;
+    max-width: 45px;
 }

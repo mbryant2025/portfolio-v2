@@ -1,4 +1,3 @@
-
 {
   "imageCommonPathPrefix": "./img/project-thumbnails/",
   "peekCommonPathPrefix": "/img/skill-categories/",
@@ -6,213 +5,382 @@
   "widgetData": [
     {
       "title": "Flight Tracker",
-      "subtitle": "Ground plane antenna and SDR to decode ADS-B transmissions",
+      "subtitle": "Ground plane antenna and SDR to decode ADS-B transmissions, locally hosted WAN server",
       "link": "https://www.google.com",
       "image": "flight-tracker.png",
-      "peek": ["python", "raspberry-pi", "js", "html", "css", "3d-printing"]
+      "peek": [
+        "python",
+        "raspberry-pi",
+        "js",
+        "html",
+        "css",
+        "3d-printing",
+        "sdr"
+      ]
+    },
+    {
+      "title": "AUV Electrical Stack",
+      "subtitle": "Electral system for Duke Robotics Club",
+      "link": "https://www.google.com",
+      "image": "drc.jpg",
+      "peek": [
+        "electronics-design",
+        "ros",
+        "arduino",
+        "linux",
+        "docker",
+        "bash",
+        "python",
+        "cc",
+        "raspberry-pi"
+      ]
     },
     {
       "title": "Ball Balancing Robot",
       "subtitle": "Computer vision ball tracking, dual PID controllers",
       "link": "https://www.google.com",
       "image": "ball-balancing.png",
-      "peek": ["cc", "opencv", "arduino", "3d-printing"]
+      "peek": [
+        "cc",
+        "opencv",
+        "arduino",
+        "3d-printing"
+      ]
+    },
+    {
+      "title": "Acoustics Stack",
+      "subtitle": "Underwater pinger localization for Duke Robotics Club",
+      "link": "https://www.google.com",
+      "image": "acoustics-stack.png",
+      "peek": [
+        "ros",
+        "python",
+        "linux",
+        "saleae"
+      ]
     },
     {
       "title": "Vision Guided Robot",
       "subtitle": "Autonomous obstacle avoidance",
       "link": "https://www.google.com",
       "image": "vision-guided-robot.JPG",
-      "peek": ["python", "tensorflow", "opencv", "raspberry-pi", "3d-printing"]
+      "peek": [
+        "python",
+        "tensorflow",
+        "opencv",
+        "raspberry-pi",
+        "3d-printing"
+      ]
     },
     {
       "title": "Plane GAN",
       "subtitle": "GAN to generate images of planes",
       "link": "https://www.google.com",
       "image": "plane-gan.png",
-      "peek": ["python", "tensorflow"]
+      "peek": [
+        "python",
+        "tensorflow"
+      ]
     },
     {
       "title": "PyEquations",
-      "subtitle": "Python Package for solving a bunch of equations with a lot of unknowns",
+      "subtitle": "Python Package for solving a lot of equations with a lot of unknowns",
       "link": "https://www.google.com",
       "image": "pyequations.png",
-      "peek": ["python", "pypi"]
+      "peek": [
+        "python",
+        "pypi"
+      ]
     },
     {
       "title": "michaelcbryant.com",
       "subtitle": "You're looking at it!",
       "link": "https://www.google.com",
       "image": "website.png",
-      "peek": ["react", "typescript"]
+      "peek": [
+        "react",
+        "typescript"
+      ]
     },
     {
-    "title": "Step Stats",
-    "subtitle": "iOS app to plot workouts and calculate statistics",
-    "link": "https://www.google.com",
-    "image": "step-stats.png",
-    "peek": ["swift"]
+      "title": "Acoustics PCBs",
+      "subtitle": "Hardware signal processing for Duke Robotics Club",
+      "link": "https://www.google.com",
+      "image": "acoustics-hardware.jpg",
+      "peek": [
+        "electronics-design",
+        "eagle"
+      ]
+    },
+    {
+      "title": "Step Stats",
+      "subtitle": "iOS app to plot workouts and calculate statistics",
+      "link": "https://www.google.com",
+      "image": "step-stats.png",
+      "peek": [
+        "swift"
+      ]
+    },
+    {
+      "title": "SMT Verification",
+      "subtitle": "Reads Altium design files; designed for EBAD",
+      "link": "https://www.google.com",
+      "image": "ebad.jpg",
+      "peek": [
+        "delphi-pascal",
+        "altium"
+      ]
     },
     {
       "title": "Satellite Antenna",
       "subtitle": "Receives and decodes broadcatsts from NOAA weather satellites",
       "link": "https://www.google.com",
       "image": "noaa.jpg",
-      "peek": ["electronics-design"]
+      "peek": [
+        "electronics-design",
+        "sdr"
+      ]
+    },
+    {
+      "title": "OOGASalad",
+      "subtitle": "Multiplayer game editor and player; 11-person group for Duke CS308",
+      "link": "https://www.google.com",
+      "image": "oogasalad.png",
+      "peek": [
+        "java"
+      ]
     },
     {
       "title": "Super Meme Bros.",
       "subtitle": "Meme-hunting game where the memes have implications",
       "link": "https://www.google.com",
       "image": "super-meme-bros.png",
-      "peek": ["unity", "csharp"]
+      "peek": [
+        "unity",
+        "csharp"
+      ]
     },
     {
       "title": "RC Forklift",
       "subtitle": "Two stage lift; controllable with PS3 controller",
       "link": "https://www.google.com",
       "image": "rc-forklift.JPG",
-      "peek": ["cc", "arduino","metalworking", "3d-printing"]
+      "peek": [
+        "cc",
+        "arduino",
+        "metalworking",
+        "3d-printing"
+      ]
     },
     {
       "title": "Banagrams Bot",
       "subtitle": "I would never have thought of these monster words",
       "link": "https://www.google.com",
       "image": "banana.JPG",
-      "peek": ["rust"]
+      "peek": [
+        "rust"
+      ]
+    },
+    {
+      "title": "Slogo",
+      "subtitle": "Logo IDE and Playground; for Duke CS308",
+      "link": "https://www.google.com",
+      "image": "slogo.png",
+      "peek": [
+        "java"
+      ]
     },
     {
       "title": "Ping Pong Robot",
       "subtitle": "Scans area and auto-aims balls at targets",
       "link": "https://www.google.com",
       "image": "ping-pong-robot.JPG",
-      "peek": ["cc", "arduino","metalworking", "3d-printing"]
+      "peek": [
+        "cc",
+        "arduino",
+        "metalworking",
+        "3d-printing"
+      ]
     },
     {
       "title": "Self-Balancing Robot",
       "subtitle": "IMU and PID to keep balance",
       "link": "https://www.google.com",
       "image": "self-balancing-robot.JPG",
-      "peek": ["cc", "arduino", "3d-printing"]
+      "peek": [
+        "cc",
+        "arduino",
+        "3d-printing"
+      ]
+    },
+    {
+      "title": "Cell Society",
+      "subtitle": "Simulates various cellular automata; for Duke CS308",
+      "link": "https://www.google.com",
+      "image": "cell-society.png",
+      "peek": [
+        "java"
+      ]
     },
     {
       "title": "Ngram",
       "subtitle": "Analyzes Google Books NGram data for patterns",
       "link": "https://www.google.com",
       "image": "ngram.png",
-      "peek": ["java"]
+      "peek": [
+        "java"
+      ]
     },
     {
       "title": "Evolved Antenna",
       "subtitle": "Evolutionarily Designed Antenna",
       "link": "https://www.google.com",
       "image": "evolved-antenna.JPG",
-      "peek": ["python"]
+      "peek": [
+        "python",
+        "electronics-design",
+        "sdr"
+      ]
     },
     {
       "title": "Pointillism",
       "subtitle": "Genetic algorithm to approximate images with circles",
       "link": "https://www.google.com",
       "image": "pointillism.png",
-      "peek": ["python"]
+      "peek": [
+        "python"
+      ]
     },
     {
       "title": "Wordler",
       "subtitle": "Bot for solving Wordle",
       "link": "https://www.google.com",
       "image": "wordler.png",
-      "peek": ["python"]
+      "peek": [
+        "python"
+      ]
     },
     {
       "title": "Filler Bot",
       "subtitle": "I was tired of losing at this game so I combated my skill issue with cheating",
       "link": "https://www.google.com",
       "image": "filler.png",
-      "peek": ["rust"]
+      "peek": [
+        "rust"
+      ]
     },
     {
       "title": "Baseball Simulator",
       "subtitle": "Simulates an entire baseball season. I put myself on Babe Ruth's team.",
       "link": "https://www.google.com",
       "image": "baseball.png",
-      "peek": ["cc"]
+      "peek": [
+        "cc"
+      ]
     },
     {
       "title": "Snake+++",
       "subtitle": "Various games of snake with increasing level of curse",
       "link": "https://www.google.com",
       "image": "snake.png",
-      "peek": ["js", "html", "css"]
+      "peek": [
+        "js",
+        "html",
+        "css"
+      ]
     },
     {
-    "title": "Bee Bot",
-    "subtitle": "Solves the New York Times Spelling Bee",
-    "link": "https://www.google.com",
-    "image": "spelling-bee.jpeg",
-    "peek": ["c"]
+      "title": "Bee Bot",
+      "subtitle": "Solves the New York Times Spelling Bee",
+      "link": "https://www.google.com",
+      "image": "spelling-bee.jpeg",
+      "peek": [
+        "c"
+      ]
     },
     {
       "title": "Maze Solver",
       "subtitle": "Solves using A*, GUI to create mazes",
       "link": "https://www.google.com",
       "image": "maze-solver.png",
-      "peek": ["python"]
+      "peek": [
+        "python"
+      ]
     },
     {
       "title": "Speed of Light Model",
       "subtitle": "Earth, Moon, and speed of light all to scale",
       "link": "https://www.google.com",
       "image": "light-model.JPG",
-      "peek": ["electronics-design", "3d-printing"]
+      "peek": [
+        "electronics-design",
+        "3d-printing"
+      ]
     },
     {
       "title": "3D Printer Enclosure",
       "subtitle": "Includes ventilation and lighting",
       "link": "https://www.google.com",
       "image": "enclosure.JPG",
-      "peek": ["woodworking", "electronics-design"]
+      "peek": [
+        "woodworking",
+        "electronics-design"
+      ]
     },
     {
       "title": "Bird Feeder",
       "subtitle": "Miter-saw-only design",
       "link": "https://www.google.com",
       "image": "bird-feeder.JPG",
-      "peek": ["woodworking"]
+      "peek": [
+        "woodworking"
+      ]
     },
     {
       "title": "Countdown Timer",
       "subtitle": "Timer to track an awaited date",
       "link": "https://www.google.com",
       "image": "countdown-timer.jpeg",
-      "peek": ["arduino"]
+      "peek": [
+        "arduino"
+      ]
     },
     {
       "title": "Duke D",
       "subtitle": "Handcrafted steel display piece",
       "link": "https://www.google.com",
       "image": "duke-d.JPG",
-      "peek": ["metalworking"]
+      "peek": [
+        "metalworking"
+      ]
     },
     {
       "title": "WiFi Yagi Antenna",
       "subtitle": "Highly directional 2.4 GHz antenna",
       "link": "https://www.google.com",
       "image": "yagi.JPG",
-      "peek": ["electronics-design"]
+      "peek": [
+        "electronics-design",
+        "sdr"
+      ]
     },
     {
       "title": "Leyden Jar",
       "subtitle": "Homemade high-Voltage capacitor",
       "link": "https://www.google.com",
       "image": "leyden-jar.JPG",
-      "peek": ["electronics-design"]
+      "peek": [
+        "electronics-design"
+      ]
     },
     {
       "title": "Mandelbrot Generator",
       "subtitle": "Generates images of the Mandelbrot set",
       "link": "https://www.google.com",
       "image": "mandelbrot.png",
-      "peek": ["python"]
+      "peek": [
+        "python"
+      ]
     }
   ]
 }

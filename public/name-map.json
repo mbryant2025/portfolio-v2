@@ -20,6 +20,8 @@
     "swift": "Swift",
     "typescript": "TypeScript",
     "unity": "Unity",
-    "woodworking": "Woodworking"
+    "woodworking": "Woodworking",
+    "delphi-pascal": "Delphi/Pascal",
+    "sdr": "Software-Defined Radio"
 }
   

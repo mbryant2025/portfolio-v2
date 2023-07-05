@@ -163,7 +163,7 @@
       {
         "name": "3d-printing",
         "category": "mechanical",
-        "start_year": 2019
+        "start_year": 2020
       },
       {
         "name": "metalworking",
@@ -184,6 +184,11 @@
         "name": "woodworking",
         "category": "mechanical",
         "start_year": 2017
+      },
+      {
+        "name": "delphi-pascal",
+        "category": "software",
+        "start_year": 2022
       }
     ]
   }
