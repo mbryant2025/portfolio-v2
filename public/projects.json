@@ -26,12 +26,12 @@
       "peek": [
         "electronics-design",
         "ros",
-        "arduino",
+        "python",
+        "cc",
         "linux",
         "docker",
         "bash",
-        "python",
-        "cc",
+        "arduino",
         "raspberry-pi"
       ]
     },
@@ -276,6 +276,16 @@
       "image": "baseball.png",
       "peek": [
         "cc"
+      ]
+    },
+    {
+      "title": "LED Cube",
+      "subtitle": "Fun patterns with 27 Individually addressable LEDs",
+      "link": "https://www.google.com",
+      "image": "led-cube.jpg",
+      "peek": [
+        "c",
+        "electronics-design"
       ]
     },
     {

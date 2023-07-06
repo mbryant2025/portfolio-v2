@@ -96,7 +96,10 @@ const SkillsTable: React.FC = () => {
                 {new Date().getFullYear() - skill.start_year + 1 === 1 ? 'year' : 'years'}
               </td>
               <td>
-                <Link to="/projects?filter=opencv" style={{ textDecoration: 'none' }}>
+                {/* <Link to={`/projects?filter=${skill.name}`} style={{ textDecoration: 'none' }}> */}
+                <Link to={`/projects/${skill.name}`}>
+                {/* <Link to={"/projects?filter=python"} style={{ textDecoration: 'none' }}> */}
+
                   <div className="button-small">
                     <p><b>View</b></p>
                   </div>

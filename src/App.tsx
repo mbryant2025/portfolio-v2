@@ -26,9 +26,9 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/skills" element={<Skills />} />
-        <Route path="/projects" element={<Projects filter={ undefined } />} />
         {filters.map((filter) => (
           <Route
+            key={filter}
             path={`/projects/${filter}`}
             element={<Projects filter={filter} />}
           />
@@ -38,5 +38,6 @@ const App: React.FC = () => {
     </div>
   );
 };
+
 
 export default App;
