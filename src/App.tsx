@@ -25,6 +25,7 @@ const App: React.FC = () => {
     <div>
       <Routes>
         <Route path="/" element={<Homepage />} />
+        <Route path="/projects" element={<Projects filter={ undefined }/>} />
         <Route path="/skills" element={<Skills />} />
         {filters.map((filter) => (
           <Route
