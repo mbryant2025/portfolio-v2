@@ -15,7 +15,7 @@ const Homepage: React.FC = () => {
     <div>
       <GeometryWidgetView scrollWidgets={<ScrollableWidgetPanel title='Michael Bryant'>
         {widgetData.map((widget) => (
-          <WidgetComponent title={widget.title} subtitle={widget.subtitle} link={widget.link} image={widget.image} />
+          <WidgetComponent key={widget.title} title={widget.title} subtitle={widget.subtitle} link={widget.link} image={widget.image} />
         ))}
       </ScrollableWidgetPanel>} shape='cube'/>
     </div>

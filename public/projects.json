@@ -1,5 +1,5 @@
 {
-  "imageCommonPathPrefix": "./img/project-thumbnails/",
+  "imageCommonPathPrefix": "/img/project-thumbnails/",
   "peekCommonPathPrefix": "/img/skill-categories/",
   "peekExtension": ".png",
   "widgetData": [

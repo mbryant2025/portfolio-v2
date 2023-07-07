@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import './styles/widgets.css';
 
 const WidgetPeekComponent: React.FC<PeekWidget> = ({ title, subtitle, link, image, peekImages, onClick }) => {
+
     return (
         <div className="peek-widget">
 
@@ -11,6 +12,7 @@ const WidgetPeekComponent: React.FC<PeekWidget> = ({ title, subtitle, link, imag
                 {peekImages.map((peekImage: string | undefined) => (
                     peekImage && (
                         <img
+                            key={peekImage}
                             src={peekImage}
                             alt=""
                             className="peeking-image"
@@ -27,9 +29,7 @@ const WidgetPeekComponent: React.FC<PeekWidget> = ({ title, subtitle, link, imag
                 ))}
             </div>
 
-
             <Link to={link} className="link">
-
                 <div className="peek-widget-inner">
                     <div className="container">
                         <div className="text-col">
@@ -44,6 +44,7 @@ const WidgetPeekComponent: React.FC<PeekWidget> = ({ title, subtitle, link, imag
                     </div>
                 </div>
             </Link>
+            
         </div>
     );
 };

@@ -11,6 +11,7 @@
     color: white;
     text-decoration:none;
     font-weight: 600;
+    background-color: transparent;
 }
 
 .back-button:hover {
