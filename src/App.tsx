@@ -21,19 +21,34 @@ const App: React.FC = () => {
       });
   }, []);
 
+  // Removes some of the filters that will be hard coded
+  const omitted = ['soldering', 'computer', 'oscilloscopes', 'spice', 'smt', 'milling', 'lathes'];
+
+  const filtersToDisplay = filters.filter((filter) => !omitted.includes(filter));
+
   return (
     <div>
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/projects" element={<Projects filter={ undefined }/>} />
         <Route path="/skills" element={<Skills />} />
-        {filters.map((filter) => (
+        {filtersToDisplay.map((filter) => (
           <Route
             key={filter}
             path={`/projects/${filter}`}
             element={<Projects filter={filter} />}
           />
         ))}
+
+        {/* Hard code some routes due to not having projects labeled with common skills */}
+        <Route path="/projects/soldering" element={<Projects filter={ "electronics-design" }/>} />
+        <Route path="/projects/computer" element={<Projects filter={ "electronics-design" }/>} />
+        <Route path="/projects/oscilloscopes" element={<Projects filter={ "electronics-design" }/>} />
+        <Route path="/projects/spice" element={<Projects filter={ "electronics-design" }/>} />
+        <Route path="/projects/smt" element={<Projects filter={ "electronics-design" }/>} />
+        <Route path="/projects/milling" element={<Projects filter={ "metalworking" }/>} />
+        <Route path="/projects/lathes" element={<Projects filter={ "metalworking" }/>} />
+
         <Route path="/games" element={<Games />} />
       </Routes>
     </div>
