@@ -106,7 +106,7 @@
       "title": "Acoustics PCBs",
       "subtitle": "Hardware signal processing for Duke Robotics Club",
       "link": "https://www.google.com",
-      "image": "acoustics-hardware.jpg",
+      "image": "acoustics-hardware.JPG",
       "peek": [
         "electronics-design",
         "eagle"
@@ -116,7 +116,7 @@
       "title": "Step Stats",
       "subtitle": "iOS app to plot workouts and calculate statistics",
       "link": "https://www.google.com",
-      "image": "step-stats.png",
+      "image": "step-stats.PNG",
       "peek": [
         "swift"
       ]
@@ -282,7 +282,7 @@
       "title": "LED Cube",
       "subtitle": "Fun patterns with 27 Individually addressable LEDs",
       "link": "https://www.google.com",
-      "image": "led-cube.jpg",
+      "image": "led-cube.JPG",
       "peek": [
         "c",
         "electronics-design"
