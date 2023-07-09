@@ -184,11 +184,6 @@
         "name": "woodworking",
         "category": "mechanical",
         "start_year": 2017
-      },
-      {
-        "name": "delphi-pascal",
-        "category": "software",
-        "start_year": 2022
       }
     ]
   }

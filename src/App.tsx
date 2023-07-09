@@ -22,7 +22,7 @@ const App: React.FC = () => {
   }, []);
 
   // Removes some of the filters that will be hard coded
-  const omitted = ['soldering', 'computer', 'oscilloscopes', 'spice', 'smt', 'milling', 'lathes'];
+  const omitted = ['soldering', 'computer', 'oscilloscopes', 'spice', 'smt', 'milling', 'lathes', 'altium'];
 
   const filtersToDisplay = filters.filter((filter) => !omitted.includes(filter));
 
@@ -44,6 +44,7 @@ const App: React.FC = () => {
         <Route path="/projects/soldering" element={<Projects filter={ "electronics-design" }/>} />
         <Route path="/projects/computer" element={<Projects filter={ "electronics-design" }/>} />
         <Route path="/projects/oscilloscopes" element={<Projects filter={ "electronics-design" }/>} />
+        <Route path="/projects/altium" element={<Projects filter={ "electronics-design" }/>} />
         <Route path="/projects/spice" element={<Projects filter={ "electronics-design" }/>} />
         <Route path="/projects/smt" element={<Projects filter={ "electronics-design" }/>} />
         <Route path="/projects/milling" element={<Projects filter={ "metalworking" }/>} />

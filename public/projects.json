@@ -122,16 +122,6 @@
       ]
     },
     {
-      "title": "SMT Verification",
-      "subtitle": "Reads Altium design files; designed for EBAD",
-      "link": "https://www.google.com",
-      "image": "ebad.jpg",
-      "peek": [
-        "delphi-pascal",
-        "altium"
-      ]
-    },
-    {
       "title": "Satellite Antenna",
       "subtitle": "Receives and decodes broadcatsts from NOAA weather satellites",
       "link": "https://www.google.com",
