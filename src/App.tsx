@@ -5,6 +5,8 @@ import Homepage from './pages/Homepage';
 import Skills from './pages/Skills';
 import Projects from './pages/Projects';
 import Games from './pages/Games';
+import SnakePlus from './pages/SnakePlus';
+
 
 const App: React.FC = () => {
   const [filters, setFilters] = useState<string[]>([]);
@@ -51,6 +53,8 @@ const App: React.FC = () => {
         <Route path="/projects/lathes" element={<Projects filter={ "metalworking" }/>} />
 
         <Route path="/games" element={<Games />} />
+        <Route path="/games/snake-plus" element={<SnakePlus />} />
+
       </Routes>
     </div>
   );
