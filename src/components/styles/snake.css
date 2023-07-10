@@ -41,3 +41,7 @@ h1 {
 .start {
     width: 30%;
 }
+
+.enemy-snake {
+    background-color: purple;
+  }

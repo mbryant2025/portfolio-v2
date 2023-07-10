@@ -7,7 +7,8 @@ import BackButton from '../components/BackButton';
 
 const Homepage: React.FC = () => {
     const widgetData: Widget[] = [
-        { title: 'Snake+', subtitle: 'Standard Snake with some changes', link: '/games/snake-plus', image: './img/project-thumbnails/snake.png' },
+        { title: 'Snake+', subtitle: 'Standard Snake with a twist', link: '/games/snake-plus', image: './img/project-thumbnails/snake.png' },
+        { title: 'Snake++', subtitle: 'Standard Snake with more changes', link: '/games/snake-plus-plus', image: './img/project-thumbnails/snake.png' }
     ];
 
     return (
