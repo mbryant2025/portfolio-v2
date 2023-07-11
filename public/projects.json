@@ -103,25 +103,6 @@
       ]
     },
     {
-      "title": "Acoustics PCBs",
-      "subtitle": "Hardware signal processing for Duke Robotics Club",
-      "link": "https://www.google.com",
-      "image": "acoustics-hardware.JPG",
-      "peek": [
-        "electronics-design",
-        "eagle"
-      ]
-    },
-    {
-      "title": "Step Stats",
-      "subtitle": "iOS app to plot workouts and calculate statistics",
-      "link": "https://www.google.com",
-      "image": "step-stats.PNG",
-      "peek": [
-        "swift"
-      ]
-    },
-    {
       "title": "Satellite Antenna",
       "subtitle": "Receives and decodes broadcatsts from NOAA weather satellites",
       "link": "https://www.google.com",
@@ -167,6 +148,25 @@
       ]
     },
     {
+      "title": "Step Stats",
+      "subtitle": "iOS app to plot workouts and calculate statistics",
+      "link": "https://www.google.com",
+      "image": "step-stats.PNG",
+      "peek": [
+        "swift"
+      ]
+    },
+    {
+      "title": "Acoustics PCBs",
+      "subtitle": "Hardware signal processing for Duke Robotics Club",
+      "link": "https://www.google.com",
+      "image": "acoustics-hardware.JPG",
+      "peek": [
+        "electronics-design",
+        "eagle"
+      ]
+    },
+    {
       "title": "Super Meme Bros.",
       "subtitle": "Meme-hunting game where the memes have implications",
       "link": "https://www.google.com",
@@ -199,7 +199,7 @@
     },
     {
       "title": "Slogo",
-      "subtitle": "Logo IDE and Playground; for Duke CS308",
+      "subtitle": "Logo IDE and playground; for Duke CS308",
       "link": "https://www.google.com",
       "image": "slogo.png",
       "peek": [
@@ -249,7 +249,7 @@
     },
     {
       "title": "Evolved Antenna",
-      "subtitle": "Evolutionarily Designed Antenna",
+      "subtitle": "Evolutionarily designed antenna",
       "link": "https://www.google.com",
       "image": "evolved-antenna.JPG",
       "peek": [
@@ -296,7 +296,7 @@
     },
     {
       "title": "LED Cube",
-      "subtitle": "Fun patterns with 27 Individually addressable LEDs",
+      "subtitle": "Fun patterns with 27 individually addressable LEDs",
       "link": "https://www.google.com",
       "image": "led-cube.JPG",
       "peek": [

@@ -93,7 +93,6 @@ const SnakePlus: React.FC = () => {
         } else if (newSnake.length > desiredLength) {
             // Remove the last segment of the snake if it exceeds the desired length
             newSnake.pop();
-            
         }
 
         setScore(newSnake.length);

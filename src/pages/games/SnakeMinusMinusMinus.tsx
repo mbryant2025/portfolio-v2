@@ -3,9 +3,9 @@ import BackButton from '../../components/BackButton';
 import '../../components/styles/snake.css'
 
 enum Direction {
+    Up,
     Down,
     Left,
-    Up,
     Right
 }
 
@@ -29,6 +29,8 @@ const SnakeMinusMinusMinus: React.FC = () => {
     const [apple, setApple] = useState(generateRandomApplePosition());
     const [startGame, setStartGame] = useState(false);
     const [score, setScore] = useState<number>(0);
+    const [showWholeSnake, setShowWholeSnake] = useState(false);
+    const [desiredLength, setDesiredLength] = useState<number>(2);
 
     function generateRandomApplePosition() {
         // If the snake is as long as there are cells on the board, the game is won
@@ -48,6 +50,8 @@ const SnakeMinusMinusMinus: React.FC = () => {
     const handleStartGame = () => {
         setScore(0);
         setSnake(initialSnake);
+        setShowWholeSnake(false);
+        setDesiredLength(2);
         setDirection(Direction.Right);
         setApple(generateRandomApplePosition());
         setStartGame(true);
@@ -55,7 +59,7 @@ const SnakeMinusMinusMinus: React.FC = () => {
 
     const moveSnake = useCallback(() => {
         const head = { ...snake[0] };
-
+    
         switch (direction) {
             case Direction.Up:
                 head.y -= 1;
@@ -70,62 +74,82 @@ const SnakeMinusMinusMinus: React.FC = () => {
                 head.x += 1;
                 break;
         }
-
+    
         if (
             head.x < 0 ||
             head.x >= columns ||
             head.y < 0 ||
             head.y >= rows ||
-            snake.some(
-                segment => segment.x === head.x && segment.y === head.y
-            )
+            snake.some(segment => segment.x === head.x && segment.y === head.y)
         ) {
             // Snake hits the edge or itself, reset the game
             setStartGame(false);
+            setShowWholeSnake(true);
             return;
         }
-
+    
         const newSnake = [head, ...snake];
-
+    
         if (head.x === apple.x && head.y === apple.y) {
-            // Snake eats the apple, generate a new apple and increment the score
+            // Snake eats the apple, generate a new apple and double the score
             setApple(generateRandomApplePosition());
-            setScore(prevScore => prevScore + 1);
-        } else {
-            // Remove the last segment of the snake if it doesn't eat the apple
+            setShowWholeSnake(true);
+            setDesiredLength(prevLength => prevLength * 2); // Double the desired length
+        } else if (newSnake.length > desiredLength) {
+            // Remove the last segment of the snake if it exceeds the desired length
             newSnake.pop();
         }
 
+        setScore(newSnake.length);
+    
         setSnake(newSnake);
-    }, [snake, direction, apple, score]);
-
+    }, [snake, direction, apple, desiredLength, score]);
+    
     useEffect(() => {
         const handleKeyDown = (event: KeyboardEvent) => {
             if (!startGame && event.key === " ") {
                 handleStartGame();
             }
 
-            // If the key is up, down, left or right arrow, change the direction of the snake randomly
-            if (event.key === "ArrowUp" || event.key === "ArrowDown" || event.key === "ArrowLeft" || event.key === "ArrowRight") {
-
-                // Rotate the direction by iterating through the enum
-                const newDirection = (direction + 1) % 4;
-
-                setDirection(newDirection);
-
+            switch (event.key) {
+                case "ArrowUp":
+                    setDirection(Direction.Up);
+                    break;
+                case "ArrowDown":
+                    setDirection(Direction.Down);
+                    break;
+                case "ArrowLeft":
+                    setDirection(Direction.Left);
+                    break;
+                case "ArrowRight":
+                    setDirection(Direction.Right);
+                    break;
             }
         };
 
         document.body.addEventListener("keydown", handleKeyDown);
 
         if (startGame) {
-            const interval = setInterval(moveSnake, 30);
+            const interval = setInterval(moveSnake, 50);
             return () => {
                 document.body.removeEventListener("keydown", handleKeyDown);
                 clearInterval(interval);
             };
         }
-    }, [startGame, moveSnake, direction]);
+    }, [startGame, moveSnake]);
+
+    useEffect(() => {
+        if (showWholeSnake && startGame) {
+            const timeout = setTimeout(() => {
+                if(startGame) {
+                    setShowWholeSnake(false);
+                }
+            }, 1000);
+            return () => {
+                clearTimeout(timeout);
+            };
+        }
+    }, [showWholeSnake]);
 
     return (
         <div>
@@ -136,15 +160,13 @@ const SnakeMinusMinusMinus: React.FC = () => {
                 <div className="game-board">
                     {Array.from(Array(rows), (_, row) =>
                         Array.from(Array(columns), (_, col) => {
-                            const isSnake = snake.some(
-                                segment => segment.x === col && segment.y === row
-                            );
+                            const isHead = snake[0].x === col && snake[0].y === row;
+                            const isSnake = isHead || (showWholeSnake && snake.some(segment => segment.x === col && segment.y === row));
                             const isApple = apple.x === col && apple.y === row;
 
                             return (
                                 <div
-                                    className={`cell ${isSnake ? "snake" : ""} ${isApple ? "apple" : ""
-                                        }`}
+                                    className={`cell ${isSnake ? "snake" : ""} ${isHead ? "head" : ""} ${isApple ? "apple" : ""}`}
                                     key={`${col}-${row}`}
                                 ></div>
                             );
