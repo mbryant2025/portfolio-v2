@@ -132,12 +132,38 @@
       ]
     },
     {
+      "title": "Spot the Spot",
+      "subtitle": "Automatically detects and tracks available parking spots",
+      "link": "https://www.google.com",
+      "image": "spot-the-spot.png",
+      "peek": [
+        "python",
+        "tensorflow",
+        "opencv",
+        "flask",
+        "raspberry-pi"
+      ]
+    },
+    {
       "title": "OOGASalad",
       "subtitle": "Multiplayer game editor and player; 11-person group for Duke CS308",
       "link": "https://www.google.com",
       "image": "oogasalad.png",
       "peek": [
         "java"
+      ]
+    },
+    {
+      "title": "Babii",
+      "subtitle": "Baby crib fall detection and alert system",
+      "link": "https://www.google.com",
+      "image": "babii.jpeg",
+      "peek": [
+        "python",
+        "opencv",
+        "flask",
+        "raspberry-pi",
+        "3d-printing"
       ]
     },
     {

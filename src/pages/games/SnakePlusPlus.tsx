@@ -28,7 +28,8 @@ const intialEnemySnake: SnakeSegment[] = [
 
 const rows = 20;
 const columns = 30;
-const enemySpeed = 60;
+const enemySpeed = 50;
+const enemyKillableDuration = 3000; // ms
 
 const SnakePlusPlus: React.FC = () => {
     const [snake, setSnake] = useState<SnakeSegment[]>(initialSnake);
@@ -38,6 +39,7 @@ const SnakePlusPlus: React.FC = () => {
     const [score, setScore] = useState<number>(0);
     const [desiredLength, setDesiredLength] = useState<number>(2);
     const [enemySnake, setEnemySnake] = useState<SnakeSegment[]>(intialEnemySnake);
+    const [enemyKillable, setEnemyKillable] = useState<boolean>(false);
 
     function generateRandomApplePosition() {
         // If the snake is as long as there are cells on the board, the game is won
@@ -61,6 +63,7 @@ const SnakePlusPlus: React.FC = () => {
     const handleStartGame = () => {
         setScore(2);
         setDesiredLength(2);
+        setEnemyKillable(false);
         setSnake(initialSnake);
         setEnemySnake(intialEnemySnake);
         setDirection(Direction.Right);
@@ -86,23 +89,30 @@ const SnakePlusPlus: React.FC = () => {
                 break;
         }
 
+        const hitEnemySnake = snake.some(
+            segment =>
+                enemySnake.some(
+                    enemySegment =>
+                        enemySegment.x === segment.x && enemySegment.y === segment.y
+                )
+        )
+
         if (
             head.x < 0 ||
             head.x >= columns ||
             head.y < 0 ||
             head.y >= rows ||
             snake.some(segment => segment.x === head.x && segment.y === head.y) ||
-            snake.some(
-                segment =>
-                    enemySnake.some(
-                        enemySegment =>
-                            enemySegment.x === segment.x && enemySegment.y === segment.y
-                    )
-            )
+            (!enemyKillable && hitEnemySnake)
         ) {
             // Snake hits the edge or itself, reset the game
             setStartGame(false);
             return;
+        }
+
+        // If the snakes collide and the enemy is killable, remove the last enemy segment
+        if (hitEnemySnake && enemyKillable) {
+            setEnemySnake(enemySnake.slice(0, -1));
         }
 
         const newSnake = [head, ...snake];
@@ -111,6 +121,12 @@ const SnakePlusPlus: React.FC = () => {
             // Snake eats the apple, generate a new apple and double the score
             setApple(generateRandomApplePosition());
             setDesiredLength(prevLength => prevLength * 2); // Double the desired length
+            // Set enemy as killable
+            setEnemyKillable(true);
+            setTimeout(() => {
+                // Technically problematic if a new game is started before the timeout, but it's fine for now
+                setEnemyKillable(false);
+            }, enemyKillableDuration);
         } else if (newSnake.length > desiredLength) {
             // Remove the last segment of the snake if it exceeds the desired length
             newSnake.pop();
@@ -122,28 +138,52 @@ const SnakePlusPlus: React.FC = () => {
     }, [snake, direction, apple, desiredLength, score]);
 
     const moveEnemySnake = useCallback(() => {
+
+        // If the enemy is length 0 (dead), return
+        if (enemySnake.length === 0) {
+            return;
+        }
+
         const enemyHead = { ...enemySnake[0] };
         const playerHead = { ...snake[0] };
 
-        if (playerHead.x < enemyHead.x) {
-            enemyHead.x -= 1;
-        } else if (playerHead.x > enemyHead.x) {
-            enemyHead.x += 1;
-        } else if (playerHead.y < enemyHead.y) {
-            enemyHead.y -= 1;
-        } else if (playerHead.y > enemyHead.y) {
-            enemyHead.y += 1;
+        if (!enemyKillable) {
+
+            if (playerHead.x < enemyHead.x) {
+                enemyHead.x -= 1;
+            } else if (playerHead.x > enemyHead.x) {
+                enemyHead.x += 1;
+            } else if (playerHead.y < enemyHead.y) {
+                enemyHead.y -= 1;
+            } else if (playerHead.y > enemyHead.y) {
+                enemyHead.y += 1;
+            }
+        }
+
+        else {
+            // If killable, move in the opposite direction -- that is, away from the player
+
+            if (playerHead.x < enemyHead.x) {
+                enemyHead.x += 1;
+            }
+            else if (playerHead.x > enemyHead.x) {
+                enemyHead.x -= 1;
+            }
+            else if (playerHead.y < enemyHead.y) {
+                enemyHead.y += 1;
+            }
+            else if (playerHead.y > enemyHead.y) {
+                enemyHead.y -= 1;
+            }
+
         }
 
         const newEnemySnake = [enemyHead, ...enemySnake.slice(0, -1)];
 
         setEnemySnake(newEnemySnake);
-    }, [enemySnake, snake]);
 
-    // const moveSnakes = useCallback(() => {
-    //     moveSnake();
-    //     moveEnemySnake();
-    // }, [moveSnake, moveEnemySnake]);
+
+    }, [enemySnake, snake]);
 
     useEffect(() => {
         const handleKeyDown = (event: KeyboardEvent) => {
@@ -206,11 +246,13 @@ const SnakePlusPlus: React.FC = () => {
 
                             return (
                                 <div
-                                    className={`cell ${isSnake ? "snake" : ""} ${isApple ? "apple" : ""
-                                        } ${isEnemySnake ? "enemy-snake" : ""}`}
+                                    className={`cell ${isSnake ? "snake" : ""
+                                        } ${isApple ? "apple" : ""} ${isEnemySnake ? (enemyKillable ? "enemy-snake-killable" : "enemy-snake") : ""
+                                        }`}
                                     key={`${col}-${row}`}
                                 ></div>
                             );
+
                         })
                     )}
                 </div>

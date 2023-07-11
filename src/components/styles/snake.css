@@ -16,8 +16,8 @@ h1 {
     width: fit-content;
     margin-bottom: 20px;
     margin-top: 20px;
-  }
-  
+}
+
 
 .cell {
     background-color: #fff;
@@ -44,4 +44,8 @@ h1 {
 
 .enemy-snake {
     background-color: purple;
-  }
+}
+
+.enemy-snake-killable {
+    background-color: blue;
+}
