@@ -10,6 +10,7 @@ import SnakePlus from './pages/games/SnakePlus';
 import SnakePlusPlus from './pages/games/SnakePlusPlus';
 import SnakePlusPlusPlus from './pages/games/SnakePlusPlusPlus';
 import SnakeMinusMinusMinus from './pages/games/SnakeMinusMinusMinus';
+import TechnicalArticle from './components/TechnicalArticle';
 
 
 const App: React.FC = () => {
@@ -55,6 +56,8 @@ const App: React.FC = () => {
         <Route path="/projects/smt" element={<Projects filter={ "electronics-design" }/>} />
         <Route path="/projects/milling" element={<Projects filter={ "metalworking" }/>} />
         <Route path="/projects/lathes" element={<Projects filter={ "metalworking" }/>} />
+
+        <Route path="/projects/test" element={<TechnicalArticle htmlFilePath= { "/articles/test/test.html" } />} />
 
         <Route path="/games" element={<Games />} />
         <Route path="/games/snake-plus" element={<SnakePlus />} />

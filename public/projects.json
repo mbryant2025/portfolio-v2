@@ -6,7 +6,7 @@
     {
       "title": "Flight Tracker",
       "subtitle": "Ground plane antenna and SDR to decode ADS-B transmissions, locally hosted WAN server",
-      "link": "https://www.google.com",
+      "link": "/projects/test",
       "image": "flight-tracker.png",
       "peek": [
         "python",
