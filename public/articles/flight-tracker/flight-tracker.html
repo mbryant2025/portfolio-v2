@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Tracker</title>
+</head>
+
+<body>
+
+    <h2>Overview</h2>
+
+    <p>
+        Flight Tracker is a web application that allows users to track flights in real time. It is built using a ground
+        plane antenna, an SDR, and a Raspberry Pi.
+        Data is decoded using Dump1090 and is displayed on a custom web page hosted by the Pi.
+    </p>
+
+    <img src="/articles/flight-tracker/Screen Shot 2022-06-05 at 12.36.40 PM cropped.png">
+
+    <h2>Build Process</h2>
+
+    <p>
+        This project started with the antenna. I decided to build a ground plane antenna that would be able to receive
+        1090 MHz ADS-B signals from overhead aircraft.
+        The antenna is made from a flattened copper pipe and 1/4 wavelength coax center conductors.
+    </p>
+
+    <img src="/articles/flight-tracker/IMG_7826.JPG">
+
+    <figcaption>Antenna construction</figcaption>
+
+    <img src="/articles/flight-tracker/IMG_8446.JPG">
+
+    <p>Completed antenna. An F connector was used to easily interface with the ground plane, radiating element, and coax
+        cable.</p>
+
+    <p>
+        Next came interfacing with the antenna through software. I used a Raspberry Pi 3B and an RTL-SDR dongle to
+        digitize the signals.
+        I configured Dump1090 to work on the Pi and made a backend Python script to read from Dump1090 and generate HTML
+        using Pydeck.
+        This HTML and the raw JSON is then served using NGINX through port forwarding. The final rendering takes the
+        form of an iframe on the web interface. The entire software stack runs from boot on the Pi.
+    </p>
+
+    <p>
+        The interface gets updates approximately every five seconds and they are reflected seamlessly and interactively
+        on the web page.
+        The backend also keeps track of various all-time records such as the highest altitude and the greatest speed.
+    </p>
+
+    <img src="/articles/flight-tracker/Screen Shot 2022-10-08 at 10.19.02 PM.png">
+
+    <figcaption>Web Interface</figcaption>
+
+    <img src="/articles/flight-tracker/Screen Shot 2022-06-05 at 12.37.12 PM.png">
+
+    <figcaption>Displayed list of detected planes</figcaption>
+
+    <p>
+        I then tested the entire system by going outside and holding the antenna over my head (confusing my neighbors in
+        the process).
+        I was able to see aircraft both overhead and on the web page. I decided I would make a more permanent setup.
+    </p>
+
+    <img src="/articles/flight-tracker/IMG_7843.JPG">
+
+    <figcaption>3D printing custom antenna mount</figcaption>
+
+    <img src="/articles/flight-tracker/IMG_7844.JPG">
+
+    <figcaption>Tower to mount antenna in attic. Electrical box at bottom houses the SDR and serves as a heatsink and for
+        interference protection.</figcaption>
+
+    <img src="/articles/flight-tracker/IMG_7847.JPG">
+
+    <figcaption>Tower positions antenna at top of attic</figcaption>
+
+    <img src="/articles/flight-tracker/IMG_8430.JPG">
+
+    <figcaption>Top of attic = heat = bad for 3D print</figcaption>
+
+    <img src="/articles/flight-tracker/IMG_8450.JPG">
+
+    <figcaption>... = thicker mount and 100% infill</figcaption>
+
+    <p>
+        With the deformation of the 3D print, I began to get concerned about the thermal performance of the Pi and SDR.
+        I mounted the Pi in a fan case and proceeded to mount a CPU cooler to the SDR.
+    </p>
+
+    <img src="/articles/flight-tracker/IMG_8437.JPG">
+
+    <figcaption>Some of the heat-conducting material in the electrical box. Thermal paste was also used.</figcaption>
+
+    <img src="/articles/flight-tracker/IMG_8440.JPG">
+
+    <figcaption>CPU cooler mounted to box. Totally overkill and I'm all for it.</figcaption>
+
+    <img src="/articles/flight-tracker/IMG_8453.JPG">
+
+    <figcaption>Fully cooled system. The Pi can be seen towards the bottom of the image.</figcaption>
+
+
+</body>
+
+</html>

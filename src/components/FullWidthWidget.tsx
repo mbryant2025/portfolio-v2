@@ -6,10 +6,12 @@ interface FullWidthWidgetProps {
     children: React.ReactNode;
 }
 
-const FullWidthWidget: React.FC<FullWidthWidgetProps> = ( {children} ) => {
+const FullWidthWidget: React.FC<FullWidthWidgetProps> = ({ children }) => {
     return (
         <div className="full-widget">
-            {children}
+            <div className="content">
+                {children}
+            </div>
         </div>
     );
 };
