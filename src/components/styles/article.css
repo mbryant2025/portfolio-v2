@@ -1,0 +1,67 @@
+.articleTitle {
+    font-size: 60px;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.tableOfContentsColumn {
+    float: left;
+    width: auto;
+}
+
+.articleColumn {
+    width: 93%;
+    float: right;
+}
+
+.articleContent h2 {
+    font-size: 42px;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    text-align: center;
+}
+
+.articleContent p {
+    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.articleContent img {
+    width: 50%;
+    height: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    /* center horizontally */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tableOfContents {
+    position: fixed;
+    font-size: 26px;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    text-align: left;
+    margin-top: 50px;
+    margin-left: -20px;
+}
+
+.tableOfContentsColumn li {
+    margin-bottom: 20px;
+}
+
+.tableOfContentsColumn li:hover {
+    font-weight: bold;
+}
+
+
+a:link {
+    text-decoration: none !important;
+}

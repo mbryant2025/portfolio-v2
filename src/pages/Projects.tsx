@@ -77,8 +77,6 @@ const Projects: React.FC<ProjectsProps> = ({ filter }) => {
 
     const peekImage = peekCommonPathPrefix + selectedPeek + peekExtension
 
-    console.log(filteredWidgets)
-
     return (
         <div>
             <BackButton />
