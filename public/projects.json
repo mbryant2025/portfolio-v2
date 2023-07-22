@@ -261,7 +261,7 @@
     {
       "title": "Pointillism",
       "subtitle": "Genetic algorithm to approximate images with circles",
-      "link": "https://www.google.com",
+      "link": "https://github.com/mbryant2025/Pointillism",
       "image": "pointillism.png",
       "peek": [
         "python"
