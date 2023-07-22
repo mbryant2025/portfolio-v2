@@ -400,6 +400,15 @@
       ]
     },
     {
+      "title": "Digits Bot",
+      "subtitle": "Solver for New York Times Digits game",
+      "link": "https://www.google.com",
+      "image": "digits.png",
+      "peek": [
+        "python"
+      ]
+    },
+    {
       "title": "Mandelbrot Generator",
       "subtitle": "Generates images of the Mandelbrot set",
       "link": "https://www.google.com",
