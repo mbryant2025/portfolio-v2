@@ -14,9 +14,12 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v2
+      - name: Install dependencies and build
+        run: |
+          yarn install
+          yarn build
       - name: Deploy
         env:
           CI: false
         run: |
-          yarn install
-          yarn run gh-pages -d build -t ${{ secrets.GITHUB_TOKEN }}
+          yarn run gh-pages -d ./build -t ${{ secrets.GITHUB_TOKEN }}
