@@ -411,7 +411,7 @@
     {
       "title": "Mandelbrot Generator",
       "subtitle": "Generates images of the Mandelbrot set",
-      "link": "https://www.google.com",
+      "link": "https://github.com/mbryant2025/mandelbrot",
       "image": "mandelbrot.png",
       "peek": [
         "python"
