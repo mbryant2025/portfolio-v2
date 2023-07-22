@@ -62,7 +62,7 @@
     {
       "title": "Vision Guided Robot",
       "subtitle": "Autonomous obstacle avoidance",
-      "link": "https://www.google.com",
+      "link": "https://github.com/mbryant2025/Vision_Guided_Robot",
       "image": "vision-guided-robot.JPG",
       "peek": [
         "python",
@@ -75,7 +75,7 @@
     {
       "title": "Plane GAN",
       "subtitle": "GAN to generate images of planes",
-      "link": "https://www.google.com",
+      "link": "https://github.com/mbryant2025/plane_gan",
       "image": "plane-gan.png",
       "peek": [
         "python",
@@ -85,7 +85,7 @@
     {
       "title": "PyEquations",
       "subtitle": "Python Package for solving a lot of equations with a lot of unknowns",
-      "link": "https://www.google.com",
+      "link": "https://github.com/mbryant2025/PyEquations",
       "image": "pyequations.png",
       "peek": [
         "python",
@@ -95,7 +95,7 @@
     {
       "title": "michaelcbryant.com",
       "subtitle": "You're looking at it!",
-      "link": "https://www.google.com",
+      "link": "https://www.michaelcbryant.com",
       "image": "website.png",
       "peek": [
         "react",
@@ -150,7 +150,7 @@
     {
       "title": "Step Stats",
       "subtitle": "iOS app to plot workouts and calculate statistics",
-      "link": "https://www.google.com",
+      "link": "https://github.com/mbryant2025/Step-Stats",
       "image": "step-stats.PNG",
       "peek": [
         "swift"
@@ -191,7 +191,7 @@
     {
       "title": "Banagrams Bot",
       "subtitle": "I would never have thought of these monster words",
-      "link": "https://www.google.com",
+      "link": "https://github.com/mbryant2025/BananaBot",
       "image": "banana.JPG",
       "peek": [
         "rust"
