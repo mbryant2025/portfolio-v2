@@ -1,32 +1,24 @@
-name: Deploy to Branch
+name: Github Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+  workflow_dispatch:
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build React app
-        run: npm run build
-
-      - name: Deploy to Branch
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
-          branch: deployment
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v2
+      - name: Deploy
+        run: |
+          yarn install
+          git config --global user.email 'github-actions@github.com'
+          git config --global user.name 'github-actions'
+          git remote set-url origin https://${{ secrets.PAT }}@github.com/username/repository.git
+          CI=false && yarn deploy
