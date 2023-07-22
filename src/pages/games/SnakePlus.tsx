@@ -1,5 +1,5 @@
 // import React, { useState, useEffect, useCallback } from "react";
-// import BackButton from '../../components/BackButton';
+import BackButton from '../../components/BackButton';
 // import '../../components/styles/snake.css'
 
 import React from 'react';
@@ -138,8 +138,8 @@ const SnakePlus: React.FC = () => {
 
     return (
         <div>
-            {/* <BackButton />
-            <div className="App">
+            <BackButton />
+            {/* <div className="App">
                 <h1 className="title">Snake+</h1>
                 <div className="score">{`Score: ${score}`}</div>
                 <div className="game-board">
