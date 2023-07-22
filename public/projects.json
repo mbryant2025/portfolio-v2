@@ -6,7 +6,7 @@
     {
       "title": "Flight Tracker",
       "subtitle": "Ground plane antenna and SDR to decode ADS-B transmissions, locally hosted WAN server",
-      "link": "/projects/test",
+      "link": "/projects/flight-tracker",
       "image": "flight-tracker.png",
       "peek": [
         "python",
@@ -38,7 +38,7 @@
     {
       "title": "Ball Balancing Robot",
       "subtitle": "Computer vision ball tracking, dual PID controllers",
-      "link": "https://www.google.com",
+      "link": "/projects/ball-balancing-robot",
       "image": "ball-balancing.png",
       "peek": [
         "cc",

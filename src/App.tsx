@@ -57,7 +57,8 @@ const App: React.FC = () => {
         <Route path="/projects/milling" element={<Projects filter={ "metalworking" }/>} />
         <Route path="/projects/lathes" element={<Projects filter={ "metalworking" }/>} />
 
-        <Route path="/projects/test" element={<TechnicalArticle htmlFilePath= { "/articles/flight-tracker/flight-tracker.html" } />} />
+        <Route path="/projects/flight-tracker" element={<TechnicalArticle htmlFilePath= { "/articles/flight-tracker/flight-tracker.html" } />} />
+        <Route path="/projects/ball-balancing-robot" element={<TechnicalArticle htmlFilePath= { "/articles/ball-balancing-robot/ball-balancing-robot.html" } />} />
 
         <Route path="/games" element={<Games />} />
         <Route path="/games/snake-plus" element={<SnakePlus />} />
