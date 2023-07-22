@@ -18,7 +18,7 @@ jobs:
           node-version: '14'
 
       - name: Install dependencies
-        run: npm cache clean --force && npm install
+        run: npm cache clean --force && rm -rf node_modules && rm package-lock.json && npm install
 
       - name: Build the React app
         run: npm run build
