@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- <link href="mainLayout.css" rel="stylesheet" type="text/css">
+        <script src="static-aircraft.js"></script>
+        <link href="static-aircraft.css" rel="stylesheet" type="text/css">
+        <link href="../navbar.css" rel="stylesheet" type="text/css"> -->
+
+    <title>Flight Tracker</title>
+
+    <style>
+        body {
+            background-color: black;
+        }
+
+        .wrapper {
+            display: grid;
+            grid-template-columns: 67% 33%;
+        }
+
+        .wrapper>div {
+            padding: 1em;
+        }
+
+        .wrapper>div:nth-child(even) {
+            z-index: -2;
+        }
+
+        .writeupWrapper {
+            display: grid;
+        }
+
+        .writeupWrapper>div {
+            padding: 1em;
+        }
+
+        .writeupWrapper>div:nth-child(even) {
+            z-index: -2;
+        }
+
+        canvas {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            z-index: -1;
+        }
+
+        .infobox {
+            outline-style: round;
+            background-color: #212121;
+            border-radius: 14px;
+            width: 68%;
+            margin: auto;
+            display: block;
+            overflow: auto;
+            min-height: 200px;
+            margin-top: 25px;
+            font-family: 'Courier New', Courier, monospace;
+            color: white;
+        }
+
+        .infoboxFull {
+            outline-style: round;
+            background-color: #212121;
+            border-radius: 14px;
+            width: 68%;
+            margin: auto;
+            display: block;
+            overflow: auto;
+            min-height: 200px;
+            margin-top: 25px;
+            font-family: 'Courier New', Courier, monospace;
+            color: white;
+        }
+
+        .infobox:hover {
+            background-color: #2d2d2d;
+        }
+
+        .projectTitle {
+            font-size: 30px;
+        }
+
+        .description {
+            font-size: 18px;
+        }
+
+        #planeImage {
+            max-width: 180px;
+            max-height: 180px;
+            margin-top: 50px;
+            float: right;
+        }
+
+        h1 {
+            font-family: 'Courier New', Courier, monospace;
+            color: white;
+            position: relative;
+            font-size: 60px;
+            text-align: center;
+        }
+
+        h5 {
+            font-family: 'Courier New', Courier, monospace;
+            color: white;
+            position: relative;
+            margin-top: 0px;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .divColumnSmall {
+            width: 35%;
+            float: left;
+        }
+
+        .divColumnBig {
+            padding: 14px;
+            width: 55%;
+            float: left;
+        }
+
+        .projectWriteup {
+            padding: 14px;
+            font-size: 18px;
+            text-align: justify;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        a:link,
+        a:visited {
+            color: white;
+        }
+
+        a:hover {
+            color: white;
+        }
+
+        .projectImage {
+            max-width: 180px;
+            max-height: 180px;
+            margin-top: 10px;
+            float: right;
+        }
+
+        .backButton {
+            background-color: black;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            position: absolute;
+            font-size: 70px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .writeupImage {
+            max-width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 15px;
+            display: block;
+        }
+
+        .imageDescription {
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .secondHeading {
+            margin-top: 80px;
+            font-size: 60px;
+            margin-bottom: 0px;
+        }
+
+        .firstHeading {
+            font-size: 60px;
+            margin-bottom: 0px;
+        }
+
+        .video {
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            margin-bottom: 50px;
+        }
+
+        @media only screen and (max-width: 760px) {
+            #cube {
+                display: none;
+            }
+
+            #tetrahedron {
+                display: none;
+            }
+
+            #dodecahedron {
+                display: none;
+            }
+
+            .wrapper {
+                grid-template-columns: 100% 0%;
+            }
+
+            .infobox {
+                width: 95%;
+            }
+        }
+
+        @media (not(max-resolution: 1dppx)) {
+            #cube {
+                display: none;
+            }
+
+            #tetrahedron {
+                display: none;
+            }
+
+            #dodecahedron {
+                display: none;
+            }
+
+            .wrapper {
+                grid-template-columns: 100% 0%;
+            }
+
+            .infobox {
+                width: 95%;
+            }
+        }
+
+        .githubIcon {
+            margin-top: 10px;
+            max-width: 65px;
+            max-height: 65px;
+            position: inline-block;
+        }
+
+        .githubIconWrapper {
+            display: grid;
+            grid-template-columns: 10% 80% 10%;
+        }
+
+        .titleWrapper {
+            display: grid;
+            grid-template-columns: 10% 80% 10%;
+        }
+
+        body {
+            background-color: black;
+            margin-bottom: 630px;
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+            position: absolute;
+            top: 77%;
+            left: 8px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        .slider.round {
+            border-radius: 34px;
+        }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
+
+        input:checked+.slider {
+            background-color: #32a852;
+        }
+
+        input:checked+.slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+        }
+
+        .paragraph {
+            color: white;
+            font-family: 'Courier New', monospace;
+            font-size: 20px;
+            text-align: left;
+            position: absolute;
+        }
+
+        .paragraph1 {
+            top: 75.5%;
+            left: 75px;
+        }
+
+        .paragraph2 {
+            top: 76%;
+            right: 280px;
+        }
+
+        .paragraph3 {
+            top: 76%;
+            right: 20px;
+        }
+
+        .paragraph4 {
+            top: 80.7%;
+            right: 280px;
+        }
+
+        .activatedButton {
+            background-color: #32a852;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-family: 'Courier New', monospace;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            transition: 0.2s;
+            border-radius: 7px;
+        }
+
+        .neutralButton {
+            background-color: #ccc;
+            border: none;
+            color: black;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-family: 'Courier New', monospace;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            transition: 0.2s;
+            border-radius: 7px;
+        }
+
+        .neutralButton:hover {
+            background-color: #32a852;
+            color: white;
+        }
+
+        .activatedButton:hover {
+            background-color: #36d661;
+            color: white;
+        }
+
+        .square {
+            height: 5%;
+            width: 200px;
+            position: absolute;
+        }
+
+        .gradient {
+            top: 76.5%;
+            right: 75px;
+            background-image: linear-gradient(to right, white, blue);
+        }
+
+        .solid {
+            top: 81.5%;
+            right: 75px;
+            background-color: #32a852;
+        }
+
+        #table th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #32a852;
+            color: white;
+            font-family: 'Courier New', monospace;
+        }
+
+        #table td,
+        #table th {
+            padding: 8px;
+            color: white;
+            font-family: 'Courier New', monospace;
+        }
+
+        #table tr:hover {
+            background-color: #2e2d2d;
+        }
+
+        #table {
+            margin-right: auto;
+            margin-left: auto;
+            width: 90%;
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+
+        #iframe-container {
+            margin-left: -8px;
+        }
+
+        #map {
+            height: 600px;
+            position: absolute;
+            top: 50px
+        }
+
+        .infoboxTable {
+            outline-style: round;
+            background-color: #212121;
+            border-radius: 14px;
+            width: 95%;
+            margin: auto;
+            display: block;
+            overflow: auto;
+            min-height: 200px;
+            margin-top: 25px;
+            position: relative;
+            top: 675px;
+        }
+
+        #buttonWrapper {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+
+        .buttonSpacer {
+            display: flex;
+            justify-content: center;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(33, 33, 33);
+            background-color: rgba(33, 33, 33, 0.4);
+        }
+
+        .modal-content {
+            background-color: #ccc;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid black;
+            width: 35%;
+            margin-top: 100px;
+        }
+
+        .close {
+            color: black;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        #popupTitle {
+            font-family: 'Courier New', monospace;
+            font-size: 40px;
+            text-align: center;
+            color: black;
+        }
+
+        .popupText {
+            font-family: 'Courier New', monospace;
+            font-size: 20px;
+            text-align: center;
+            color: black;
+        }
+
+        @media only screen and (max-width: 760px) {
+            #iframe-container {
+                display: none;
+            }
+
+            #updateToggle {
+                display: none;
+            }
+
+            #square {
+                display: none;
+            }
+
+            .infoboxTable {
+                top: 20px;;
+            }
+        }
+    </style>
+
+    <script>
+        window.onload = function () {
+
+            var recordBtn = document.getElementById("recordButton");
+            recordBtn.addEventListener("click", showRecords);
+
+            var recordBtn = document.getElementById("liveButton");
+            recordBtn.addEventListener("click", showLive);
+
+            var modal = document.getElementById("popup");
+            var span = document.getElementsByClassName("close")[0];
+
+            loadLiveAircraft();
+
+            modal.style.display = "block";
+
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+
+        }
+
+        function readTextFile(file, callback) {
+            var rawFile = new XMLHttpRequest();
+            rawFile.overrideMimeType("application/json");
+            rawFile.open("GET", file, true);
+            rawFile.onreadystatechange = function () {
+                if (rawFile.readyState === 4 && rawFile.status == "200") {
+                    callback(rawFile.responseText);
+                }
+            }
+            rawFile.send(null);
+        }
+
+        function showRecords() {
+            document.getElementById("recordButton").classList.add('activatedButton');
+            document.getElementById("recordButton").classList.remove('neutralButton');
+
+            document.getElementById("liveButton").classList.add('neutralButton');
+            document.getElementById("liveButton").classList.remove('activatedButton');
+
+            loadRecordAircraft()
+        }
+
+        function showLive() {
+            document.getElementById("liveButton").classList.add('activatedButton');
+            document.getElementById("liveButton").classList.remove('neutralButton');
+
+            document.getElementById("recordButton").classList.add('neutralButton');
+            document.getElementById("recordButton").classList.remove('activatedButton');
+
+            loadLiveAircraft()
+        }
+
+        function loadRecordAircraft() {
+
+            var table = document.getElementById("table");
+
+            table.innerHTML = "<tbody><tr><th>Record</th><th>Metric</th><th>Flight Number</th><th>Timestamp</th><th>Available on Map</th></tr><tr><td>Max Speed</td><td>748.9 mph</td><td>DAL185  </td><td>06/26/2022 15:10:23</td><td>Yes</td></tr><tr><td>Min Speed</td><td>1.2 mph</td><td>N145HH  </td><td>06/13/2022 17:18:40</td><td>Yes</td></tr><tr><td>Max Altitude</td><td>54875'</td><td>Unavailable</td><td>06/11/2022 09:36:28</td><td>No</td></tr><tr><td>Min Altitude</td><td>75'</td><td>Unavailable</td><td>06/06/2022 19:51:45</td><td>No</td></tr><tr><td>Max Distance</td><td>266.0509 miles</td><td>AFR027  </td><td>06/21/2022 22:29:31</td><td>Yes</td></tr><tr><td>Min Distance</td><td>0.0202 miles</td><td>N20272  </td><td>06/15/2022 18:17:54</td><td>Yes</td></tr></tbody></table>";
+
+
+        }
+
+        function loadLiveAircraft() {
+
+            var table = document.getElementById("table");
+
+            for (let i = table.rows.length - 1; i > 0; i--) {
+                table.deleteRow(i);
+            }
+
+            var headers = document.getElementsByTagName('th');
+            headers[0].innerHTML = '#';
+            headers[1].innerHTML = 'Flight Number';
+            headers[2].innerHTML = 'Speed';
+            headers[3].innerHTML = 'Altitude';
+            headers[4].innerHTML = 'Available on Map';
+
+            readTextFile("static-aircraft.json", function (text) {
+                var data = JSON.parse(text);
+                var aircraft = data.data;
+
+                for (let i = 0; i < aircraft.length; i++) {
+                    let row = table.insertRow(i + 1);
+
+                    let cell1 = row.insertCell(0);
+                    let cell2 = row.insertCell(1);
+                    let cell3 = row.insertCell(2);
+                    let cell4 = row.insertCell(3);
+                    let cell5 = row.insertCell(4);
+
+                    let number = i + 1;
+                    let flightNumber = aircraft[i].flight != null ? aircraft[i].flight : "Unavailable";
+                    let speed = aircraft[i].speed != null ? aircraft[i].speed : "Unavailable";
+                    let altitude = aircraft[i].alt != 'Unavailable' ? aircraft[i].alt + ' ft' : "Unavailable";
+                    let availableOnMap = aircraft[i].pos != "" ? "Yes" : "No";
+
+                    cell1.innerHTML = number;
+                    cell2.innerHTML = flightNumber;
+                    cell3.innerHTML = speed;
+                    cell4.innerHTML = altitude;
+                    cell5.innerHTML = availableOnMap;
+
+                }
+            });
+
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+
+    <div id="iframe-container">
+
+        <iframe src="static-map.html" width="100%" id="map" frameborder="0" height="600px"
+            style="top: 50px; visibility: visible;"></iframe>
+
+
+        <div class="infoboxTable">
+
+            <div id="buttonWrapper">
+                <div>
+                    <div class="buttonSpacer">
+                        <button id="liveButton" class="activatedButton">Live Aircraft</button>
+                    </div>
+                </div>
+                <div>
+                    <div class="buttonSpacer">
+                        <button id="recordButton" class="neutralButton">Record Book</button>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <table id="table">
+                    <tbody>
+                        <tr>
+                            <th>#</th>
+                            <th>Flight Number</th>
+                            <th>Speed</th>
+                            <th>Altitude</th>
+                            <th>Available on Map</th>
+                        </tr>
+
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+        <div id="popup" class="modal" style="display: none;">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p id="popupTitle">Flight Tracker</p>
+                <p class="popupText">Planes are plotted in <span style="color: #FF8C00">orange</span></p>
+                <p class="popupText">Higher planes have <span style="color: #0000FF">blue</span> paths</p>
+                <p class="popupText">Lower planes have <span style="color: #FFFFFF">white</span> paths</p>
+                <p class="popupText">Record planes are in <span style="color: #32A851">green</span></p>
+
+                <p class="popupText"><br>Hover over a plane for more information</p>
+                <p class="popupText">**Notice: The server is not currently running; the data is static from Sept. 22,
+                    2022**</p>
+            </div>
+        </div>

@@ -19,7 +19,7 @@
         It utilizes a webcam mounted above the ball and OpenCV to determine the position of the ball.
         This information is then sent over serial to an Arduino Nano on the robot where two PID loops are run (one for x and one for y).
         The microcontroller then uses the output of these PID controllers to drive the servo motors with a PCA9685 servo driver.
-        All of the software for this project is written in C++.
+        All of the software for this project was (eventually) written in C++.
     </p>
     
     <img src="/articles/ball-balancing-robot/ballBalancing.png" style="max-height: 400px; width: auto;">
@@ -94,12 +94,12 @@
     <figcaption>Building OpenCV on the Raspberry Pi and the subsequent realization of the less-than-optimal execution speed of the entire Python program 
         (though for this I mainly blame the capture time of the PiCamera)</figcaption>
 
-    <h2>Video</h2>
-
     <img src="/articles/ball-balancing-robot/IMG_8274.JPG">
 
     <figcaption>Many months later... Pi is replaced by Arduino and vision processing transitioned to PC with USB webcam.</figcaption>
     
+    <h2>Video</h2>
+
     <iframe width="560" height="315" src="https://www.youtube.com/embed/vCGubZ74fSc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
     <figcaption>Final product after rewriting software and inadequately tuning PID loop</figcaption>
