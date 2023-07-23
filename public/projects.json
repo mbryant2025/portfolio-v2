@@ -85,7 +85,7 @@
     {
       "title": "PyEquations",
       "subtitle": "Python Package for solving a lot of equations with a lot of unknowns",
-      "link": "https://github.com/mbryant2025/PyEquations",
+      "link": "/projects/pyequations",
       "image": "pyequations.png",
       "peek": [
         "python",

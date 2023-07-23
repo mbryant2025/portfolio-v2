@@ -59,6 +59,9 @@ const App: React.FC = () => {
 
         <Route path="/projects/flight-tracker" element={<TechnicalArticle htmlFilePath= { "/articles/flight-tracker/flight-tracker.html" } />} />
         <Route path="/projects/ball-balancing-robot" element={<TechnicalArticle htmlFilePath= { "/articles/ball-balancing-robot/ball-balancing-robot.html" } />} />
+        <Route path="/projects/pyequations" element={<TechnicalArticle htmlFilePath={ "/articles/pyequations/pyequations.html" } />} />
+        {/* ADD-ARTICLE-HERE */}
+        {/* See article-build.sh -- automatically generates routes for articles */}
 
         <Route path="/games" element={<Games />} />
         <Route path="/games/snake-plus" element={<SnakePlus />} />
