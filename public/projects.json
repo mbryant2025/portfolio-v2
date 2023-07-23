@@ -62,7 +62,7 @@
     {
       "title": "Vision Guided Robot",
       "subtitle": "Autonomous obstacle avoidance",
-      "link": "https://github.com/mbryant2025/Vision_Guided_Robot",
+      "link": "/projects/vision-guided-robot",
       "image": "vision-guided-robot.JPG",
       "peek": [
         "python",
@@ -105,7 +105,7 @@
     {
       "title": "Satellite Antenna",
       "subtitle": "Receives and decodes broadcatsts from NOAA weather satellites",
-      "link": "https://www.google.com",
+      "link": "/projects/satellite-antenna",
       "image": "noaa.jpg",
       "peek": [
         "electronics-design",

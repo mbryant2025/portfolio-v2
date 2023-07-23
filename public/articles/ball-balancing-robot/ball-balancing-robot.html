@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flight Tracker</title>
+    <title>Ball Balancing Robot</title>
     <subtitle>August 2021, June 2022</subtitle>
     <github>https://github.com/mbryant2025/BallBalancingRobot</github>
 </head>
@@ -14,6 +14,95 @@
 
     <h2>Overview</h2>
 
+    <p>
+        This robot balances a ping pong ball on a platform. 
+        It utilizes a webcam mounted above the ball and OpenCV to determine the position of the ball.
+        This information is then sent over serial to an Arduino Nano on the robot where two PID loops are run (one for x and one for y).
+        The microcontroller then uses the output of these PID controllers to drive the servo motors with a PCA9685 servo driver.
+        All of the software for this project is written in C++.
+    </p>
+    
+    <img src="/articles/ball-balancing-robot/ballBalancing.png" style="max-height: 400px; width: auto;">
+
+    <h2>Build Process</h2>
+
+    <p>
+        The majority of this project was completed in August 2021. 
+        The entirety of the software, namely the PID controller and vision processing, was written in Python and computed on a Raspberry Pi 3A+. 
+        Upon testing the near-complete robot, it was concluded that the capture speed of the PiCamera was too slow for the update speed needed to keep the ball balanced. 
+        The project was pushed aside until June 2022 when the software was entirely rewritten in C++ to utilize a webcam in order to achieve significantly higher refresh rates.
+    </p>
+
+    <img src="/articles/ball-balancing-robot/IMG_4090.JPG">
+
+    <figcaption>Testing a custom ball and socket joint for the platform to pivot on. This was definitely the first attempt.</figcaption>
+
+    <img src="/articles/ball-balancing-robot/IMG_4136.JPG">
+
+    <figcaption>3D Printing the base of the robot</figcaption>
+
+    <img src="/articles/ball-balancing-robot/IMG_4092.JPG">
+
+    <figcaption>3D printing the platform</figcaption>
+
+    <img src="/articles/ball-balancing-robot/IMG_4139.JPG">
+
+    <figcaption>Mocking up the electronics</figcaption>
+
+    <p>
+        The plan for the robot was to have three modes, switched by the white push button. 
+        The first mode balanced the ball in the center, the next mode moved the ball in a circle by continuously changing the setpoint, 
+        and the third mode would allow the user to change the setpoint with a joystick. 
+        These modes were indicated by the red, green, and blue LEDs on the robot. 
+        Due to the lack of analog inputs on the Pi 3A+, I used a MCP3008 ADC to interface with the joystick.
+    </p>
+
+    <img src="/articles/ball-balancing-robot/IMG_4142.JPG">
+
+    <figcaption>Prototyping with MCP3008</figcaption>
+
+    <img src="/articles/ball-balancing-robot/IMG_4145.JPG">
+
+    <figcaption>Mock-up of circuit board layout</figcaption>
+
+    <img src="/articles/ball-balancing-robot/IMG_4148.JPG">
+
+    <figcaption>Soldered board</figcaption>
+
+    <img src="/articles/ball-balancing-robot/IMG_4150.JPG">
+
+    <figcaption>Near-complete electronics</figcaption>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/pkUkLaDjZns" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <figcaption>Testing servo control. The rubber bands serve to keep the platform square.</figcaption>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/cv1zAJrg9rM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <figcaption>Testing solder job</figcaption>
+
+    <img src="/articles/ball-balancing-robot/IMG_4160.JPG">
+
+    <figcaption>3D printing PiCamera mount. This is held above the platform by two steel rods.</figcaption>
+
+    <img src="/articles/ball-balancing-robot/IMG_4169.JPG">
+
+    <figcaption>Mounting PiCamera</figcaption>
+
+    <img src="/articles/ball-balancing-robot/IMG_4168.JPG">
+
+    <figcaption>Building OpenCV on the Raspberry Pi and the subsequent realization of the less-than-optimal execution speed of the entire Python program 
+        (though for this I mainly blame the capture time of the PiCamera)</figcaption>
+
+    <h2>Video</h2>
+
+    <img src="/articles/ball-balancing-robot/IMG_8274.JPG">
+
+    <figcaption>Many months later... Pi is replaced by Arduino and vision processing transitioned to PC with USB webcam.</figcaption>
+    
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/vCGubZ74fSc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <figcaption>Final product after rewriting software and inadequately tuning PID loop</figcaption>
 
 </body>
 

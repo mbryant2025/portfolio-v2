@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vision Guided Robot</title>
+    <subtitle>April 2021 - June 2021</subtitle>
+    <github>https://github.com/mbryant2025/Vision_Guided_Robot</github>
+</head>
+
+<body>
+
+    <h2>Overview</h2>
+
+    <p>
+        This robot drives autonomously through the use of a PiCamera and a CNN developed with TensorFlow. 
+        The robot is equipped with a Raspberry Pi Zero W that transmits images over SSH to a host PC. 
+        The images are run through the TensorFlow model and commands are returned to the robot.
+        The CNN was trained on a custom-made dataset of over 1,500 images and the resulting robot is near perfect at avoiding obstacles.
+    </p>
+
+    <img src="/articles/vision-guided-robot/visionRobot.JPG">
+
+    <h2>Build Process</h2>
+
+    <img src="/articles/vision-guided-robot/IMG_3755.JPG">
+
+    <figcaption>Mocking up the idea with Pi, battery pack, and chassis</figcaption>
+
+    <img src="/articles/vision-guided-robot/IMG_3767.JPG">
+
+    <figcaption>3D printing mount for camera</figcaption>
+
+    <img src="/articles/vision-guided-robot/IMG_3769.JPG">
+
+    <figcaption>Testing LEDs on the robot</figcaption>
+
+    <img src="/articles/vision-guided-robot/IMG_3770.JPG">
+
+    <figcaption>Printing mounts for the LEDs</figcaption>
+
+    <img src="/articles/vision-guided-robot/IMG_3771.JPG">
+
+    <figcaption>Testing LEDs in mounts</figcaption>
+
+    <img src="/articles/vision-guided-robot/IMG_3779.JPG">
+
+    <figcaption>Added 3D printed parts, Micro-B breakout for power connection, and L298D motor driver to mockup</figcaption>
+
+    <img src="/articles/vision-guided-robot/IMG_3780.JPG">
+
+    <figcaption>First wiring of the robot -- includes USB hub mounted to the bottom of the robot to split power to Pi and motor driver</figcaption>
+
+    <img src="/articles/vision-guided-robot/IMG_3809.JPG">
+
+    <figcaption>Establishing SSH connection between computers. The Pi Zero W does not have sufficient computational power for this sort of vision processing, so I decided that the robot would perform best if these heavy computations were performed remotely.</figcaption>
+
+    <img src="/articles/vision-guided-robot/IMG_3815.JPG">
+
+    <figcaption>Implementing SSH to send messages between Pi and PC</figcaption>
+
+    <img src="/articles/vision-guided-robot/IMG_3819.JPG">
+
+    <figcaption>Sending an image (Numpy array) over the SSH connection using the Python Socket and Pickle libraries</figcaption>
+
+    <img src="/articles/vision-guided-robot/IMG_3832.JPG">
+
+    <figcaption>Robot wiring entirely soldered. This includes soldering all of the headers onto the Pi.</figcaption>
+
+    <img src="/articles/vision-guided-robot/IMG_3917.JPG">
+
+    <figcaption>3D printing a better mount for the battery pack</figcaption>
+
+    <img src="/articles/vision-guided-robot/IMG_4032.JPG">
+
+    <figcaption>Added a live view of the images on the PC</figcaption>
+
+    <p>
+        After having the physical construction and basic software complete, next came developing the machine learning model.
+        The goal of the vision processing is to determine if the robot is blocked or not. So, for this classification problem, I went with a CNN.
+        I chose my network to have 3 layers, of size 76,800 (320 * 240 -- the image size), 100, and 2. The output neurons correspond with 'blocked' and 'open.'
+        I went with this simple neural structure because differentiating 'blocked' from 'open' is a rather simple classification problem, with only 2 categories and a relatively stark difference between the two.
+    </p>
+
+    <p>
+        Next, I wrote a quick program on the robot to systematically take images to build a dataset. 
+        This amassed over 1,500 labeled images.
+    </p>
+
+    <p>
+        The model was trained over 5 epochs. The model was simple enough to do on my CPU -- training time was under 10 minutes. Not very often do I see all 16 threads of my CPU fully maxed out...
+    </p>
+
+    <img src="/articles/vision-guided-robot/image2804.png">
+
+    <figcaption>Sample 'blocked' image</figcaption>
+
+    <img src="/articles/vision-guided-robot/image3354.png">
+
+    <figcaption>Sample 'open' image</figcaption>
+
+    <h2>Video</h2>
+
+    <p>
+        The resulting robot worked great! Whenever it encountered a 'blocked' image, it was programmed to turn around in a random direction.
+        Additionally, the headlights enable when the brightness of the image is below a threshold.
+        Between the PiCamera, SSH, and CNN, the robot executes commands approximately every 0.5 seconds.
+    </p>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/o4q2jD7HNac" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <img src="/articles/vision-guided-robot/visionRobot.JPG">
+
+    <figcaption>The Final Robot</figcaption>
+
+</body>
+
+
+
+</html>
