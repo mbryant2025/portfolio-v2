@@ -200,7 +200,7 @@
     {
       "title": "Slogo",
       "subtitle": "Logo IDE and playground; for Duke CS308",
-      "link": "https://www.google.com",
+      "link": "/projects/slogo",
       "image": "slogo.png",
       "peek": [
         "java"
@@ -232,7 +232,7 @@
     {
       "title": "Cell Society",
       "subtitle": "Simulates various cellular automata; for Duke CS308",
-      "link": "https://www.google.com",
+      "link": "/projects/cell-society",
       "image": "cell-society.png",
       "peek": [
         "java"
