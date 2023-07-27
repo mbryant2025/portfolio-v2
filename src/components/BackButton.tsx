@@ -3,7 +3,13 @@ import './styles/back.css';
 
 const BackButton: React.FC = () => {
   const handleGoBack = () => {
-    window.history.back();
+    // Check if the previous URL contains "michaelcbryant.com"
+    if (document.referrer.includes('michaelcbryant.com')) {
+      window.history.back();
+    } else {
+      // Redirect to the root of your React Router
+      window.location.href = '/';
+    }
   };
 
   return (
@@ -14,4 +20,3 @@ const BackButton: React.FC = () => {
 };
 
 export default BackButton;
-
