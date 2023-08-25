@@ -4,7 +4,8 @@ import './styles/back.css';
 const BackButton: React.FC = () => {
   const handleGoBack = () => {
     // Check if the previous URL contains "michaelcbryant.com"
-    if (document.referrer.includes('michaelcbryant.com')) {
+    console.log(document.referrer)
+    if (document.referrer.includes('michaelcbryant.com') || document.referrer.includes('localhost')) {
       window.history.back();
     } else {
       // Redirect to the root of your React Router

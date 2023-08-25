@@ -26,14 +26,14 @@
         "start_year": 2019
       },
       {
-        "name": "bash",
-        "category": "software",
-        "start_year": 2020
-      },
-      {
         "name": "docker",
         "category": "software",
         "start_year": 2021
+      },
+      {
+        "name": "bash",
+        "category": "software",
+        "start_year": 2020
       },
       {
         "name": "raspberry-pi",

@@ -75,7 +75,7 @@
     {
       "title": "Plane GAN",
       "subtitle": "GAN to generate images of planes",
-      "link": "https://github.com/mbryant2025/plane_gan",
+      "link": "/projects/plane-gan",
       "image": "plane-gan.png",
       "peek": [
         "python",

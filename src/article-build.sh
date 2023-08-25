@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo NOTE: should be run from project root
+
 # Prompt the user for a name
 echo "What is the name of the article? (file name, no spaces)"
 
@@ -22,7 +24,7 @@ new_line="        <Route path=\"/projects/$(printf "%q" "$name")\" element={<Tec
 # Escape double quotes in the new_line
 escaped_new_line=$(printf "%s\n" "$new_line" | sed 's/"/\\&/g')
 
-# Use awk to insert the new line above the "ADD-ARTICLE-HERE" comment
+# Insert the new line above the "ADD-ARTICLE-HERE" comment
 awk -v line="$escaped_new_line" '/ADD-ARTICLE-HERE/ {print line} 1' "$react_code_file" > temp_file
 mv temp_file "$react_code_file"
 
