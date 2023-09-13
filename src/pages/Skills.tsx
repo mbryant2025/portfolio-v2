@@ -4,6 +4,7 @@ import SkillsTable from '../components/SkillsTable';
 import BackButton from '../components/BackButton';
 import '../components/styles/skills.css'
 import FullWidthWidget from '../components/FullWidthWidget';
+import Socials from '../components/Socials';
 
 
 const Skills: React.FC = () => {
@@ -13,6 +14,8 @@ const Skills: React.FC = () => {
       <BackButton />
       <ScrollableWidgetPanel title='Michael Bryant'>
         <img src={"/img/michael.jpg"} alt={"Michael Bryant"} className="michael" />
+        <Socials />
+
         <FullWidthWidget>
           <SkillsTable />
         </FullWidthWidget>
