@@ -72,7 +72,7 @@
     {
       "title": "PatientWatch",
       "subtitle": "Remotely monitors patient vitals and alerts for emergencies",
-      "link": "/projects/patientwatch",
+      "link": "/projects/patient-watch",
       "image": "PatientWatch.png",
       "peek": [
         "python",
