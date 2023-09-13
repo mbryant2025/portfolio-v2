@@ -60,16 +60,29 @@
       ]
     },
     {
-      "title": "Vision Guided Robot",
-      "subtitle": "Autonomous obstacle avoidance",
-      "link": "/projects/vision-guided-robot",
-      "image": "vision-guided-robot.JPG",
+      "title": "PyEquations",
+      "subtitle": "Python Package for solving a lot of equations with a lot of unknowns",
+      "link": "/projects/pyequations",
+      "image": "pyequations.png",
       "peek": [
         "python",
-        "tensorflow",
+        "pypi"
+      ]
+    },
+    {
+      "title": "PatientWatch",
+      "subtitle": "Remotely monitors patient vitals and alerts for emergencies",
+      "link": "/projects/patientwatch",
+      "image": "PatientWatch.png",
+      "peek": [
+        "python",
         "opencv",
-        "raspberry-pi",
-        "3d-printing"
+        "flask",
+        "arduino",
+        "cc",
+        "js",
+        "html",
+        "css"
       ]
     },
     {
@@ -83,13 +96,26 @@
       ]
     },
     {
-      "title": "PyEquations",
-      "subtitle": "Python Package for solving a lot of equations with a lot of unknowns",
-      "link": "/projects/pyequations",
-      "image": "pyequations.png",
+      "title": "Spot the Spot",
+      "subtitle": "Automatically detects and tracks available parking spots",
+      "link": "https://www.google.com",
+      "image": "spot-the-spot.png",
       "peek": [
         "python",
-        "pypi"
+        "tensorflow",
+        "opencv",
+        "flask",
+        "raspberry-pi",
+        "3d-printing"
+      ]
+    },
+    {
+      "title": "OOGASalad",
+      "subtitle": "Multiplayer game editor and player; 11-person group for Duke CS308",
+      "link": "https://www.google.com",
+      "image": "oogasalad.png",
+      "peek": [
+        "java"
       ]
     },
     {
@@ -103,6 +129,19 @@
       ]
     },
     {
+      "title": "Vision Guided Robot",
+      "subtitle": "Autonomous obstacle avoidance",
+      "link": "/projects/vision-guided-robot",
+      "image": "vision-guided-robot.JPG",
+      "peek": [
+        "python",
+        "tensorflow",
+        "opencv",
+        "raspberry-pi",
+        "3d-printing"
+      ]
+    },
+    {
       "title": "Satellite Antenna",
       "subtitle": "Receives and decodes broadcatsts from NOAA weather satellites",
       "link": "/projects/satellite-antenna",
@@ -110,28 +149,6 @@
       "peek": [
         "electronics-design",
         "sdr"
-      ]
-    },
-    {
-      "title": "Spot the Spot",
-      "subtitle": "Automatically detects and tracks available parking spots",
-      "link": "https://www.google.com",
-      "image": "spot-the-spot.png",
-      "peek": [
-        "python",
-        "tensorflow",
-        "opencv",
-        "flask",
-        "raspberry-pi"
-      ]
-    },
-    {
-      "title": "OOGASalad",
-      "subtitle": "Multiplayer game editor and player; 11-person group for Duke CS308",
-      "link": "https://www.google.com",
-      "image": "oogasalad.png",
-      "peek": [
-        "java"
       ]
     },
     {
