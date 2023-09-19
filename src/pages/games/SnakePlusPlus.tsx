@@ -65,16 +65,14 @@ const SnakePlusPlus: React.FC = () => {
     const [apple, setApple] = useState(generateRandomApplePosition());
 
 
-    const handleStartGame = () => {
+    const handleStartGame = useCallback(() => {
         setScore(2);
         setDesiredLength(2);
-        setEnemyKillable(false);
         setSnake(initialSnake);
-        setEnemySnake(intialEnemySnake);
         setDirection(Direction.Right);
         setApple(generateRandomApplePosition());
         setStartGame(true);
-    };
+    }, [generateRandomApplePosition]);
 
     const moveSnake = useCallback(() => {
         const head = { ...snake[0] };
