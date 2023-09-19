@@ -14,8 +14,10 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Clean github pages
-      run: gh-pages-clean
+    - name: Switch to main branch
+      run: |
+        git checkout main
+        git pull origin main
 
 
     - name: Deploy react app to github pages
