@@ -26,7 +26,7 @@ window.addEventListener('resize', () => {
 
   debounceTimeout = setTimeout(() => {
     window.location.reload();
-  }, 50); // 50ms is a good debounce time
+  }, 50); // 50ms
 });
 
 // If you want to start measuring performance in your app, pass a function
