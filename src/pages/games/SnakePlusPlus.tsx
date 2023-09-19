@@ -72,6 +72,7 @@ const SnakePlusPlus: React.FC = () => {
         setDirection(Direction.Right);
         setApple(generateRandomApplePosition());
         setStartGame(true);
+        setEnemySnake(intialEnemySnake);
     }, [generateRandomApplePosition]);
 
     const moveSnake = useCallback(() => {
