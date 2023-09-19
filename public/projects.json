@@ -21,7 +21,7 @@
     {
       "title": "AUV Electrical Stack",
       "subtitle": "Electral system for Duke Robotics Club",
-      "link": "https://www.google.com",
+      "link": "https://duke-robotics.com",
       "image": "drc.jpg",
       "peek": [
         "electronics-design",
@@ -50,7 +50,7 @@
     {
       "title": "Acoustics Stack",
       "subtitle": "Underwater pinger localization for Duke Robotics Club",
-      "link": "https://www.google.com",
+      "link": "https://duke-robotics.com",
       "image": "acoustics-stack.png",
       "peek": [
         "ros",
@@ -98,7 +98,7 @@
     {
       "title": "Spot the Spot",
       "subtitle": "Automatically detects and tracks available parking spots",
-      "link": "https://www.google.com",
+      "link": "https://devpost.com/software/spot-the-spot",
       "image": "spot-the-spot.png",
       "peek": [
         "python",
@@ -212,6 +212,18 @@
       "image": "banana.JPG",
       "peek": [
         "rust"
+      ]
+    },
+    {
+      "title": "Blue Devil Horns",
+      "subtitle": "Network-synced LED horns for Duke Basketball games",
+      "link": "https://github.com/mbryant2025/blue_devil_horns",
+      "image": "horns.JPG",
+      "peek": [
+        "cc",
+        "arduino",
+        "linux",
+        "electronics-design"
       ]
     },
     {

@@ -31,13 +31,13 @@
         "start_year": 2021
       },
       {
-        "name": "bash",
-        "category": "software",
+        "name": "raspberry-pi",
+        "category": "electronics",
         "start_year": 2020
       },
       {
-        "name": "raspberry-pi",
-        "category": "electronics",
+        "name": "opencv",
+        "category": "software",
         "start_year": 2020
       },
       {
@@ -46,12 +46,12 @@
         "start_year": 2021
       },
       {
-        "name": "opencv",
+        "name": "c",
         "category": "software",
         "start_year": 2020
       },
       {
-        "name": "c",
+        "name": "bash",
         "category": "software",
         "start_year": 2020
       },
