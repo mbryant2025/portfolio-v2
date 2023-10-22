@@ -8,17 +8,100 @@
     <title>PyEquations</title>
     <subtitle>May 2022 - June 2022</subtitle>
     <github>https://github.com/mbryant2025/PyEquations</github>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+
 </head>
 
 <body>
 
-    <h2>SECTION-HEADING</h2>
+    <h2>Overview</h2>
 
-    <p>PARAGRAPH</p>
+    <p>PyEquations is a Python package for solving a bunch of equations with a bunch of unknowns. </p>
 
-    <img src="IMAGE">
+    <p>PyEquations maximally
+        solves with the given equations, functions, and variables.
 
-    <figcaption>CAPTION</figcaption>
+        You can simply dump all your equations and the known values; PyEquations will figure out the rest (including
+        units)!
+    </p>
+
+
+    <h2>Installation</h2>
+
+    <p>PyEquations can be installed using pip:</p>
+
+    <iframe frameborder=0 style="min-width: 200px; width: 60%; height: 160px;" scrolling="no" seamless="seamless"
+        srcdoc='<html><body><style type="text/css">.gist .gist-data { height: 40px;  width:100%;}</style><script
+         src="https://gist.github.com/mbryant2025/e72fc21a98472166e4432cf6b2c0370e.js"></script></body></html>'></iframe>
+
+
+    <h2>Example</h2>
+
+    <p>Suppose we are on top of a 100-meter tall building and we throw a ball up with an initial velocity of 3
+        meters/second. After how long does the ball hit the ground and with what velocity?</p>
+
+    <p>This is a simple problem if one has studied physics. Everything can be solved for using the kinematic equations
+        (of constant acceleration):</p>
+
+    <img src="/articles/pyequations/kin.png" style="border: 5px solid white; width: 30%; margin-bottom: -20px;">
+
+    <figcaption>Kinematic Equations of Motion</figcaption>
+
+    <p>Let's demonstrate how to solve this problem with PyEquations.</p>
+
+    <iframe frameborder=0 style="min-width: 200px; width: 80%; height: 960px;" scrolling="no" seamless="seamless"
+        srcdoc='<html><body><style type="text/css">.gist .gist-data { height: 900px; width:100%; }</style><script
+         src="https://gist.github.com/mbryant2025/98076d8444db37d21fa89662383e50b6.js"></script></body></html>'></iframe>
+
+
+    <p>Now, we can use the class to solve for a given set of known values.</p>
+
+    <iframe frameborder=0 style="min-width: 200px; width: 80%; height: 460px;" scrolling="no" seamless="seamless"
+        srcdoc='<html><body><style type="text/css">.gist .gist-data { height: 400px;  width:100%;}</style><script
+     src="https://gist.github.com/mbryant2025/5ba6259fdf1907c5d8d15081f25973c9.js"></script></body></html>'></iframe>
+
+    
+    <p>The output of this code is:</p>
+
+    <iframe frameborder=0 style="min-width: 200px; width: 80%; height: 160px;" scrolling="no" seamless="seamless"
+    srcdoc='<html><body><style type="text/css">.gist .gist-data { height: 60px; width:100%; }</style><script
+     src="https://gist.github.com/mbryant2025/769673b483b876bf33266805978da200.js"></script></body></html>'></iframe>
+
+
+    <p>And just like that, PyEquations figured out the rest of the unknowns for us.</p>
+
+    <p>But, if you look carefully at the output, you'll notice that there are two solution branches. PyEquations figured out that there are two possible solutions with the given equations and known values. One of them has negative time, which we do not want for out ball-off-building example.</p>
+
+    <p>Let's fix this problem while also showcasing another feature of PyEquations.</p>
+
+    <iframe frameborder=0 style="min-width: 200px; width: 80%; height: 460px;" scrolling="no" seamless="seamless"
+    srcdoc='<html><body><style type="text/css">.gist .gist-data { height: 400px; width:100%; }</style><script
+     src="https://gist.github.com/mbryant2025/5dc42020110cc654085b36ba8888b3a2.js"></script></body></html>'></iframe>
+
+
+    <p>The above code adds a parsing function that deletes the solution branch if the time is negative.    </p>
+
+    <p>Now, the output is:</p>
+
+    <iframe frameborder=0 style="min-width: 200px; width: 80%; height: 120px;" scrolling="no" seamless="seamless"
+    srcdoc='<html><body><style type="text/css">.gist .gist-data { height: 40px; width:100%; }</style><script
+     src="https://gist.github.com/mbryant2025/8bb81fab5ee27e241257386646f28936.js"></script></body></html>'></iframe>
+
+
+    <p>Now, we have only one solution, which is the correct one.</p>
+
+    <h2>More</h2>
+
+    <p>In addition to these basic features, there are many more advanced capabilities and checks performed by PyEquations. This includes recursive branching, solution validation and automatic branch deletion, and multi-level inheritance. </p>
+
+    <p>To see the full documentation of PyEquations, check out the github README by clicking the GitHub icon at the top right of the page.</p>
+
+    <p> Additionally, follow the GitHub link to find the PyPi page for PyEquations.</p>
+
+
 
 </body>
 

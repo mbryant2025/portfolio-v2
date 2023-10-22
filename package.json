@@ -13,8 +13,10 @@
     "@types/react-dom": "^18.2.5",
     "axios": "^1.4.0",
     "fs": "^0.0.1-security",
+    "mathjax": "^3.2.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-mathjax2": "^0.0.2",
     "react-router-dom": "^6.13.0",
     "react-scripts": "5.0.1",
     "styled-components": "^6.0.0-rc.3",
@@ -29,7 +31,7 @@
     "deploy": "gh-pages-clean gh-pages -d gh-pages",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-    },
+  },
   "eslintConfig": {
     "extends": [
       "react-app",

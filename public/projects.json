@@ -4,6 +4,21 @@
   "peekExtension": ".png",
   "widgetData": [
     {
+      "title": "Programmable Magna-Tiles",
+      "subtitle": "Custom C-like language and interpreter running on ESP32, BLE connection to React App",
+      "link": "/projects/programmable-magna-tiles",
+      "image": "littlearn.png",
+      "peek": [
+        "cc",
+        "react",
+        "typescript",
+        "css",
+        "arduino",
+        "electronics-design",
+        "3d-printing"
+      ]
+    },
+    {
       "title": "Flight Tracker",
       "subtitle": "Ground plane antenna and SDR to decode ADS-B transmissions, locally hosted WAN server",
       "link": "/projects/flight-tracker",
@@ -115,7 +130,8 @@
       "link": "https://www.google.com",
       "image": "oogasalad.png",
       "peek": [
-        "java"
+        "java",
+        "css"
       ]
     },
     {
@@ -232,7 +248,8 @@
       "link": "/projects/slogo",
       "image": "slogo.png",
       "peek": [
-        "java"
+        "java",
+        "css"
       ]
     },
     {
@@ -264,7 +281,8 @@
       "link": "/projects/cell-society",
       "image": "cell-society.png",
       "peek": [
-        "java"
+        "java",
+        "css"
       ]
     },
     {
