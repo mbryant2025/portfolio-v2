@@ -13,8 +13,9 @@
         "react",
         "typescript",
         "css",
-        "arduino",
         "electronics-design",
+        "bash",
+        "docker",
         "3d-printing"
       ]
     },
@@ -51,6 +52,29 @@
       ]
     },
     {
+      "title": "PyEquations",
+      "subtitle": "Python Package for solving a lot of equations with a lot of unknowns",
+      "link": "/projects/pyequations",
+      "image": "pyequations.png",
+      "peek": [
+        "python",
+        "pypi"
+      ]
+    },
+    {
+      "title": "Acoustics Stack",
+      "subtitle": "Underwater pinger localization for Duke Robotics Club",
+      "link": "https://duke-robotics.com",
+      "image": "acoustics-stack.png",
+      "peek": [
+        "ros",
+        "python",
+        "linux",
+        "cc",
+        "saleae"
+      ]
+    },
+    {
       "title": "Ball Balancing Robot",
       "subtitle": "Computer vision ball tracking, dual PID controllers",
       "link": "/projects/ball-balancing-robot",
@@ -63,31 +87,9 @@
       ]
     },
     {
-      "title": "Acoustics Stack",
-      "subtitle": "Underwater pinger localization for Duke Robotics Club",
-      "link": "https://duke-robotics.com",
-      "image": "acoustics-stack.png",
-      "peek": [
-        "ros",
-        "python",
-        "linux",
-        "saleae"
-      ]
-    },
-    {
-      "title": "PyEquations",
-      "subtitle": "Python Package for solving a lot of equations with a lot of unknowns",
-      "link": "/projects/pyequations",
-      "image": "pyequations.png",
-      "peek": [
-        "python",
-        "pypi"
-      ]
-    },
-    {
       "title": "PatientWatch",
       "subtitle": "Remotely monitors patient vitals and alerts for emergencies",
-      "link": "/projects/patient-watch",
+      "link": "https://devpost.com/software/car-watch",
       "image": "PatientWatch.png",
       "peek": [
         "python",
@@ -202,7 +204,7 @@
     {
       "title": "Super Meme Bros.",
       "subtitle": "Meme-hunting game where the memes have implications",
-      "link": "https://www.google.com",
+      "link": "https://github.com/mbryant2025/SuperMemeBros",
       "image": "super-meme-bros.png",
       "peek": [
         "unity",
@@ -288,7 +290,7 @@
     {
       "title": "Ngram",
       "subtitle": "Analyzes Google Books NGram data for patterns",
-      "link": "https://www.google.com",
+      "link": "https://github.com/mbryant2025/NGram",
       "image": "ngram.png",
       "peek": [
         "java"
@@ -317,7 +319,7 @@
     {
       "title": "Wordler",
       "subtitle": "Bot for solving Wordle",
-      "link": "https://www.google.com",
+      "link": "https://github.com/mbryant2025/Wordler",
       "image": "wordler.png",
       "peek": [
         "python"
@@ -326,7 +328,7 @@
     {
       "title": "Filler Bot",
       "subtitle": "I was tired of losing at this game so I combated my skill issue with cheating",
-      "link": "https://www.google.com",
+      "link": "https://github.com/mbryant2025/filler-bot",
       "image": "filler.png",
       "peek": [
         "rust"
@@ -335,7 +337,7 @@
     {
       "title": "Baseball Simulator",
       "subtitle": "Simulates an entire baseball season. I put myself on Babe Ruth's team.",
-      "link": "https://www.google.com",
+      "link": "https://github.com/mbryant2025/BaseballSimulator",
       "image": "baseball.png",
       "peek": [
         "cc"
@@ -354,7 +356,7 @@
     {
       "title": "Snake+++",
       "subtitle": "Various games of snake with increasing level of curse",
-      "link": "https://www.google.com",
+      "link": "https://michaelcbryant.com/#/games",
       "image": "snake.png",
       "peek": [
         "js",
@@ -365,7 +367,7 @@
     {
       "title": "Bee Bot",
       "subtitle": "Solves the New York Times Spelling Bee",
-      "link": "https://www.google.com",
+      "link": "https://github.com/mbryant2025/BeeBot",
       "image": "spelling-bee.jpeg",
       "peek": [
         "c"
@@ -374,7 +376,7 @@
     {
       "title": "Maze Solver",
       "subtitle": "Solves using A*, GUI to create mazes",
-      "link": "https://www.google.com",
+      "link": "https://github.com/mbryant2025/Maze-Solver",
       "image": "maze-solver.png",
       "peek": [
         "python"
@@ -449,7 +451,7 @@
     {
       "title": "Digits Bot",
       "subtitle": "Solver for New York Times Digits game",
-      "link": "https://www.google.com",
+      "link": "https://github.com/mbryant2025/digits",
       "image": "digits.png",
       "peek": [
         "python"

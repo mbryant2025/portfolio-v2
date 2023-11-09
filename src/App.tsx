@@ -29,7 +29,7 @@ const App: React.FC = () => {
   }, []);
 
   // Removes some of the filters that will be hard coded
-  const omitted = ['soldering', 'computer', 'oscilloscopes', 'spice', 'smt', 'milling', 'lathes', 'altium'];
+  const omitted = ['soldering', 'computer', 'oscilloscopes', 'spice', 'smt', 'milling', 'lathes', 'altium', 'git'];
 
   const filtersToDisplay = filters.filter((filter) => !omitted.includes(filter));
 
@@ -56,6 +56,9 @@ const App: React.FC = () => {
         <Route path="/projects/smt" element={<Projects filter={ "electronics-design" }/>} />
         <Route path="/projects/milling" element={<Projects filter={ "metalworking" }/>} />
         <Route path="/projects/lathes" element={<Projects filter={ "metalworking" }/>} />
+
+        {/* For git, just redirect to projects with no filter */}
+        <Route path="/projects/git" element={<Projects filter={ undefined }/>} />
 
         <Route path="/projects/flight-tracker" element={<TechnicalArticle htmlFilePath= { "/articles/flight-tracker/flight-tracker.html" } />} />
         <Route path="/projects/ball-balancing-robot" element={<TechnicalArticle htmlFilePath= { "/articles/ball-balancing-robot/ball-balancing-robot.html" } />} />
