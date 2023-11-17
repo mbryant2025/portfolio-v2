@@ -8,7 +8,7 @@ const BackButton: React.FC = () => {
     if (document.referrer.includes('michaelcbryant.com') || document.referrer.includes('localhost')) {
       window.history.back();
     } else {
-      // Redirect to the root of your React Router
+      // Redirect to the root of React Router
       window.location.href = '/';
     }
   };

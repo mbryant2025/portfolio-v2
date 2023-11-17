@@ -10,6 +10,7 @@ import SnakePlus from './pages/games/SnakePlus';
 import SnakePlusPlus from './pages/games/SnakePlusPlus';
 import SnakePlusPlusPlus from './pages/games/SnakePlusPlusPlus';
 import SnakeMinusMinusMinus from './pages/games/SnakeMinusMinusMinus';
+import MazeSolver from './pages/games/MazeSolver';
 import TechnicalArticle from './components/TechnicalArticle';
 
 
@@ -71,6 +72,7 @@ const App: React.FC = () => {
         <Route path="/projects/patient-watch" element={<TechnicalArticle htmlFilePath={ "/articles/patient-watch/patient-watch.html" } />} />
         <Route path="/projects/blue-devil-horns" element={<TechnicalArticle htmlFilePath={ "/articles/blue-devil-horns/blue-devil-horns.html" } />} />
         <Route path="/projects/programmable-magna-tiles" element={<TechnicalArticle htmlFilePath={ "/articles/programmable-magna-tiles/programmable-magna-tiles.html" } />} />
+        <Route path="/projects/maze-solver" element={<TechnicalArticle htmlFilePath={ "/articles/maze-solver/maze-solver.html" } />} />
         {/* ADD-ARTICLE-HERE */}
         {/* See article-build.sh -- automatically generates routes for articles */}
 
@@ -79,6 +81,7 @@ const App: React.FC = () => {
         <Route path="/games/snake-plus-plus" element={<SnakePlusPlus />} />
         <Route path="/games/snake-plus-plus-plus" element={<SnakePlusPlusPlus />} />
         <Route path="/games/snake-minus-minus-minus" element={<SnakeMinusMinusMinus />} />
+        <Route path="/games/maze-solver" element={<MazeSolver />} />
 
       </Routes>
     </div>

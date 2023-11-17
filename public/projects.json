@@ -5,7 +5,7 @@
   "widgetData": [
     {
       "title": "Programmable Magna-Tiles",
-      "subtitle": "Custom C-like language and interpreter running on ESP32, BLE connection to React App",
+      "subtitle": "Custom C-like language and interpreter running on ESP32, BLE connection to React IDE",
       "link": "/projects/programmable-magna-tiles",
       "image": "littlearn.png",
       "peek": [
@@ -317,6 +317,16 @@
       ]
     },
     {
+      "title": "Maze Solver",
+      "subtitle": "Solves using A*, GUI to create mazes",
+      "link": "/projects/maze-solver",
+      "image": "maze-solver.png",
+      "peek": [
+        "react",
+        "typescript"
+      ]
+    },
+    {
       "title": "Wordler",
       "subtitle": "Bot for solving Wordle",
       "link": "https://github.com/mbryant2025/Wordler",
@@ -371,15 +381,6 @@
       "image": "spelling-bee.jpeg",
       "peek": [
         "c"
-      ]
-    },
-    {
-      "title": "Maze Solver",
-      "subtitle": "Solves using A*, GUI to create mazes",
-      "link": "https://github.com/mbryant2025/Maze-Solver",
-      "image": "maze-solver.png",
-      "peek": [
-        "python"
       ]
     },
     {
