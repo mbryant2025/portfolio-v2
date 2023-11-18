@@ -378,7 +378,7 @@ const MazeSolver: React.FC = () => {
 
                 <button
                     className={`button`}
-                    onClick={() => window.location.href = 'https://michaelcbryant.com/#/projects/maze-solver'}
+                    onClick={() => window.location.href = '/#/projects/maze-solver'}
                 >
                     Read More
                 </button>
