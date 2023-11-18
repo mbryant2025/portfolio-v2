@@ -30,8 +30,6 @@ var diagonalNeighbors = false;
 
 const solveMaze = (newMaze: MazeCell[][]) => {
 
-    console.log('Solving maze...');
-
     const openList: MazeCell[] = [];
 
     // Remove all path cells, treating them as open cells
@@ -68,11 +66,6 @@ const solveMaze = (newMaze: MazeCell[][]) => {
             // Path found, reconstruct path and update maze
             let current = currentNode;
             const path: MazeCell[] = [];
-            console.log('Path found!');
-            console.log('Path length:', currentNode.gCost);
-            console.log('Path cost:', currentNode.fCost)
-            //log parent
-            console.log(currentNode.parent);
             while (current?.parent) {
                 //log length of path
                 // If the current is the start, don't add it to the path
