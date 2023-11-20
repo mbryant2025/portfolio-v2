@@ -37,7 +37,7 @@
     {
       "title": "AUV Electrical Stack",
       "subtitle": "Electral system for Duke Robotics Club",
-      "link": "https://duke-robotics.com",
+      "link": "https://duke-robotics.com/projects/",
       "image": "drc.jpg",
       "peek": [
         "electronics-design",
@@ -64,7 +64,7 @@
     {
       "title": "Acoustics Stack",
       "subtitle": "Underwater pinger localization for Duke Robotics Club",
-      "link": "https://duke-robotics.com",
+      "link": "https://duke-robotics.com/projects/",
       "image": "acoustics-stack.png",
       "peek": [
         "ros",
@@ -235,7 +235,7 @@
     {
       "title": "Blue Devil Horns",
       "subtitle": "Network-synced LED horns for Duke Basketball games",
-      "link": "https://github.com/mbryant2025/blue_devil_horns",
+      "link": "/projects/blue-devil-horns",
       "image": "horns.JPG",
       "peek": [
         "cc",

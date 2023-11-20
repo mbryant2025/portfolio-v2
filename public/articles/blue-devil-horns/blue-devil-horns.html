@@ -12,13 +12,41 @@
 
 <body>
 
-    <h2>SECTION-HEADING</h2>
+    <h2>Overview</h2>
 
-    <p>PARAGRAPH</p>
+    <p>Blue Devil horns are common at Duke Basketball games. However, they are only static. I decided I would modify them to have
+        network-controlled animations.
+    </p>
 
-    <img src="IMAGE">
+    <img src="/img/project-thumbnails/horns.JPG">
 
-    <figcaption>CAPTION</figcaption>
+    <figcaption>The Modified Horns</figcaption>
+
+    <h2>Video</h2>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/cPvOUfdN3wI?si=LqzC1DoJjJsXYq1u" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+    <h2>Details</h2>
+
+    <p>
+        I used an Arduino Nano 33 IoT to both control the horns and connect to a network. The horns are controlled by a netcat command.
+
+        Putting the horns on the Duke WiFi network is not necessairly simple, so I brought my own router to college. Not sure if this is technically allowed on campus...
+
+    </p>
+
+    <p>
+        For the command, I simply send a single byte to the Arduino. The byte is the index of the animation to play. This can be expanded in the future.
+
+    </p>
+
+    <iframe frameborder=0 style="min-width: 200px; width: 80%; height: 120px;" scrolling="no" seamless="seamless"
+    srcdoc='<html><body><style type="text/css">.gist .gist-data { height: 40px; width:100%; }</style><script
+     src="https://gist.github.com/mbryant2025/aca7ebab0bb96d58f7d9a9dcf62f37cc.js"></script></body></html>'></iframe>
+
+     <p>
+        I also acknowledge the current command only sends to one IP. Another improvement would be to have a central server that all horns could connect to. This would allow for more complex animations and more horns.
+    </p>
 
 </body>
 
