@@ -1,3 +1,6 @@
+# Script to update which projects are complete and which are todo
+# Should be run from src directory
+
 import json
 
 # Read JSON data from file

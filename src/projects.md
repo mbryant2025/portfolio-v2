@@ -1,21 +1,22 @@
 # Total Projects: 43
 
-## Complete (10)
+## Complete (12)
 - Programmable Magna-Tiles
 - Flight Tracker
 - PyEquations
 - Ball Balancing Robot
+- PatientWatch
 - Plane GAN
 - Vision Guided Robot
 - Satellite Antenna
+- Blue Devil Horns
 - Slogo
 - Cell Society
 - Maze Solver
 
-## Todo (33)
+## Todo (31)
 - AUV Electrical Stack
 - Acoustics Stack
-- PatientWatch
 - Spot the Spot
 - OOGASalad
 - michaelcbryant.com
@@ -25,7 +26,6 @@
 - Super Meme Bros.
 - RC Forklift
 - Banagrams Bot
-- Blue Devil Horns
 - Ping Pong Robot
 - Self-Balancing Robot
 - Ngram
