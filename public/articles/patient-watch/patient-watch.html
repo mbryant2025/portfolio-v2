@@ -5,20 +5,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TITLE</title>
-    <subtitle>DATE</subtitle>
-    <github>GITHUB-LINK</github>
+    <title>Patient Watch</title>
+    <subtitle>September 2023</subtitle>
+    <github>https://github.com/mbryant2025/HackDuke2023</github>
 </head>
 
 <body>
 
-    <h2>SECTION-HEADING</h2>
+    <h2>Overview</h2>
 
-    <p>PARAGRAPH</p>
+    <p>Made for HackDuke2023, Patient Watch is a patient monitoring system.
+        It is a modular system that is currently fitted for tracking patient temperature, room humidity, and patient
+        movement.
 
-    <img src="IMAGE">
+    </p>
 
-    <figcaption>CAPTION</figcaption>
+    <img src="img/project-thumbnails/PatientWatch.png">
+
+    <figcaption>PatientWatch GUI. Patient movement is shown in red.</figcaption>
+
+    <p>
+        The system works over the internet, and is designed to be used in a hospital setting. During the Hackathon,
+        we streamed data from accross campus and we won first place.
+    </p>
+
+    <h2>Video</h2>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/5vSCjttRTvk?si=KQmqmCiCM_j5xG-H" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+    <h2>Details</h2>
+
+    <p>
+        Web hosting is made possible through a Flask server. The software was made for a Raspberry Pi, but can also be run on a PC.
+        For the case of a PC, an Arduino is used to collect data from sensors and send it to the PC, with use of the PySerial library.
+
+        A webcam is attached to the computer where a simple OpenCV algorithm is used to detect movement.
+
+    </p>
+
+    <img src="articles/patient-watch/patient-watch-demo.jpg">
+
+    <figcaption>At the judging demo -- hey look, that's me!</figcaption>
+
+
+    <h2>Role</h2>
+
+    <p>
+        This project was completed for HackDuke2023 and I was responsible for the software of the project.
+    </p>
+
+
+    <button onClick="window.open('https://devpost.com/software/car-watch', '_blank');">Devpost
+    </button>
+
+    <p></p>
+    
 
 </body>
 

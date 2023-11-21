@@ -89,7 +89,7 @@
     {
       "title": "PatientWatch",
       "subtitle": "Remotely monitors patient vitals and alerts for emergencies",
-      "link": "https://devpost.com/software/car-watch",
+      "link": "/projects/patient-watch",
       "image": "PatientWatch.png",
       "peek": [
         "python",
