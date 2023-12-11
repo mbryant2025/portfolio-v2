@@ -4,9 +4,9 @@
   "peekExtension": ".png",
   "widgetData": [
     {
-      "title": "Programmable Magna-Tiles",
+      "title": "Programmable Magnetic Tiles",
       "subtitle": "Custom C-like language and interpreter running on ESP32, BLE connection to React IDE",
-      "link": "/projects/programmable-magna-tiles",
+      "link": "/projects/programmable-tiles",
       "image": "littlearn.png",
       "peek": [
         "cc",
@@ -87,6 +87,27 @@
       ]
     },
     {
+      "title": "UR5e 3D Printer",
+      "subtitle": "Pipeline to convert STL files to Gazebo simulation of 3D printer",
+      "link": "/projects/ur5e-3d-printer",
+      "image": "ur5e.png",
+      "peek": [
+        "ros",
+        "python",
+        "3d-printing"
+      ]
+    },
+    {
+      "title": "Plane GAN",
+      "subtitle": "GAN to generate images of planes",
+      "link": "/projects/plane-gan",
+      "image": "plane-gan.png",
+      "peek": [
+        "python",
+        "tensorflow"
+      ]
+    },
+    {
       "title": "PatientWatch",
       "subtitle": "Remotely monitors patient vitals and alerts for emergencies",
       "link": "/projects/patient-watch",
@@ -100,16 +121,6 @@
         "js",
         "html",
         "css"
-      ]
-    },
-    {
-      "title": "Plane GAN",
-      "subtitle": "GAN to generate images of planes",
-      "link": "/projects/plane-gan",
-      "image": "plane-gan.png",
-      "peek": [
-        "python",
-        "tensorflow"
       ]
     },
     {

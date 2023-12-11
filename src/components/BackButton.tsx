@@ -3,6 +3,13 @@ import './styles/back.css';
 
 const BackButton: React.FC = () => {
   const handleGoBack = () => {
+
+    // Kill any audio
+    const audio = document.getElementsByTagName("audio");
+    for (let i = 0; i < audio.length; i++) {
+      audio[i].pause();
+    }
+
     // Check if the previous URL contains "michaelcbryant.com"
     console.log(document.referrer)
     if (document.referrer.includes('michaelcbryant.com') || document.referrer.includes('localhost')) {

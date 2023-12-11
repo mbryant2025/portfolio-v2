@@ -8,6 +8,7 @@ import BackButton from '../components/BackButton';
 const Homepage: React.FC = () => {
     const widgetData: Widget[] = [
         { title: 'Maze Solver', subtitle: 'Draw your own mazes!', link: '/games/maze-solver', image: './img/project-thumbnails/maze-solver.png' },
+        // { title: 'Super Meme Bros', subtitle: 'Meme-hunting platformer where memes have effects', link: '/games/super-meme-bros', image: './img/project-thumbnails/super-meme-bros.png' },
         { title: 'Snake+', subtitle: 'Standard Snake with a twist', link: '/games/snake-plus', image: './img/project-thumbnails/snake.png' },
         { title: 'Snake++', subtitle: 'There may or may not be an emeny snake', link: '/games/snake-plus-plus', image: './img/project-thumbnails/snake.png' },
         { title: 'Snake+++', subtitle: 'Maximally cursed Snake', link: '/games/snake-plus-plus-plus', image: './img/project-thumbnails/snake.png' },

@@ -11,7 +11,11 @@ import SnakePlusPlus from './pages/games/SnakePlusPlus';
 import SnakePlusPlusPlus from './pages/games/SnakePlusPlusPlus';
 import SnakeMinusMinusMinus from './pages/games/SnakeMinusMinusMinus';
 import MazeSolver from './pages/games/MazeSolver';
+import SuperMemeBros from './pages/games/super-meme-bros/SuperMemeBros';
+import SuperMemeBrosPlayer from './pages/games/super-meme-bros/SuperMemeBrosPlayer';
+
 import TechnicalArticle from './components/TechnicalArticle';
+import ProgrammableTiles from './pages/depth-articles/programmable-magna-tiles';
 
 
 const App: React.FC = () => {
@@ -71,9 +75,11 @@ const App: React.FC = () => {
         <Route path="/projects/plane-gan" element={<TechnicalArticle htmlFilePath={ "/articles/plane-gan/plane-gan.html" } />} />
         <Route path="/projects/patient-watch" element={<TechnicalArticle htmlFilePath={ "/articles/patient-watch/patient-watch.html" } />} />
         <Route path="/projects/blue-devil-horns" element={<TechnicalArticle htmlFilePath={ "/articles/blue-devil-horns/blue-devil-horns.html" } />} />
-        <Route path="/projects/programmable-magna-tiles" element={<TechnicalArticle htmlFilePath={ "/articles/programmable-magna-tiles/programmable-magna-tiles.html" } />} />
+        {/* <Route path="/projects/programmable-magna-tiles" element={<TechnicalArticle htmlFilePath={ "/articles/programmable-magna-tiles/programmable-magna-tiles.html" } />} /> */}
+        <Route path="/projects/programmable-tiles" element={<ProgrammableTiles />} />
         <Route path="/projects/maze-solver" element={<TechnicalArticle htmlFilePath={ "/articles/maze-solver/maze-solver.html" } />} />
         <Route path="/projects/patient-watch" element={<TechnicalArticle htmlFilePath={ "/articles/patient-watch/patient-watch.html" } />} />
+        <Route path="/projects/ur5e-3d-printer" element={<TechnicalArticle htmlFilePath={ "/articles/ur5e-3d-printer/ur5e-3d-printer.html" } />} />
         {/* ADD-ARTICLE-HERE */}
         {/* See article-build.sh -- automatically generates routes for articles */}
 
@@ -83,6 +89,9 @@ const App: React.FC = () => {
         <Route path="/games/snake-plus-plus-plus" element={<SnakePlusPlusPlus />} />
         <Route path="/games/snake-minus-minus-minus" element={<SnakeMinusMinusMinus />} />
         <Route path="/games/maze-solver" element={<MazeSolver />} />
+        <Route path="/games/super-meme-bros" element={<SuperMemeBros />} />
+        <Route path="/games/super-meme-bros/player" element={<SuperMemeBrosPlayer />} />
+
 
       </Routes>
     </div>

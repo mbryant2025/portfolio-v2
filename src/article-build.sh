@@ -34,8 +34,5 @@ code "./public/articles/$name/$name.html"
 echo "Opening projects.json at ./public/projects.json"
 code "./public/projects.json"
 
-# Run the projects.py script
-python3 projects.py
-
 # Remind to add the article to articles.json in red text (macos)
 echo -e "\033[0;31mDon't forget to add the article to projects.json!\033[0m"

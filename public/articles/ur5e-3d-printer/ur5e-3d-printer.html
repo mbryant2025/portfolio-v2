@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UR5e 3D Printer</title>
+    <subtitle>November 2023 - December 2023</subtitle>
+    <github>https://github.com/mbryant2025/ur5e_3d_printer/tree/main</github>
+</head>
+
+<body>
+
+    <h2>Overview</h2>
+
+    <p>This system turns the UR5e robot arm into a 3D printer in Gazebo. It consists of three parts: a custom slicer profile for the UR5e,
+        a G-code interpreter that sends commands to the robot, and a Gazebo plugin that simulates the extruder.</p>
+
+
+    <img src="img/project-thumbnails/ur5e.png">
+
+    <figcaption>Printing a vase in Gazebo</figcaption>
+
+    <h2>Video</h2>
+
+    <h2>Design</h2>
+
+    <p>
+        For the purpose of this project, many of the different G-code commands were ignored. Specifically, the only parts considered were the G0 and G1 commands.
+        These commands are used to move the robot to a specific location. The G0 command is used for non-extruding moves, while the G1 command is used for extruding moves.
+    </p>
+
+    <p>
+        Built into the G-code interpreter is an interface for enabling and disabling the extruder. This allowed for the important abstraction between the separate parts of the system.
+        The G-code parser also had some useful optimizations and abstractions. It made use of a Python generator to allow for the G-code to be read line-by-line, rather than all at once. This was also abstracted from any ROS or Gazebo specific code, allowing for the G-code interpreter to be tested individually.
+    </p>
+
+    <iframe frameborder=0 style="min-width: 200px; width: 80%; height: 760px;" scrolling="no" seamless="seamless"
+    srcdoc='<html><body><style type="text/css">.gist .gist-data { height: 700px; width:100%; }</style><script src="https://gist.github.com/mbryant2025/f8570bbded988818f95ff086b26be29f.js"></script></body></html>'></iframe>
+
+    <figcaption>The high-level functionality of the 3D printer package, showcasing the various dependency injections</figcaption>
+
+    <h2>Notes about Simulation</h2>
+
+    <p>Since the robot is printing in simulation, there are a few extra considerations.</p>
+
+    <p>
+        There is no need for support material, since the robot can print in mid-air. Additionally, the layer height was made to be very large (5mm) to speed up printing and to make the layers more visible.
+    </p>
+
+
+
+    <h2>Role</h2>
+
+    <p>Made by a group of four students for Duke ECE 383: Intro to Robotics and Automation, my role was the core of the system: the G-code interpreter and 
+        sending commands to the robot (both movement and the extruder). </p>
+
+    </p>
+
+</body>
+
+</html>
