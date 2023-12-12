@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import ScrollableWidgetPanel from '../components/ScrollableWidgetPanel';
 import WidgetPeekComponent from '../components/WidgetPeekComponent';
-import GeometryWidgetView from '../components/GeometryWidgetView';
+import TwoColumnView from '../components/TwoColumnView';
 import BackButton from '../components/BackButton';
 import WidgetBar from '../components/WidgetBar';
 import { PeekWidget } from '../types';
@@ -77,16 +77,21 @@ const Projects: React.FC<ProjectsProps> = ({ filter }) => {
 
     const peekImage = peekCommonPathPrefix + selectedPeek + peekExtension
 
+    const filteredWidgetsLeft = filteredWidgets.filter((_, index) => index % 2 === 0);
+    const filteredWidgetsRight = filteredWidgets.filter((_, index) => index % 2 === 1);
+
     return (
         <div>
             <BackButton />
-            <GeometryWidgetView
-                scrollWidgets={
-                    <ScrollableWidgetPanel title='Projects'>
-                        {selectedPeek !== undefined && (
-                            <WidgetBar image={peekImage} title={formattedSelectedPeek} onClick={() => handlePeekClick(undefined)} />
-                        )}
-                        {filteredWidgets.map((widget) => (
+            
+            <TwoColumnView title={'Projects'}
+                widgetBar = {selectedPeek !== undefined && (
+                    <WidgetBar image={peekImage} title={formattedSelectedPeek} onClick={() => handlePeekClick(undefined)} />
+                )}
+                scrollWidgetsLeft={
+                    <ScrollableWidgetPanel title=''>
+                        
+                        {filteredWidgetsLeft.map((widget) => (
                             <WidgetPeekComponent
                                 key={widget.title}
                                 title={widget.title}
@@ -100,7 +105,22 @@ const Projects: React.FC<ProjectsProps> = ({ filter }) => {
                         ))}
                     </ScrollableWidgetPanel>
                 }
-                shape='tetrahedron'
+                scrollWidgetsRight={
+                    <ScrollableWidgetPanel title=''>
+                        {filteredWidgetsRight.map((widget) => ( 
+                            <WidgetPeekComponent
+                                key={widget.title}
+                                title={widget.title}
+                                subtitle={widget.subtitle}
+                                link={widget.link}
+                                image={widget.image}
+                                peek={widget.peek}
+                                peekImages={widget.peekImages}
+                                onClick={handlePeekClick}
+                            />
+                        ))}
+                    </ScrollableWidgetPanel>
+                }
             />
         </div>
     );

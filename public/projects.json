@@ -35,46 +35,6 @@
       ]
     },
     {
-      "title": "AUV Electrical Stack",
-      "subtitle": "Electral system for Duke Robotics Club",
-      "link": "https://duke-robotics.com/projects/",
-      "image": "drc.jpg",
-      "peek": [
-        "electronics-design",
-        "ros",
-        "python",
-        "cc",
-        "linux",
-        "docker",
-        "bash",
-        "arduino",
-        "raspberry-pi"
-      ]
-    },
-    {
-      "title": "PyEquations",
-      "subtitle": "Python Package for solving a lot of equations with a lot of unknowns",
-      "link": "/projects/pyequations",
-      "image": "pyequations.png",
-      "peek": [
-        "python",
-        "pypi"
-      ]
-    },
-    {
-      "title": "Acoustics Stack",
-      "subtitle": "Underwater pinger localization for Duke Robotics Club",
-      "link": "https://duke-robotics.com/projects/",
-      "image": "acoustics-stack.png",
-      "peek": [
-        "ros",
-        "python",
-        "linux",
-        "cc",
-        "saleae"
-      ]
-    },
-    {
       "title": "Ball Balancing Robot",
       "subtitle": "Computer vision ball tracking, dual PID controllers",
       "link": "/projects/ball-balancing-robot",
@@ -87,14 +47,23 @@
       ]
     },
     {
-      "title": "UR5e 3D Printer",
-      "subtitle": "Pipeline to convert STL files to Gazebo simulation of 3D printer",
-      "link": "/projects/ur5e-3d-printer",
-      "image": "ur5e.png",
+      "title": "Board Game Maker",
+      "subtitle": "Multiplayer game editor and player; 11-person group for Duke CS308",
+      "link": "https://www.google.com",
+      "image": "oogasalad.png",
       "peek": [
-        "ros",
-        "python",
-        "3d-printing"
+        "java",
+        "css"
+      ]
+    },
+    {
+      "title": "Satellite Antenna",
+      "subtitle": "Receives and decodes broadcatsts from NOAA weather satellites",
+      "link": "/projects/satellite-antenna",
+      "image": "noaa.jpg",
+      "peek": [
+        "electronics-design",
+        "sdr"
       ]
     },
     {
@@ -107,6 +76,45 @@
         "tensorflow"
       ]
     },
+    {
+      "title": "AUV Electrical Stack",
+      "subtitle": "Electral system for Duke Robotics Club",
+      "link": "https://duke-robotics.com/projects/",
+      "image": "drc.jpg",
+      "peek": [
+        "electronics-design",
+        "ros",
+        "python",
+        "cc",
+        "linux",
+        "docker",
+        "bash",
+        "arduino"
+      ]
+    },
+    {
+      "title": "PyEquations Python Package",
+      "subtitle": "Python Package for solving a lot of equations with a lot of unknowns",
+      "link": "/projects/pyequations",
+      "image": "pyequations.png",
+      "peek": [
+        "python",
+        "pypi"
+      ]
+    },
+    {
+      "title": "UR5e 3D Printer",
+      "subtitle": "Pipeline to convert STL files to Gazebo simulation of 3D printer",
+      "link": "/projects/ur5e-3d-printer",
+      "image": "ur5e.png",
+      "peek": [
+        "ros",
+        "python",
+        "cc",
+        "3d-printing"
+      ]
+    },
+
     {
       "title": "PatientWatch",
       "subtitle": "Remotely monitors patient vitals and alerts for emergencies",
@@ -138,16 +146,6 @@
       ]
     },
     {
-      "title": "OOGASalad",
-      "subtitle": "Multiplayer game editor and player; 11-person group for Duke CS308",
-      "link": "https://www.google.com",
-      "image": "oogasalad.png",
-      "peek": [
-        "java",
-        "css"
-      ]
-    },
-    {
       "title": "michaelcbryant.com",
       "subtitle": "You're looking at it!",
       "link": "https://www.michaelcbryant.com",
@@ -168,16 +166,6 @@
         "opencv",
         "raspberry-pi",
         "3d-printing"
-      ]
-    },
-    {
-      "title": "Satellite Antenna",
-      "subtitle": "Receives and decodes broadcatsts from NOAA weather satellites",
-      "link": "/projects/satellite-antenna",
-      "image": "noaa.jpg",
-      "peek": [
-        "electronics-design",
-        "sdr"
       ]
     },
     {

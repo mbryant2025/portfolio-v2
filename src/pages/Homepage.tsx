@@ -17,7 +17,7 @@ const Homepage: React.FC = () => {
         {widgetData.map((widget) => (
           <WidgetComponent key={widget.title} title={widget.title} subtitle={widget.subtitle} link={widget.link} image={widget.image} />
         ))}
-      </ScrollableWidgetPanel>} shape='cube'/>
+      </ScrollableWidgetPanel>} shape='tetrahedron'/>
     </div>
   );
 };

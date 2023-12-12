@@ -10,13 +10,13 @@ interface WidgetBarProps {
 const WidgetBar: React.FC<WidgetBarProps> = ({ image, title, onClick }) => {
     return (
         <div className="widget-bar" onClick={() => onClick()}>
-                <div className="widget-bar-image">
-                    <img src={image} alt="Selected Widget" className="peeking-image-bar"/>
-                </div>
-                <div className="widget-bar-title">
-                    <p>{title}</p>
-                </div>
+            <div className="widget-bar-image">
+                <img src={image} alt="Selected Widget" className="peeking-image-bar" />
             </div>
+            <div className="widget-bar-title">
+                <p>{title}</p>
+            </div>
+        </div>
     );
 };
 
