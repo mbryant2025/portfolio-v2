@@ -183,10 +183,62 @@ const TechnicalDetails: React.FC = () => {
                 </div>
             </div>
 
-            <div className="smallInfoText">
-                These two branches of the software span a wide range of skills and technologies, and are tied together by a custom communication protocol over BLE.
+
+            <div className="subsectionText">
+                Software Architecture
             </div>
 
+
+            <img src="/img/depth-articles/programmable-magna-tiles/Software-Diagram.png" alt="Programmable Magna Tiles" className="diagram" />
+
+
+
+
+            <div className="subsectionText">
+                Programming Language and Embedded Software
+            </div>
+
+            <div className="smallInfoText">
+                The custom language is a C-like interpreted language was implemented in C++ and designed to be ultra-lightweight as to be compiled onto an (inexpensive) ESP32.
+                The language supports variables, control flow, functions, stack frames, I/O through hardware and BLE, and a variety of other features. Error handling is also implemented, and the errors are sent back to the IDE for display without crashing the ESP32.
+            </div>
+            <figure>
+                <img src="/img/depth-articles/programmable-magna-tiles/esp32.JPG" alt="Programmable Magna Tiles" className="logoImage" />
+
+                <figcaption className="cap">Inside of (prototype) Brain, including ESP32 and 18650 battery, rechargable with USB-C</figcaption>
+            </figure>
+
+            <div className="smallInfoText">
+                Compiling to this platform is extremely difficult as there are a variety of compile-time checks, very limited memory, and constrained program size.
+
+                The code had to be entirely refactored for compile-time checks, extreme care was taken around memory safety, including valgrind and unit testing, and the ESP32 flash memory was repartitioned to allow for larger programs and to even allocate a small region for dynamically storing user programs.
+
+            </div>
+
+            <figure>
+                <img src="/img/depth-articles/programmable-magna-tiles/testing.png" alt="Programmable Magna Tiles" className="logoImage" />
+
+
+                <figcaption className="cap">Unit testing and valgrind were used to ensure memory safety</figcaption>
+            </figure>
+
+
+            <div className="smallInfoText">
+
+                All development was Dockerized to allow for easy cross-compilation and testing.
+            </div>
+
+
+            <div className="smallInfoText">
+                Both cores on the ESP32 were utilized. One for running the interpreted program, and the other for handling BLE communication and the web interface. This includes callbacks for BLE events, and reuploading during program execution.
+            </div>
+
+            <div className="subsectionText">
+                Hardware Architecture
+            </div>
+
+
+            <img src="/img/depth-articles/programmable-magna-tiles/Hardware-Diagram.png" alt="Programmable Magna Tiles" className="diagram" />
 
 
             <div className="subsectionText">
@@ -243,46 +295,6 @@ const TechnicalDetails: React.FC = () => {
 
             <div className="smallInfoText">
                 The IDE app was built and deployed to the internet at littlearn.com, and is fully functional.
-            </div>
-
-            <div className="subsectionText">
-                Programming Language and Embedded Software
-            </div>
-
-            <div className="smallInfoText">
-                The custom language is a C-like interpreted language was implemented in C++ and designed to be ultra-lightweight as to be compiled onto an (inexpensive) ESP32.
-                The language supports variables, control flow, functions, stack frames, I/O through hardware and BLE, and a variety of other features. Error handling is also implemented, and the errors are sent back to the IDE for display without crashing the ESP32.
-            </div>
-            <figure>
-                <img src="/img/depth-articles/programmable-magna-tiles/esp32.JPG" alt="Programmable Magna Tiles" className="logoImage" />
-
-                <figcaption className="cap">Inside of (prototype) Brain, including ESP32 and 18650 battery, rechargable with USB-C</figcaption>
-            </figure>
-
-            <div className="smallInfoText">
-                Compiling to this platform is extremely difficult as there are a variety of compile-time checks, very limited memory, and constrained program size.
-
-                The code had to be entirely refactored for compile-time checks, extreme care was taken around memory safety, including valgrind and unit testing, and the ESP32 flash memory was repartitioned to allow for larger programs and to even allocate a small region for dynamically storing user programs.
-
-            </div>
-
-            <figure>
-                <img src="/img/depth-articles/programmable-magna-tiles/testing.png" alt="Programmable Magna Tiles" className="logoImage" />
-
-
-                <figcaption className="cap">Unit testing and valgrind were used to ensure memory safety</figcaption>
-            </figure>
-
-
-            <div className="smallInfoText">
-
-                All development was Dockerized to allow for easy cross-compilation and testing.
-            </div>
-
-            <img src="/img/skill-categories/docker.png" alt="Programmable Magna Tiles" className="logoImage" />
-
-            <div className="smallInfoText">
-                Both cores on the ESP32 were utilized. One for running the interpreted program, and the other for handling BLE communication and the web interface. This includes callbacks for BLE events, and reuploading during program execution.
             </div>
 
             <div className="smallInfoText">
