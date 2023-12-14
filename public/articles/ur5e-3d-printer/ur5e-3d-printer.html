@@ -22,7 +22,17 @@
 
     <figcaption>Printing a vase in Gazebo</figcaption>
 
-    <h2>Video</h2>
+    <h2>Video Demo</h2>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/nSbk0zETqzg?si=hjifSa6J7QN_dAAu" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+    <figcaption>Printing with an extra-large 5mm layer height</figcaption>
+    <h2>Printing Timelapse</h2>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/SZ_eGinS39s?si=zj_fQHVL4Whp-0Ll" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+    <figcaption>The print took 26 minutes with 1mm layer height</figcaption>
+
+    <img src="articles/ur5e-3d-printer/vase.jpg">
+    <figcaption>The vase printed in Gazebo</figcaption>
 
     <h2>Design</h2>
 
@@ -49,6 +59,9 @@
         There is no need for support material, since the robot can print in mid-air. Additionally, the layer height was made to be very large (5mm) to speed up printing and to make the layers more visible.
     </p>
 
+    <p>
+        Finally, the simulation speed decreases as the robot prints. This is because of a suspected memory leak in the Gazebo plugin that we modified.
+    </p>
 
 
     <h2>Role</h2>

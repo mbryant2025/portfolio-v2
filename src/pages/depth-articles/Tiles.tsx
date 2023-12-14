@@ -230,7 +230,7 @@ const TechnicalDetails: React.FC = () => {
 
 
             <div className="smallInfoText">
-                Both cores on the ESP32 were utilized. One for running the interpreted program, and the other for handling BLE communication and the web interface. This includes callbacks for BLE events, and reuploading during program execution.
+                Both cores on the ESP32 were utilized. One for running the interpreted program, and the other for handling BLE communication with the web interface. This includes callbacks for BLE events, and reuploading during program execution.
             </div>
 
             <div className="subsectionText">
