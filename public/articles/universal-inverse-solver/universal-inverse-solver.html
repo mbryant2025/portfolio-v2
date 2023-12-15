@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universal Inverse Solver</title>
+    <subtitle>November 2023 - December 2023</subtitle>
+    <github>https://github.com/mbryant2025/universal_inverse_implementation</github>
+</head>
+
+<body>
+
+    <h2>Overview</h2>
+
+    <p>This project represents a custom implementation of Kadkhodaie and Simoncelli's algorithm for a universal inverse
+        solver from the prior implicit in a denoiser, implemented using PyTorch.</p>
+
+    <p>
+        In essence, the algorithm uses a denoiser to generate a prior distribution for the true image, and then uses
+        that prior to solve for the true image given a corrupted image. Specifically, this solves three problems:
+        inpainting, missing random pixels, and image synthesis.
+    </p>
+
+    <h2>Synthesis</h2>
+
+    <p>
+        Syntehsis involves converging towards an image on the manifold of images that is closest to the prior
+        distribution when starting from a random image.
+    </p>
+
+    <img src="/articles/universal-inverse-solver/synthesis.png" alt="Synthesis">
+
+    <figcaption>A synthesized image</figcaption>
+
+    <img src="/articles/universal-inverse-solver/synthesis_progress.png" alt="Synthesis">
+
+    <figcaption>Progression of the synthesis</figcaption>
+
+    <img src="/articles/universal-inverse-solver/synthesis_2.png" alt="Synthesis">
+
+    <figcaption>Another synthesized image</figcaption>
+
+    <h2>Inpainting</h2>
+
+    <p>
+        Inpainting involves blocking out a region of an image and then converging towards an image on the manifold of
+        images that is closest to the prior distribution when starting from the blocked image.
+    </p>
+
+    <img src="/articles/universal-inverse-solver/inpainted.png" alt="Inpainting">
+    <img src="/articles/universal-inverse-solver/inpainted_2.png" alt="Inpainting">
+    <img src="/articles/universal-inverse-solver/inpainted_3.png" alt="Inpainting">
+
+    <figcaption>Inpainted samples</figcaption>
+
+    <p>
+        The region removed from the image is of a random size and random location.
+    </p>
+
+    <h2>Missing Random Pixels</h2>
+
+    <p>
+        Missing random pixels involves randomly removing pixels from an image and then performing a similar convergence as before.
+    </p>
+
+    <img src="/articles/universal-inverse-solver/random_pix.png" alt="Random Pixels">
+    <img src="/articles/universal-inverse-solver/random_pix_2.png" alt="Random Pixels">
+    <img src="/articles/universal-inverse-solver/random_pix_3.png" alt="Random Pixels">
+
+    <figcaption>Missing random pixels samples</figcaption>
+
+    <p>Pixels are turned to black with 85% probability in generating the corrupted image.</p>
+
+    <h2>Non-Idealities</h2>
+
+
+
+
+    <p>With sufficient information lost during the corruption, the system can recover the incorrect digit:</p>
+
+    <img src="/articles/universal-inverse-solver/5to9.png" alt="Incorrect Digit">
+
+    <figcaption>The 5 is corrupted such that the system recovers a 9</figcaption>
+
+    <img src="/articles/universal-inverse-solver/2to8.png" alt="Incorrect Digit">
+
+    <figcaption>The 2 is corrupted such that the system recovers an 8</figcaption>
+
+    <img src="/articles/universal-inverse-solver/weird_a.png" alt="Incorrect Digit">
+
+    <figcaption>An image from the training set is corrupted such that the system tried to recover what appears to be a
+        partial 6 and a 1</figcaption>
+
+
+    <h2>Original Paper</h2>
+
+    <p>These results matches those of the original paper, which can be found here:</p>
+
+    <button onclick="window.open('https://arxiv.org/pdf/2007.13640.pdf')">Paper</button>
+
+    <p>
+
+    </p>
+
+</body>
+
+</html>

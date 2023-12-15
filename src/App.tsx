@@ -16,6 +16,7 @@ import SuperMemeBrosPlayer from './pages/games/super-meme-bros/SuperMemeBrosPlay
 
 import TechnicalArticle from './components/TechnicalArticle';
 import ProgrammableTiles from './pages/depth-articles/Tiles';
+import SpokenDigit from './pages/depth-articles/SpokenDigit';
 
 
 const App: React.FC = () => {
@@ -77,9 +78,11 @@ const App: React.FC = () => {
         <Route path="/projects/blue-devil-horns" element={<TechnicalArticle htmlFilePath={ "/articles/blue-devil-horns/blue-devil-horns.html" } />} />
         {/* <Route path="/projects/programmable-magna-tiles" element={<TechnicalArticle htmlFilePath={ "/articles/programmable-magna-tiles/programmable-magna-tiles.html" } />} /> */}
         <Route path="/projects/programmable-tiles" element={<ProgrammableTiles />} />
+        <Route path="/projects/spoken-digit-recognition" element={<SpokenDigit />} />
         <Route path="/projects/maze-solver" element={<TechnicalArticle htmlFilePath={ "/articles/maze-solver/maze-solver.html" } />} />
         <Route path="/projects/patient-watch" element={<TechnicalArticle htmlFilePath={ "/articles/patient-watch/patient-watch.html" } />} />
         <Route path="/projects/ur5e-3d-printer" element={<TechnicalArticle htmlFilePath={ "/articles/ur5e-3d-printer/ur5e-3d-printer.html" } />} />
+        <Route path="/projects/universal-inverse-solver" element={<TechnicalArticle htmlFilePath={ "/articles/universal-inverse-solver/universal-inverse-solver.html" } />} />
         {/* ADD-ARTICLE-HERE */}
         {/* See article-build.sh -- automatically generates routes for articles */}
 

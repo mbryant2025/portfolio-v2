@@ -1,24 +1,24 @@
 # Total Projects: 43
 
-## Complete (12)
-- Programmable Magna-Tiles
+## Complete (13)
+- Programmable Magnetic Tiles
 - Flight Tracker
-- PyEquations
 - Ball Balancing Robot
-- PatientWatch
-- Plane GAN
-- Vision Guided Robot
 - Satellite Antenna
+- Plane GAN
+- PyEquations Python Package
+- UR5e 3D Printer
+- PatientWatch
+- Vision Guided Robot
 - Blue Devil Horns
 - Slogo
 - Cell Society
 - Maze Solver
 
-## Todo (31)
+## Todo (30)
+- Board Game Maker
 - AUV Electrical Stack
-- Acoustics Stack
 - Spot the Spot
-- OOGASalad
 - michaelcbryant.com
 - Babii
 - Step Stats

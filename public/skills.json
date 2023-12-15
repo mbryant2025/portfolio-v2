@@ -46,6 +46,21 @@
         "start_year": 2021
       },
       {
+        "name": "pytorch",
+        "category": "software",
+        "start_year": 2023
+      },
+      {
+        "name": "sklearn",
+        "category": "software",
+        "start_year": 2023
+      },
+      {
+        "name": "ml",
+        "category": "software",
+        "start_year": 2020
+      },
+      {
         "name": "c",
         "category": "software",
         "start_year": 2020

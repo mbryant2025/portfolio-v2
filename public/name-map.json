@@ -37,7 +37,10 @@
     "eagle": "EAGLE",
     "milling": "Milling",
     "lathes": "Lathes",
-    "flask": "Flask"
+    "flask": "Flask",
+    "ml": "Machine Learning",
+    "sklearn": "scikit-learn",
+    "pytorch": "PyTorch"
 
 }
   

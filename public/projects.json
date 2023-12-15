@@ -12,9 +12,7 @@
         "cc",
         "react",
         "typescript",
-        "css",
         "electronics-design",
-        "bash",
         "docker",
         "3d-printing"
       ]
@@ -35,49 +33,18 @@
       ]
     },
     {
-      "title": "Ball Balancing Robot",
-      "subtitle": "Computer vision ball tracking, dual PID controllers",
-      "link": "/projects/ball-balancing-robot",
-      "image": "ball-balancing.png",
-      "peek": [
-        "cc",
-        "opencv",
-        "arduino",
-        "3d-printing"
-      ]
-    },
-    {
-      "title": "Board Game Maker",
-      "subtitle": "Multiplayer game editor and player; 11-person group for Duke CS308",
-      "link": "https://www.google.com",
-      "image": "oogasalad.png",
-      "peek": [
-        "java",
-        "css"
-      ]
-    },
-    {
-      "title": "Satellite Antenna",
-      "subtitle": "Receives and decodes broadcatsts from NOAA weather satellites",
-      "link": "/projects/satellite-antenna",
-      "image": "noaa.jpg",
-      "peek": [
-        "electronics-design",
-        "sdr"
-      ]
-    },
-    {
-      "title": "Plane GAN",
-      "subtitle": "GAN to generate images of planes",
-      "link": "/projects/plane-gan",
-      "image": "plane-gan.png",
+      "title": "Spoken Digit Recognition",
+      "subtitle": "GMMs and MLE Classifier to recognize spoken digits",
+      "link": "/projects/spoken-digit-recognition",
+      "image": "digits_classification.png",
       "peek": [
         "python",
-        "tensorflow"
+        "ml",
+        "sklearn"
       ]
     },
     {
-      "title": "AUV Electrical Stack",
+      "title": "Duke Robotics AUV",
       "subtitle": "Electral system for Duke Robotics Club",
       "link": "https://duke-robotics.com/projects/",
       "image": "drc.jpg",
@@ -88,8 +55,30 @@
         "cc",
         "linux",
         "docker",
-        "bash",
-        "arduino"
+        "bash"
+      ]
+    },
+    {
+      "title": "Univeral Inverse Solver",
+      "subtitle": "Image reconstruction using the prior implicit in a denoiser",
+      "link": "/projects/universal-inverse-solver",
+      "image": "inverse.png",
+      "peek": [
+        "python",
+        "ml",
+        "pytorch"
+      ]
+    },
+    {
+      "title": "Ball Balancing Robot",
+      "subtitle": "Computer vision ball tracking, dual PID controllers",
+      "link": "/projects/ball-balancing-robot",
+      "image": "ball-balancing.png",
+      "peek": [
+        "cc",
+        "opencv",
+        "arduino",
+        "3d-printing"
       ]
     },
     {
@@ -114,7 +103,37 @@
         "3d-printing"
       ]
     },
-
+    {
+      "title": "Satellite Antenna",
+      "subtitle": "Receives and decodes broadcatsts from NOAA weather satellites",
+      "link": "/projects/satellite-antenna",
+      "image": "noaa.jpg",
+      "peek": [
+        "electronics-design",
+        "sdr"
+      ]
+    },
+    {
+      "title": "Plane GAN",
+      "subtitle": "GAN to generate images of planes",
+      "link": "/projects/plane-gan",
+      "image": "plane-gan.png",
+      "peek": [
+        "python",
+        "ml",
+        "tensorflow"
+      ]
+    },
+    {
+      "title": "Board Game Maker",
+      "subtitle": "Multiplayer game editor and player; 11-person group for Duke CS308",
+      "link": "https://www.google.com",
+      "image": "oogasalad.png",
+      "peek": [
+        "java",
+        "css"
+      ]
+    },
     {
       "title": "PatientWatch",
       "subtitle": "Remotely monitors patient vitals and alerts for emergencies",
@@ -138,6 +157,7 @@
       "image": "spot-the-spot.png",
       "peek": [
         "python",
+        "ml",
         "tensorflow",
         "opencv",
         "flask",
@@ -162,6 +182,7 @@
       "image": "vision-guided-robot.JPG",
       "peek": [
         "python",
+        "ml",
         "tensorflow",
         "opencv",
         "raspberry-pi",
@@ -169,7 +190,7 @@
       ]
     },
     {
-      "title": "Babii",
+      "title": "Baby Crib Alert System",
       "subtitle": "Baby crib fall detection and alert system",
       "link": "https://devpost.com/software/babii",
       "image": "babii.jpeg",

@@ -31,21 +31,12 @@ const WidgetPeekComponent: React.FC<PeekWidget> = ({ title, subtitle, link, imag
 
             <Link to={link} className="link">
                 <div className="peek-widget-inner">
-                    {/* <div className="peeking-widget-container"> */}
-                    {/* <div className="peeking-widget-text-col">
-                            <div className="text-box">
-                                <p className="widget-title">{title}</p>
-                                <p className="widget-subtitle">{subtitle}</p>
-                            </div>
-                        </div> */}
                     <div className="peeking-widget-image-col">
                         <img src={image} alt={title} className="peeking-widget-image" />
                     </div>
                     <div className="text-box">
                         <p className="peeking-widget-title">{title}</p>
-                        {/* <p className="widget-subtitle">{subtitle}</p> */}
                     </div>
-                    {/* </div> */}
                 </div>
             </Link>
 
