@@ -1,13 +1,15 @@
-# Total Projects: 43
+# Total Projects: 45
 
-## Complete (13)
+## Complete (15)
 - Programmable Magnetic Tiles
 - Flight Tracker
+- Spoken Digit Recognition
+- Univeral Inverse Solver
 - Ball Balancing Robot
-- Satellite Antenna
-- Plane GAN
 - PyEquations Python Package
 - UR5e 3D Printer
+- Satellite Antenna
+- Plane GAN
 - PatientWatch
 - Vision Guided Robot
 - Blue Devil Horns
@@ -16,11 +18,11 @@
 - Maze Solver
 
 ## Todo (30)
+- Duke Robotics AUV
 - Board Game Maker
-- AUV Electrical Stack
 - Spot the Spot
 - michaelcbryant.com
-- Babii
+- Baby Crib Alert System
 - Step Stats
 - Acoustics PCBs
 - Super Meme Bros.

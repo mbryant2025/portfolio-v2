@@ -127,7 +127,7 @@
     {
       "title": "Board Game Maker",
       "subtitle": "Multiplayer game editor and player; 11-person group for Duke CS308",
-      "link": "https://www.google.com",
+      "link": "/coming-soon",
       "image": "oogasalad.png",
       "peek": [
         "java",
@@ -168,7 +168,7 @@
     {
       "title": "michaelcbryant.com",
       "subtitle": "You're looking at it!",
-      "link": "https://www.michaelcbryant.com",
+      "link": "/coming-soon",
       "image": "website.png",
       "peek": [
         "react",
@@ -214,7 +214,7 @@
     {
       "title": "Acoustics PCBs",
       "subtitle": "Hardware signal processing for Duke Robotics Club",
-      "link": "https://www.google.com",
+      "link": "/coming-soon",
       "image": "acoustics-hardware.JPG",
       "peek": [
         "electronics-design",
@@ -234,7 +234,7 @@
     {
       "title": "RC Forklift",
       "subtitle": "Two stage lift; controllable with PS3 controller",
-      "link": "https://www.google.com",
+      "link": "/coming-soon",
       "image": "rc-forklift.JPG",
       "peek": [
         "cc",
@@ -289,7 +289,7 @@
     {
       "title": "Self-Balancing Robot",
       "subtitle": "IMU and PID to keep balance",
-      "link": "https://www.google.com",
+      "link": "/coming-soon",
       "image": "self-balancing-robot.JPG",
       "peek": [
         "cc",
@@ -319,7 +319,7 @@
     {
       "title": "Evolved Antenna",
       "subtitle": "Evolutionarily designed antenna",
-      "link": "https://www.google.com",
+      "link": "/coming-soon",
       "image": "evolved-antenna.JPG",
       "peek": [
         "python",
@@ -376,7 +376,7 @@
     {
       "title": "LED Cube",
       "subtitle": "Fun patterns with 27 individually addressable LEDs",
-      "link": "https://www.google.com",
+      "link": "/coming-soon",
       "image": "led-cube.JPG",
       "peek": [
         "c",
@@ -406,7 +406,7 @@
     {
       "title": "Speed of Light Model",
       "subtitle": "Earth, Moon, and speed of light all to scale",
-      "link": "https://www.google.com",
+      "link": "/coming-soon",
       "image": "light-model.JPG",
       "peek": [
         "electronics-design",
@@ -416,7 +416,7 @@
     {
       "title": "3D Printer Enclosure",
       "subtitle": "Includes ventilation and lighting",
-      "link": "https://www.google.com",
+      "link": "/coming-soon",
       "image": "enclosure.JPG",
       "peek": [
         "woodworking",
@@ -426,7 +426,7 @@
     {
       "title": "Bird Feeder",
       "subtitle": "Miter-saw-only design",
-      "link": "https://www.google.com",
+      "link": "/coming-soon",
       "image": "bird-feeder.JPG",
       "peek": [
         "woodworking"
@@ -435,7 +435,7 @@
     {
       "title": "Countdown Timer",
       "subtitle": "Timer to track an awaited date",
-      "link": "https://www.google.com",
+      "link": "/coming-soon",
       "image": "countdown-timer.jpeg",
       "peek": [
         "arduino"
@@ -444,7 +444,7 @@
     {
       "title": "Duke D",
       "subtitle": "Handcrafted steel display piece",
-      "link": "https://www.google.com",
+      "link": "/coming-soon",
       "image": "duke-d.JPG",
       "peek": [
         "metalworking"
@@ -453,7 +453,7 @@
     {
       "title": "WiFi Yagi Antenna",
       "subtitle": "Highly directional 2.4 GHz antenna",
-      "link": "https://www.google.com",
+      "link": "/coming-soon",
       "image": "yagi.JPG",
       "peek": [
         "electronics-design",
@@ -463,7 +463,7 @@
     {
       "title": "Leyden Jar",
       "subtitle": "Homemade high-Voltage capacitor",
-      "link": "https://www.google.com",
+      "link": "/coming-soon",
       "image": "leyden-jar.JPG",
       "peek": [
         "electronics-design"
