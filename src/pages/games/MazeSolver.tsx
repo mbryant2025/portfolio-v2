@@ -359,7 +359,7 @@ const MazeSolver: React.FC = () => {
                     className={`button ${diagonalNeighbors ? 'maze-diagonal-button-selected' : 'maze-diagonal-button'}`}
                     onClick={() => changeDiagonalNeighbors()}
                 >
-                    Diagonal Neighbors
+                    Diagonal Paths
                 </button>
 
                 <button

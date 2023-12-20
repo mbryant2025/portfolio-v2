@@ -138,4 +138,5 @@
 .maze-buttons button {
     padding: 10px;
     margin: 20px;
+    min-width: 250px;
 }

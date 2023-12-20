@@ -14,6 +14,7 @@ import SnakeMinusMinusMinus from './pages/games/SnakeMinusMinusMinus';
 import MazeSolver from './pages/games/MazeSolver';
 import SuperMemeBros from './pages/games/super-meme-bros/SuperMemeBros';
 import SuperMemeBrosPlayer from './pages/games/super-meme-bros/SuperMemeBrosPlayer';
+import EightQueens from './pages/games/EightQueens';
 
 import TechnicalArticle from './components/TechnicalArticle';
 import ProgrammableTiles from './pages/depth-articles/Tiles';
@@ -96,6 +97,7 @@ const App: React.FC = () => {
         <Route path="/games/maze-solver" element={<MazeSolver />} />
         <Route path="/games/super-meme-bros" element={<SuperMemeBros />} />
         <Route path="/games/super-meme-bros/player" element={<SuperMemeBrosPlayer />} />
+        <Route path="/games/eight-queens" element={<EightQueens />} />
 
 
       </Routes>

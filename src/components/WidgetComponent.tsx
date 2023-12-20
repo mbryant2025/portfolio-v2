@@ -15,7 +15,7 @@ const WidgetComponent: React.FC<Widget> = ({ title, subtitle, link, image }) => 
             </div>
           </div>
           <div className="image-col"> 
-            <img src={image} alt={title} className="image"/>
+            <img src={image} alt={title} className="image" draggable="false" />
           </div>
         </div>
       </div>
