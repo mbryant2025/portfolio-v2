@@ -1,0 +1,104 @@
+{
+    "words": [
+        {
+            "word": "taboo",
+            "definition": "In the context of cultural norms, taboos are behaviors that bring the most serious sanctions. As the strongest proscriptive mores, violations of them are considered the most serious. \nExamples of taboos include incest and cannibalism. "
+        },
+        {
+            "word": "folkway",
+            "definition": "In the context of cultural norms, folkways have little moral significance and are the least serious norms. They are norms that govern everyday behavior but lack the moral undertones of mores. \nExamples of folkways include holding the door open for someone behind you and saying “please” and “thank you.”\nDeviations from folkways are typically met with mild disapproval, but are still usually noticed."
+        },
+        {
+            "word": "ethnocentrism",
+            "definition": "Ethnocentrism is the belief that one’s own culture is superior to others and the tendency to judge other cultures by the standards of one’s own. \nEthnocentrism can be described as a “yardstick” approach to other cultures, and can result in one thinking that other cultures are “weird, strange, or wrong,” whereas their own culture is “normal, natural, and right.” \n A famous example to demonstrate ethnocentrism is the “Nacirema” article by Horace Miner, which describes American culture in a way that makes it seem strange and exotic. This includes the description of the American bathroom as a “shrine” and the act of brushing one’s teeth as a “ritual.”"
+        },
+        {
+            "word": "nonexcludable",
+            "definition": "Nonexcludable goods are goods that are difficult to exclude people from using. \nExamples of nonexcludable goods include public parks and clean air. \nNonexcludable goods are often provided by the government because it is difficult to charge people for their use. \n These goods are often subject to the issue of freeloaders, but somebody has to provide them -- thus the government often steps in."
+        },
+        {
+            "word": "marx",
+            "definition": "Famous supporter of conflict theory. \nMarx experienced the Industrial Revolution and saw the exploitation of the working class in factories. He came to believe that socieites change based on conflict. Simply put, bosses have everything and workers have nothing. This leads to conflict and change. \nMarx believed that the working class would eventually rise up and overthrow the ruling class, leading to a classless society. \nMarx’s ideas are the basis of communism."
+        },
+        {
+            "word": "lombroso",
+            "definition": "Italian criminologist who believed that criminals were biologically different from non-criminals.  \nHe believed that criminals could be identified by physical characteristics, particularly those of the skeleton. \nLombroso’s ideas have been largely discredited, but they were influential in the early 20th century.\n Lombroso had a collection of skeletons, and beleived that poverty, diet, and bad habits could cause physical changes in the body that would lead to criminal behavior.\n Lombroso's ideas strongly fall in the individualistic perspective of crime."
+        },
+        {
+            "word": "anomie",
+            "definition": "Anomie is a state of normlessness, where norms are weak, conflicting, or absent. \nAnomie can occur when there is rapid social change, such as during the Industrial Revolution. \nAnomie can also occur when there is a lack of social integration, such as when people are isolated from one another. It can lead to deviant behavior, as people are unsure of what is expected of them.\n In the context of crime and deviance, anomie is considered a macro-level explanation. The famous Sociologist Emile Durkheim is associated with originating the concept of anomie."
+        },
+        {
+            "word": "recidivism",
+            "definition": "Recidivism is the tendency of a convicted criminal to reoffend. \nRecidivism rates are often used as a measure of the effectiveness of the criminal justice system. \nRecidivism rates are often high, particularly for certain types of crimes, such as drug offenses. \nRecidivism rates are often higher for people who have been incarcerated than for those who have not.\n Explanations for recidivism include the stigma of a criminal record, the difficulty of finding a job, and the lack of support for former inmates."
+        },
+        {
+            "word": "panopticon",
+            "definition": "A panopticon is a type of prison design that allows a single guard to observe all of the prisoners. \nA panopticon is designed so that the prisoners cannot tell whether they are being watched or not. \nA panopticon is intended to create a sense of constant surveillance, which is thought to deter deviant behavior."
+        },
+        {
+            "word": "socialization",
+            "definition": "The process by which people learn the norms, values, and beliefs of their culture. \nSocialization is a lifelong process that begins in childhood and continues throughout one’s life. \nSocialization is important because it helps people to learn how to behave in society and to develop a sense of self. \nSocialization is also important because it helps to maintain social order and stability."
+        },
+        {
+            "word": "ethnicity",
+            "definition": "Ethnicity is a collection of people distinguished by others or themselves, primarily on the basis of cultural or nationality characteristics. One's ethnicity is self-defined, voluntary, cultural, non-hierarchical, fluid, multiple, and planar. Much less discrimination happens on the basis of ethnicity than that of race."
+
+        },
+        {
+            "word": "race",
+            "definition": "A group of people who have been singled out, often on the basis of physical characteristics. Historically, it has been externally imposed, involuntary, based on physical differences, hierarchical, exclusive, and unequal"
+        },
+        {
+            "word": "prejudice",
+            "definition": "A preconceived opinion that is not based on reason or actual experience. Prejudice is often based on stereotypes and can lead to discrimination."
+        },
+
+        {
+            "word": "solidarity",
+            "definition": "Solidarity is the feeling of togetherness that people have when they are part of a group. \nSolidarity can be based on shared values, beliefs, or experiences. \nSolidarity can be strong or weak, depending on the group and the circumstances. \nSolidarity is important because it helps to create social cohesion and maintain social order."
+        },
+        {
+            "word": "stratification",
+            "definition": "Interchangable with inequality, statification is systematic inequalities in rewards, between groups of people, that arise as intended or unintended consequences of social processes and relationships. These rewards can include status, power, and property."
+
+        },
+        {
+            "word": "class",
+            "definition": "A group of people who share a similar economic position in society. \nClass is often based on income, wealth, and occupation. \nClass can be divided into upper class, middle class, and lower class. \nClass is important because it can affect people’s life chances and opportunities., and can change over time."
+        },
+        {
+            "word": "caste",
+            "definition": "A system of social stratification in which people are born into a particular social group and cannot change their social position. \nCaste systems are often based on religion. India is a famous example of a society with a caste system. \nCaste systems are often associated with rigid social roles and limited social mobility."
+        },
+        {
+            "word": "functionalist",
+            "definition": "A sociological perspective that emphasizes the ways in which the parts of society work together to maintain social order. \nFunctionalists believe that society is like a living organism, with each part playing a role in maintaining the whole. \nFunctionalists are interested in the functions of social institutions, such as the family, education, and religion. \nFunctionalists are also interested in the ways in which social institutions change over time."
+        },
+        {
+            "word": "homophily",
+            "definition": "The tendency for people to have ties to those that are very similar to themselves and fewer ties to people different from themselves (heterophily). \nHomophily is a common feature of social networks. \nHomophily can be based on a variety of factors, such as status and values.  \n- Baseline homophily: People tend to associate with others who are similar to themselves. \nSeveral types of homophily include: \n- Status homophily: People tend to associate with others of similar status. \n- Value homophily: People tend to associate with others who share their values. \n- Inbreeding homophily: Purposely associating with others who are similar to oneself."
+        },
+        {
+            "word": "stereotype",
+            "definition": "A widely held but fixed and oversimplified image or idea of a particular type of person or thing. \nStereotypes are often based on prejudice and can lead to discrimination.\n A famous test to reveal stereotypes is the Implicit Association Test (IAT). This test measures the strength of associations between concepts (e.g., races) and evaluations (e.g., good or bad) in our minds."
+        },
+        {
+            "word": "acculturation",
+            "definition": "Acculturation is the process by which people from one culture adopt the beliefs, values, and practices of another culture. \nAcculturation can occur when people move to a new country or when they are exposed to a new culture. \nAcculturation can be a difficult process, as people may have to give up some of their own cultural practices in order to fit in. \nAcculturation can also be a positive process, as it can lead to greater understanding and cooperation between people from different cultures."
+        },
+        {
+            "word": "jonestown",
+            "definition": "Jonestown was the informal name for the Peoples Temple Agricultural Project, an intentional community in northwestern Guyana formed by the Peoples Temple, a cult from California. \nOn November 18, 1978, 918 people died in Jonestown, the majority of whom were Americans. \nThe deaths were the result of mass suicide by cyanide poisining. The community demonstrates the effectivness of group solidarity, especially in communities with strict limitations.\n The event spawned the phrase “drinking the kool aid.”" 
+        },
+        {
+            "word": "durkheim",
+            "definition": "Emile Durkheim is perhaps one of the most well-known sociologists.\nA famous functionalist, his first work was on solidarity. This included:\n - Mechanical solidarity: In pre-industrial socities, people stuck together because they had similar jobs, went to the same church, or were generally similar. People were more independent and relied on each other less.\n - Organic solidarity: In modern society, jobs become more specialized. People depend on each other more. Ex. a shoemaker and farmer have different specialities and provide different goods."
+        },
+        {
+            "word": "androcentrism",
+            "definition": "Androcentrism is the belief that the male perspective is the default, or the center of society."
+        }
+        
+    ]
+}

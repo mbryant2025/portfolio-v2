@@ -20,6 +20,10 @@ import TechnicalArticle from './components/TechnicalArticle';
 import ProgrammableTiles from './pages/depth-articles/Tiles';
 import SpokenDigit from './pages/depth-articles/SpokenDigit';
 
+import SociologyArcade from './pages/games/Sociology';
+import SociologyConnections from './pages/games/sociology/Connections';
+import SociologyWordHunt from './pages/games/sociology/WordHunt';
+
 
 const App: React.FC = () => {
   const [filters, setFilters] = useState<string[]>([]);
@@ -98,6 +102,10 @@ const App: React.FC = () => {
         <Route path="/games/super-meme-bros" element={<SuperMemeBros />} />
         <Route path="/games/super-meme-bros/player" element={<SuperMemeBrosPlayer />} />
         <Route path="/games/eight-queens" element={<EightQueens />} />
+        <Route path="/games/sociology-arcade" element={<SociologyArcade />} />
+
+        <Route path="/games/sociology-arcade/connections" element={<SociologyConnections />} />
+        <Route path="/games/sociology-arcade/word-hunt" element={<SociologyWordHunt />} />
 
 
       </Routes>

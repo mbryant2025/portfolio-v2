@@ -1,6 +1,6 @@
 .articleTitle {
     font-size: 60px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Courier New', monospace;
     color: white;
     margin-top: 50px;
     text-align: center;
@@ -8,7 +8,7 @@
 
 .articleSubtitle {
     font-size: 30px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Courier New', monospace;
     color: white;
     margin-top: 50px;
     text-align: center;
@@ -21,7 +21,7 @@
 
 .hamburgerButton {
     font-size: 69px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Courier New', monospace;
     color: white;
     left: 0;
     bottom: 0;
@@ -50,14 +50,14 @@
 
 .articleContent h2 {
     font-size: 42px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Courier New', monospace;
     color: white;
     text-align: center;
 }
 
 .articleContent p {
     font-size: 20px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Courier New', monospace;
     color: white;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -66,7 +66,7 @@
 
 .articleContent figcaption {
     font-size: 20px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Courier New', monospace;
     color: white;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -100,7 +100,7 @@
   min-height: 65px;
   max-height: 100px;
   font-size: 20px;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Courier New', monospace;
   white-space:nowrap;
   display: flex;
   align-items: center;
@@ -116,7 +116,7 @@
 .tableOfContents {
     position: fixed;
     font-size: 26px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Courier New', monospace;
     color: white;
     text-align: left;
     margin-top: 30px;

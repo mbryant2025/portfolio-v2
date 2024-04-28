@@ -13,7 +13,8 @@ const Homepage: React.FC = () => {
         { title: 'Snake+', subtitle: 'Standard Snake with a twist', link: '/games/snake-plus', image: './img/project-thumbnails/snake.png' },
         { title: 'Snake++', subtitle: 'There may or may not be an emeny snake', link: '/games/snake-plus-plus', image: './img/project-thumbnails/snake.png' },
         { title: 'Snake+++', subtitle: 'Maximally cursed Snake', link: '/games/snake-plus-plus-plus', image: './img/project-thumbnails/snake.png' },
-        { title: 'Snake---', subtitle: 'Challenging in a new way', link: '/games/snake-minus-minus-minus', image: './img/project-thumbnails/snake.png' }
+        { title: 'Snake---', subtitle: 'Challenging in a new way', link: '/games/snake-minus-minus-minus', image: './img/project-thumbnails/snake.png' },
+        { title: 'Sociology Arcade', subtitle: 'Sociology-Related Games!', link: '/games/sociology-arcade', image: './img/project-thumbnails/snake.png' }
     ];
 
     return (
