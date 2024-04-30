@@ -7,10 +7,11 @@ import Projects from './pages/Projects';
 import Games from './pages/Games';
 import ComingSoon from './pages/ComingSoon';
 
-import SnakePlus from './pages/games/SnakePlus';
-import SnakePlusPlus from './pages/games/SnakePlusPlus';
-import SnakePlusPlusPlus from './pages/games/SnakePlusPlusPlus';
-import SnakeMinusMinusMinus from './pages/games/SnakeMinusMinusMinus';
+import Snake from './pages/games/Snake';
+import SnakePlus from './pages/games/snake-plus/SnakePlus';
+import SnakePlusPlus from './pages/games/snake-plus/SnakePlusPlus';
+import SnakePlusPlusPlus from './pages/games/snake-plus/SnakePlusPlusPlus';
+import SnakeMinusMinusMinus from './pages/games/snake-plus/SnakeMinusMinusMinus';
 import MazeSolver from './pages/games/MazeSolver';
 import SuperMemeBros from './pages/games/super-meme-bros/SuperMemeBros';
 import SuperMemeBrosPlayer from './pages/games/super-meme-bros/SuperMemeBrosPlayer';
@@ -94,18 +95,21 @@ const App: React.FC = () => {
         {/* See article-build.sh -- automatically generates routes for articles */}
 
         <Route path="/games" element={<Games />} />
-        <Route path="/games/snake-plus" element={<SnakePlus />} />
-        <Route path="/games/snake-plus-plus" element={<SnakePlusPlus />} />
-        <Route path="/games/snake-plus-plus-plus" element={<SnakePlusPlusPlus />} />
-        <Route path="/games/snake-minus-minus-minus" element={<SnakeMinusMinusMinus />} />
+        
         <Route path="/games/maze-solver" element={<MazeSolver />} />
         <Route path="/games/super-meme-bros" element={<SuperMemeBros />} />
         <Route path="/games/super-meme-bros/player" element={<SuperMemeBrosPlayer />} />
         <Route path="/games/eight-queens" element={<EightQueens />} />
-        <Route path="/games/sociology-arcade" element={<SociologyArcade />} />
 
+        <Route path="/games/sociology-arcade" element={<SociologyArcade />} />
         <Route path="/games/sociology-arcade/connections" element={<SociologyConnections />} />
         <Route path="/games/sociology-arcade/word-hunt" element={<SociologyWordHunt />} />
+
+        <Route path="/games/snake" element={<Snake />} />
+        <Route path="/games/snake/snake-plus" element={<SnakePlus />} />
+        <Route path="/games/snake/snake-plus-plus" element={<SnakePlusPlus />} />
+        <Route path="/games/snake/snake-plus-plus-plus" element={<SnakePlusPlusPlus />} />
+        <Route path="/games/snake/snake-minus-minus-minus" element={<SnakeMinusMinusMinus />} />
 
 
       </Routes>

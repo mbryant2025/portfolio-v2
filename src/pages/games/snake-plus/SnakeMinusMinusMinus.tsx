@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
-import BackButton from '../../components/BackButton';
-import '../../components/styles/snake.css'
+import BackButton from '../../../components/BackButton';
+import '../../../components/styles/snake.css'
 
 enum Direction {
     Up,
