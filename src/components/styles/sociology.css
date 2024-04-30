@@ -165,7 +165,6 @@
   max-width: 86%;
   font-size: 20px;
   font-family: 'Courier New', monospace;
-  white-space:nowrap;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -256,4 +255,9 @@
   align-items: center;
   justify-content: center;
 
+}
+
+.completed-text {
+  margin-left: 20px;
+  margin-right: 20px;
 }

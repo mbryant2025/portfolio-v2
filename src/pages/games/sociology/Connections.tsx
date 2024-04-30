@@ -84,7 +84,7 @@ const SociologyConnections: React.FC = () => {
             <div className="completed-categories">
                 
                 {completedCategories.map((completedCategory: string, index: number) => (
-                    <div key={index} className="completed-category">{completedCategory}</div>
+                    <div key={index} className="completed-category"><div className="completed-text">{completedCategory}</div></div>
                 ))}
             </div>
 
@@ -178,6 +178,13 @@ const SociologyConnections: React.FC = () => {
 
                         // If we didnt get it, lose a life
                         setLives(lives - 1);
+                        // Also deselect the words
+                        setSelectedWords([]);
+
+                        setWarningInfo('Try Again');
+                        setTimeout(() => {
+                            setWarningInfo('');
+                        }, 2000);
                         
 
 
