@@ -13,6 +13,10 @@
             "definition": "Ethnocentrism is the belief that one’s own culture is superior to others and the tendency to judge other cultures by the standards of one’s own. \nEthnocentrism can be described as a “yardstick” approach to other cultures, and can result in one thinking that other cultures are “weird, strange, or wrong,” whereas their own culture is “normal, natural, and right.” \n A famous example to demonstrate ethnocentrism is the “Nacirema” article by Horace Miner, which describes American culture in a way that makes it seem strange and exotic. This includes the description of the American bathroom as a “shrine” and the act of brushing one’s teeth as a “ritual.”"
         },
         {
+            "word": "nacirema",
+            "definition": "The Nacirema are a fictional group of people described in an article by Horace Miner. \nThe Nacirema are actually Americans, but the article describes their culture in a way that makes it seem strange and exotic. \nFor example, the article describes the American bathroom as a “shrine” and the act of brushing one’s teeth as a “ritual.” \nThe article is intended to demonstrate the concept of ethnocentrism, or the belief that one’s own culture is superior to others."
+        },
+        {
             "word": "nonexcludable",
             "definition": "Nonexcludable goods are goods that are difficult to exclude people from using. \nExamples of nonexcludable goods include public parks and clean air. \nNonexcludable goods are often provided by the government because it is difficult to charge people for their use. \n These goods are often subject to the issue of freeloaders, but somebody has to provide them -- thus the government often steps in."
         },
@@ -98,7 +102,14 @@
         {
             "word": "androcentrism",
             "definition": "Androcentrism is the belief that the male perspective is the default, or the center of society."
-        }
-        
+        },
+        {
+            "word": "disfunction",
+            "definition": "A disfunction is a negative consequence of an aspect of society. \nDysfunctions can be manifest or latent. \nManifest dysfunctions are the intended consequences of an aspect of society. \nLatent dysfunctions are the unintended consequences of an aspect of society. \nDysfunctions are important because they can help to explain social change."
+        },
+        {
+            "word": "poverty",
+            "definition": "Poverty is a state of deprivation, where people lack the basic necessities of life, such as food, shelter, and clothing. \nMany explanations for poverty exist, including individualistic explanations, such as lack of education or motivation, and structural explanations, such as lack of access to jobs or discrimination. \nPoverty is often measured in terms of income, with people living below the poverty line considered to be poor. \nPoverty is a major social problem, as it can lead to a variety of negative consequences, such as poor health and low life expectancy."
+        }   
     ]
 }

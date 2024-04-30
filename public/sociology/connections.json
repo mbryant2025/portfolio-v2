@@ -1,3 +1,114 @@
 {
-    
+    "groups": [
+
+        {
+        "category": "Sociologists",
+        "words": [
+            "Marx",
+            "Durkheim",
+            "Webber",
+            "Merton"
+            ]
+        },
+
+        {
+            "category": "Individualistic Explanations for Love",
+            "words": [
+                "Proximity",
+                "Familiarity",
+                "Attractiveness",
+                "Similarity"
+            ]
+        },
+
+        {
+            "category": "Types of Discrimination",
+            "words": [
+                "Individual",
+                "Statistical",
+                "Hatred",
+                "Institutional"
+            ]
+        },
+
+        {
+            "category": "Theories",
+            "words": [
+                "Davis-Moore",
+                "Conflict",
+                "Symbolic Interactionism",
+                "Rational Choice"
+            ]
+        },
+
+        {
+            "category": "Known For Famous Studies",
+            "words": [
+                "Zimbardo",
+                "Foucault",
+                "Asch",
+                "Dutton"
+            ]
+        },
+
+        {
+            "category": "Subjects of Famous Experiments",
+            "words": [
+                "Prison",
+                "Monkeys",
+                "Lines",
+                "Rats"
+
+            ]
+        },
+
+        {
+            "cateogory": "Functionalists",
+            "words": [
+                "Merton",
+                "Durkheim",
+
+            ]
+        },
+
+        {
+            "cateogory": "Conflict Theorists",
+            "words": [
+                "Marx",
+                "Weber"
+                
+            ]
+        },
+
+        {
+            "cateogory": "Crime Theorists",
+            "words": [
+                "Foucault",
+                "Lombroso"
+                
+            ]
+        },
+
+        {
+            "cateogory": "Human containment referenced in studies",
+            "words": [
+                "Prison",
+                "Panopticon"
+                
+            ]
+        },
+
+        {
+            "cateogory": "Types of Functions",
+            "words": [
+                "Manifest",
+                "Latent",
+                "Dysfunctions",
+                
+                
+            ]
+        }
+        
+    ]
+
 }
