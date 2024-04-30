@@ -7,8 +7,8 @@ import BackButton from '../../components/BackButton';
 
 const SociologyArcade: React.FC = () => {
     const widgetData: Widget[] = [
-        { title: 'Connections', subtitle: 'Blatant ripoff of the NYT game', link: '/games/sociology-arcade/connections', image: './img/project-thumbnails/maze-solver.png' },
-        { title: 'Word Hunt', subtitle: 'Find sociology words!', link: '/games/sociology-arcade/word-hunt', image: './img/project-thumbnails/maze-solver.png' },
+        { title: 'Connections', subtitle: 'Blatant ripoff of the NYT game', link: '/games/sociology-arcade/connections', image: './img/games/sociology/connections.png' },
+        { title: 'Word Hunt', subtitle: 'Find sociology words!', link: '/games/sociology-arcade/word-hunt', image: './img/games/sociology/wordhunt.png' },
     ];
 
     return (

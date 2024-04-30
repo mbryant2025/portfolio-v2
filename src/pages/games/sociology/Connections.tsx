@@ -11,6 +11,9 @@ interface WordBox {
 
 const wordsFile = 'sociology/connections.json';
 
+const numGroups = 4;
+const numWordsPerGroup = 4;
+
 
 const SociologyConnections: React.FC = () => {
 
@@ -32,7 +35,7 @@ const SociologyConnections: React.FC = () => {
                 // Now we need to go through and find 16 words (4 groups)
                 // Randomly choose, except skip category if we already have 4 or a common word
 
-                while (words.length < 16) {
+                while (words.length < numGroups * numWordsPerGroup) {
                     const category = categories[Math.floor(Math.random() * categories.length)];
                     
                     console.log(category);
@@ -40,9 +43,13 @@ const SociologyConnections: React.FC = () => {
                     // Check if we dont already have the 4 words
                     // category.words are the words
 
-                    if (category.words.length < 4) {
+                    if (category.words.length < numWordsPerGroup) {
                         continue;
                     }
+
+                    // If it is more than the desired amount, trim it down randomly
+                    category.words.sort(() => Math.random() - 0.5);
+                    category.words = category.words.slice(0, numWordsPerGroup);
 
                     if (category.words.some((word: string) => words.some((wordBox: WordBox) => wordBox.word === word))) {
                         continue;
@@ -72,6 +79,7 @@ const SociologyConnections: React.FC = () => {
         <div>
             <BackButton />
             <h1 className="title">Sociology Connections</h1>
+            <h1 className="subtitle">Create groups of {numWordsPerGroup} words!</h1>
 
             <div className="completed-categories">
                 
@@ -94,7 +102,7 @@ const SociologyConnections: React.FC = () => {
                                 setSelectedWords(selectedWords.filter((selectedWord: WordBox) => selectedWord.word !== wordBox.word));
                             } else {
                                 // If not selected, select, but only max of 4
-                                if (selectedWords.length < 4) {
+                                if (selectedWords.length < numWordsPerGroup) {
                                     setSelectedWords([...selectedWords, wordBox]);
                                 }
                             }
@@ -123,9 +131,9 @@ const SociologyConnections: React.FC = () => {
                             return;
                         }
 
-                        // Check that 4 words are selected
-                        if (selectedWords.length !== 4) {
-                            setWarningInfo('Select 4 words');
+                        // Check that proper number words are selected
+                        if (selectedWords.length !== numWordsPerGroup) {
+                            setWarningInfo('Select ' + numWordsPerGroup + ' Words');
                             setTimeout(() => {
                                 setWarningInfo('');
                             }, 2000);
@@ -144,17 +152,18 @@ const SociologyConnections: React.FC = () => {
                         });
 
                         const categoryValues = Object.values(categoryCounts);
-                        if (categoryValues.some((value: number) => value === 3)) {
+                        if (categoryValues.some((value: number) => value === (numWordsPerGroup - 1))) {
                             setWarningInfo('One Away');
                             setTimeout(() => {
                                 setWarningInfo('');
                             }
                             , 2000);
+                            setLives(lives - 1);
                             return;
                         }
 
-                        // If we got 4, pop off the corresponding word boxes
-                        if (categoryValues.some((value: number) => value === 4)) {
+                        // If we got the right amount, pop off the corresponding word boxes
+                        if (categoryValues.some((value: number) => value === numWordsPerGroup)) {
                             const newWords = words.filter((wordBox: WordBox) => !selectedWords.some((selectedWord: WordBox) => selectedWord.word === wordBox.word));
                             setWords(newWords);
 
@@ -167,7 +176,7 @@ const SociologyConnections: React.FC = () => {
                             return;
                         }
 
-                        // If we didnt get 4, lose a life
+                        // If we didnt get it, lose a life
                         setLives(lives - 1);
                         
 

@@ -6,7 +6,7 @@
         "words": [
             "Marx",
             "Durkheim",
-            "Webber",
+            "Weber",
             "Merton"
             ]
         },
@@ -32,22 +32,12 @@
         },
 
         {
-            "category": "Theories",
+            "category": "Sociological Perspectives",
             "words": [
-                "Davis-Moore",
                 "Conflict",
                 "Symbolic Interactionism",
-                "Rational Choice"
-            ]
-        },
-
-        {
-            "category": "Known For Famous Studies",
-            "words": [
-                "Zimbardo",
-                "Foucault",
-                "Asch",
-                "Dutton"
+                "Rational Choice",
+                "Functionalism"
             ]
         },
 
@@ -58,30 +48,11 @@
                 "Monkeys",
                 "Lines",
                 "Rats"
-
             ]
         },
 
         {
-            "cateogory": "Functionalists",
-            "words": [
-                "Merton",
-                "Durkheim",
-
-            ]
-        },
-
-        {
-            "cateogory": "Conflict Theorists",
-            "words": [
-                "Marx",
-                "Weber"
-                
-            ]
-        },
-
-        {
-            "cateogory": "Crime Theorists",
+            "category": "Crime Theorists",
             "words": [
                 "Foucault",
                 "Lombroso"
@@ -90,7 +61,7 @@
         },
 
         {
-            "cateogory": "Human containment referenced in studies",
+            "category": "Human containment devices referenced in studies",
             "words": [
                 "Prison",
                 "Panopticon"
@@ -99,15 +70,104 @@
         },
 
         {
-            "cateogory": "Types of Functions",
+            "category": "Types of Functions",
             "words": [
                 "Manifest",
                 "Latent",
-                "Dysfunctions",
-                
-                
+                "Dysfunctions"
+            ]
+        },
+
+        {
+            "category": "Sociologists who founded differing perspectives",
+            "words": [
+                "Marx",
+                "Durkheim",
+                "Weber"
+            ]
+        },
+
+        {
+            "category": "Types of rewards, differing by stratification",
+            "words": [
+                "Status",
+                "Power",
+                "Property"
+            ]
+        },
+
+        {
+            "category": "Views on poverty",
+            "words": [
+                "Culture of Poverty",
+                "Situational",
+                "Structural"
+            ]
+        },
+
+        {
+            "category": "Latio Health Paradox Theories",
+            "words": [
+                "Healthy Migrant",
+                "Salmon Bias",
+                "Assimilation",
+                "Circular Migration"
+            ]
+        },
+
+        {
+            "category": "___ Effect",
+            "words": [
+                "Matthew",
+                "Broken Windows",
+                "Halo",
+                "Returning Soldier",
+                "Broken Heart"
+            ]
+        },
+
+        {
+            "category": "Levels of Analysis",
+            "words": [
+                "Individual",
+                "Group",
+                "Organization",
+                "Society"
+            ]
+        },
+
+        {
+            "category": "Talking Networks",
+            "words": [
+                "Degree",
+                "Multiplexity",
+                "Simplex",
+                "Directed"
+            ]
+        },
+
+        {
+            "category": "You've Got the Power",
+            "words": [
+                "Least Interested",
+                "Bhramin",
+                "Stanford Prison Guards",
+                "Social Norms"
+            ]
+        },
+
+        {
+            "category": "Pertains to Functionalism",
+            "words": [
+                "Durkheim",
+                "Institutions",
+                "Solidarity",
+                "Macroscopic"
             ]
         }
+        
+
+        
         
     ]
 

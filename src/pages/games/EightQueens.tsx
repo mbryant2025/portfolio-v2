@@ -10,11 +10,11 @@ interface Square {
 const MazeSolver: React.FC = () => {
     const initialQueens = [
         { row: 0, col: 0 },
-        { row: 1, col: 4 },
+        { row: 1, col: 6 },
         { row: 2, col: 7 },
-        { row: 3, col: 2 },
+        { row: 6, col: 2 },
         { row: 4, col: 2 },
-        { row: 5, col: 6 },
+        { row: 0, col: 6 },
         { row: 6, col: 1 },
         { row: 7, col: 3 },
     ];
