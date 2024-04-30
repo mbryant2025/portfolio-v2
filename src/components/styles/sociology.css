@@ -1,7 +1,7 @@
 .word-hunt-grid {
   width: 70%;
   display: grid;
-  font-family: 'Courier New', monospace;
+  
   color: white;
   grid-template-columns: repeat(14, 1fr);
   grid-template-rows: auto;
@@ -41,7 +41,7 @@
   justify-content: space-between;
   margin: 0 auto;
   width: 70%;
-  font-family: 'Courier New', monospace;
+  
   color: white;
   font-size: 16px;
   display: flex;
@@ -55,7 +55,7 @@
   justify-content: space-between;
   margin: 0 auto;
   width: 70%;
-  font-family: 'Courier New', monospace;
+  
   border-radius: 14px;
   font-size: 16px;
 }
@@ -66,7 +66,7 @@
 
 .wordhunt-words {
 
-  font-family: 'Courier New', monospace;
+  
   color: white;
   font-size: 16px;
   border-radius: 14px;
@@ -117,7 +117,7 @@
   width: 80%;
   justify-self: center;
 
-  font-family: 'Courier New', monospace;
+  
   color: white;
   margin-top: 50px;
 }
@@ -134,7 +134,7 @@
 
 .definition {
   font-size: 16px;
-  font-family: 'Courier New', monospace;
+  
   color: white;
   margin-top: 50px;
   margin-bottom: 50px;
@@ -164,7 +164,7 @@
   min-width: 86%;
   max-width: 86%;
   font-size: 20px;
-  font-family: 'Courier New', monospace;
+  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -197,7 +197,7 @@
 
 .warning {
   font-size: 36px;
-  font-family: 'Courier New', monospace;
+  
   color: white;
   margin-top: 10px;
   margin-bottom: 50px;
@@ -226,7 +226,7 @@
   justify-content: space-between;
   margin: 0 auto;
   width: 70%;
-  font-family: 'Courier New', monospace;
+  
   color: white;
   font-size: 16px;
   border-radius: 14px;
@@ -236,7 +236,7 @@
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  font-family: 'Courier New', monospace;
+  
   border-radius: 14px;
   font-size: 16px;
   background-color: white;

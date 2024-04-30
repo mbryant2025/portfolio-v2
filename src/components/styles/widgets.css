@@ -20,7 +20,7 @@
     padding-right: 10px;
     padding-top: 10px;
     font-size: 20px;
-    font-family: 'Courier New', monospace;
+    
     display: grid;
     grid-template-rows: 1fr 1fr;
 }
@@ -117,7 +117,7 @@
     min-height: 65px;
     max-height: 100px;
     font-size: 20px;
-    font-family: 'Courier New', monospace;
+    
     white-space:nowrap;
     display: flex;
     margin-bottom: 50px;
