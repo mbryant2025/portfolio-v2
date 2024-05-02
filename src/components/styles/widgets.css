@@ -126,6 +126,7 @@
 @media (max-width: 768px) {
     .widget-bar {
         width: 90%;
+        margin-bottom: -25px;
     }
 }
 
@@ -134,17 +135,18 @@
 }
 
 .widget-bar-image {
-    display: flex;
     width: 50%;
-    margin: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    
 }
 
 .widget-bar-title {
-    width: 50%;
     font-size: 20px;
-    margin: auto;
     text-align: center;
-    margin-right: 33.33%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .peeking-image-bar {

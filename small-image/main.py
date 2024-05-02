@@ -3,7 +3,7 @@ from PIL import Image
 
 
 # 780 for thumbnail, 1100 for article
-def resize_image(image_path, resized_path, new_width=780):
+def resize_image(image_path, resized_path, new_width=3000):
     img = Image.open(image_path)
     width, height = img.size
     new_height = round(new_width * height / width)

@@ -16,7 +16,6 @@
 
 @media (max-width: 768px) {
     .link-wrapper {
-        display: grid;
         grid-template-columns: 100%;
     }
 }
@@ -26,11 +25,13 @@
     text-align: left;
     color: white;
     width: 66%;
+    margin-left: 5%;
 }
 
 @media (max-width: 768px) {
     .detail-widget-text {
         width: 100%;
+        margin-left: 0;
     }
 }
 
@@ -47,8 +48,8 @@
 }
 
 .detail-widget-image {
+    width: 400px;
     height: 300px;
-    width: 300px;
     max-height: 300px;
     max-width: 300px;
     border-radius: 8px;
@@ -81,6 +82,7 @@
 
 @media (max-width: 768px) {
     .peeking-images-detail {
-        margin-left: -5%
+        margin-left: -6%;
+        width: 112%;
     }
 }
