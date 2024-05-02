@@ -1,23 +1,38 @@
 import React from 'react';
-import ScrollableWidgetPanel from '../components/ScrollableWidgetPanel';
-import WidgetComponent from '../components/WidgetComponent';
-import GeometryWidgetView from '../components/GeometryWidgetView';
-import { Widget } from '../types';
+import Projects from './Projects';
+import '../components/styles/homepage.css';
+import Navbar from '../components/Navbar';
 
 const Homepage: React.FC = () => {
-  const widgetData: Widget[] = [
-    { title: 'Project Portfolio', subtitle: 'Includes writeups', link: '/projects', image: './img/project-thumbnails/vision-guided-robot.JPG' },
-    { title: 'About Me', subtitle: 'Technical skills', link: '/skills', image: './img/michael-robot.jpeg' },
-    { title: 'Games and Simulations', subtitle: 'Run now in the browser', link: '/games', image: './img/project-thumbnails/maze-solver.png' }
-  ];
 
   return (
     <div>
-      <GeometryWidgetView scrollWidgets={<ScrollableWidgetPanel title='Michael Bryant'>
-        {widgetData.map((widget) => (
-          <WidgetComponent key={widget.title} title={widget.title} subtitle={widget.subtitle} link={widget.link} image={widget.image} />
-        ))}
-      </ScrollableWidgetPanel>} shape='tetrahedron'/>
+
+      <div className="splash-screen">
+        <img src={`${process.env.PUBLIC_URL}/img/michael-robot-full.jpg`} alt="" className="splash-screen-image" />
+      
+        <div className="splash-screen-contents">
+
+          <Navbar selected="Home" animate={true} />
+
+          <div className="splash-screen-overlay-text">
+            <h1 className="splash-screen-text">Hi! I'm Michael.</h1>
+            <h1 className="splash-screen-subtext">ECE/CS At Duke</h1>
+          </div>
+
+          
+
+          <img className="animated-arrow" src={`${process.env.PUBLIC_URL}/img/arrow.png`} alt="" onClick={() => {
+            window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
+          }
+          } />
+            
+
+        </div>
+      </div>
+
+
+      <Projects filter={undefined} />
     </div>
   );
 };

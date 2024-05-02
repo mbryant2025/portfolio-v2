@@ -123,6 +123,12 @@
     margin-bottom: 50px;
 }
 
+@media (max-width: 768px) {
+    .widget-bar {
+        width: 90%;
+    }
+}
+
 .widget-bar:hover {
     background-color: #36d661;
 }

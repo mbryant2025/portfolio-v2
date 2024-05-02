@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import ScrollableWidgetPanel from '../components/ScrollableWidgetPanel';
-import WidgetPeekComponent from '../components/WidgetPeekComponent';
-import TwoColumnView from '../components/TwoColumnView';
-import BackButton from '../components/BackButton';
+import DetailComponent from '../components/DetailComponent';
+import DetailView from '../components/DetailView';
 import WidgetBar from '../components/WidgetBar';
 import { PeekWidget } from '../types';
 import getFormattedName from '../mapNames';
@@ -68,7 +67,7 @@ const Projects: React.FC<ProjectsProps> = ({ filter }) => {
         setSelectedPeek(peek);
         setFormattedSelectedPeek(mappedTitle);
 
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
     };
 
     const filteredWidgets = selectedPeek
@@ -77,38 +76,16 @@ const Projects: React.FC<ProjectsProps> = ({ filter }) => {
 
     const peekImage = peekCommonPathPrefix + selectedPeek + peekExtension
 
-    const filteredWidgetsLeft = filteredWidgets.filter((_, index) => index % 2 === 0);
-    const filteredWidgetsRight = filteredWidgets.filter((_, index) => index % 2 === 1);
-
     return (
-        <div>
-            <BackButton />
-            
-            <TwoColumnView title={'Projects'}
+        <div>            
+            <DetailView title={'Projects'}
                 widgetBar = {selectedPeek !== undefined && (
                     <WidgetBar image={peekImage} title={formattedSelectedPeek} onClick={() => handlePeekClick(undefined)} />
                 )}
-                scrollWidgetsLeft={
+                scrollWidgets={
                     <ScrollableWidgetPanel title=''>
-                        
-                        {filteredWidgetsLeft.map((widget) => (
-                            <WidgetPeekComponent
-                                key={widget.title}
-                                title={widget.title}
-                                subtitle={widget.subtitle}
-                                link={widget.link}
-                                image={widget.image}
-                                peek={widget.peek}
-                                peekImages={widget.peekImages}
-                                onClick={handlePeekClick}
-                            />
-                        ))}
-                    </ScrollableWidgetPanel>
-                }
-                scrollWidgetsRight={
-                    <ScrollableWidgetPanel title=''>
-                        {filteredWidgetsRight.map((widget) => ( 
-                            <WidgetPeekComponent
+                        {filteredWidgets.map((widget) => (
+                            <DetailComponent
                                 key={widget.title}
                                 title={widget.title}
                                 subtitle={widget.subtitle}
