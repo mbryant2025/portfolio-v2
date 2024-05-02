@@ -26,8 +26,6 @@
         "python",
         "raspberry-pi",
         "js",
-        "html",
-        "css",
         "3d-printing",
         "sdr"
       ]
@@ -51,11 +49,10 @@
       "peek": [
         "electronics-design",
         "ros",
-        "python",
         "cc",
         "linux",
-        "docker",
-        "bash"
+        "python",
+        "docker"
       ]
     },
     {
@@ -130,9 +127,7 @@
       "link": "/coming-soon",
       "image": "oogasalad.png",
       "peek": [
-        "java",
-        "css"
-      ]
+        "java"      ]
     },
     {
       "title": "PatientWatch",
@@ -145,9 +140,7 @@
         "flask",
         "arduino",
         "cc",
-        "js",
-        "html",
-        "css"
+        "js"
       ]
     },
     {
@@ -389,9 +382,7 @@
       "link": "https://michaelcbryant.com/#/games",
       "image": "snake.png",
       "peek": [
-        "js",
-        "html",
-        "css"
+        "js"
       ]
     },
     {
