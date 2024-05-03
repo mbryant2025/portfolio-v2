@@ -10,7 +10,7 @@ def resize_image(image_path, resized_path, new_width=3000):
     img = img.resize((new_width, new_height), Image.LANCZOS)
     img.save(resized_path)
 
-for f in os.listdir('small-image/input'):
+for f in os.listdir('image_format/input'):
     if f.endswith('.DS_Store'):
         continue
-    resize_image('small-image/input/' + f, 'small-image/output/' + f)
+    resize_image('image_format/input/' + f, 'image_format/output/' + f)

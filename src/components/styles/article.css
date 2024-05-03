@@ -1,3 +1,8 @@
+.articleContainer {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .articleTitle {
     font-size: 60px;
     
@@ -59,8 +64,7 @@
 }
 
 .articleColumn {
-    width: 93%;
-    float: right;
+    width: 100%;
 }
 
 .articleColumnWide{
@@ -132,6 +136,7 @@
     margin-right: auto;
     max-width: 90%;
     margin-bottom: 50px;
+    border-radius: 14px;
 }
 
 @media (max-width: 768px) {

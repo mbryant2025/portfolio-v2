@@ -22,7 +22,7 @@ const Navbar: React.FC<NavbarProps> = ({ selected, animate }) => {
                 </li>}
 
                 {selected !== "About" && <li className={selected === 'About' ? 'is-selected' : ''}>
-                    <Link to="/projects">About</Link>
+                    <Link to="/skills">About</Link>
                 </li>}
             </ul>
         </nav>

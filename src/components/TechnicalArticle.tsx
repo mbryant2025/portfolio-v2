@@ -3,6 +3,7 @@ import axios from 'axios';
 import FullWidthWidget from './FullWidthWidget';
 import BackButton from './BackButton';
 import './styles/article.css';
+import PageBottom from './PageBottom';
 
 interface TechnicalArticleProps {
   htmlFilePath: string;
@@ -106,11 +107,11 @@ const TechnicalArticle: React.FC<TechnicalArticleProps> = ({ htmlFilePath }) => 
   };
 
   return (
-    <div>
+    <div className="articleContainer">
       <BackButton />
       {pageTitle && <h1 className="articleTitle">{pageTitle}</h1>}
       {subtitle && <h3 className="articleSubtitle">{subtitle}</h3>}
-      <div className="tableOfContentsColumn">
+      {/* <div className="tableOfContentsColumn">
         <button className="hamburgerButton" onClick={toggleTableOfContents}>
           &#9776;
         </button>
@@ -119,7 +120,7 @@ const TechnicalArticle: React.FC<TechnicalArticleProps> = ({ htmlFilePath }) => 
             <ul>{tableOfContents}</ul>
           </div>
         )}
-      </div>
+      </div> */}
       <div className={showTableOfContents ? "articleColumn" : "articleColumnWide"}>
         <FullWidthWidget>
           {gitHubLink && <img src="/img/github.png" alt="GitHub" className="github" onClick={() => window.open(gitHubLink, '_blank')} />}
@@ -131,6 +132,8 @@ const TechnicalArticle: React.FC<TechnicalArticleProps> = ({ htmlFilePath }) => 
           )}
           <div className="spacer"></div>
         </FullWidthWidget>
+      <PageBottom />
+
       </div>
     </div>
   );

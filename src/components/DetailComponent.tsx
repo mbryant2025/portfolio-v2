@@ -39,7 +39,6 @@ const DetailComponent: React.FC<PeekWidget> = ({ title, subtitle, link, image, p
                         ))}
                     </div>
                 </div>
-    
 
                 <Link to={link} className="detail-widget-image">
                     <img src={image} alt={title} className="detail-widget-image" />

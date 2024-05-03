@@ -2,6 +2,7 @@ import React from 'react';
 import Projects from './Projects';
 import '../components/styles/homepage.css';
 import Navbar from '../components/Navbar';
+import PageBottom from '../components/PageBottom';
 
 const Homepage: React.FC = () => {
 
@@ -33,6 +34,8 @@ const Homepage: React.FC = () => {
 
 
       <Projects filter={undefined} />
+
+      <PageBottom />
     </div>
   );
 };
