@@ -9,7 +9,7 @@ const ComingSoon: React.FC = () => {
 
   const [randomLink, setRandomLink] = React.useState("");
 
-  const m = ["Oh no!", "This page is still under construction.", "You can go back or try a random article below!"]
+  const m = ["Oh no!", "This page is still under construction.", "You can go back or visit a random project below!"]
 
 
   useEffect(() => {
@@ -41,7 +41,7 @@ const ComingSoon: React.FC = () => {
       <ScreenMessage messages={m} />
       <Link to={randomLink} >
         <button className='button' >
-          Random Article
+          Random Project
         </button>
       </Link>
     </div>
