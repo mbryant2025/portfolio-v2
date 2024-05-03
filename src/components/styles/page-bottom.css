@@ -9,6 +9,10 @@
     margin-bottom: 50px;
 }
 
+.bottom-text-wrapper {
+    width: 100%;
+}
+
 .bottom-text {
     text-align: left;
     color: white;

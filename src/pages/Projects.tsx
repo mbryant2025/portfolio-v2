@@ -11,11 +11,26 @@ interface ProjectsProps {
 }
 
 const Projects: React.FC<ProjectsProps> = ({ filter }) => {
+
+    const [formattedSelectedPeek, setFormattedSelectedPeek] = useState<string>('');
     const [widgetData, setWidgetData] = useState<PeekWidget[]>([]);
-    const [selectedPeek, setSelectedPeek] = useState<string | undefined>(filter);
+    const [selectedPeek, setSelectedPeek] = useState<string | undefined>('');
     const [peekCommonPathPrefix, setPeekCommonPathPrefix] = useState<string>('');
     const [peekExtension, setPeekExtension] = useState<string>('');
-    const [formattedSelectedPeek, setFormattedSelectedPeek] = useState<string>('');
+
+    // Load selected peek from local storage once when the component mounts
+    useEffect(() => {
+        const savedPeek = localStorage.getItem('selectedPeek');
+        if (savedPeek === null || savedPeek === '' || savedPeek === 'undefined') {
+            setSelectedPeek(undefined);
+        } else {
+            setSelectedPeek(savedPeek);
+            // Now to set the formatted name
+            getFormattedName(savedPeek).then((formattedName) => {
+                setFormattedSelectedPeek(formattedName);
+            });
+        }
+    }, []);
 
     useEffect(() => {
         const fetchFormattedName = async () => {
@@ -60,12 +75,14 @@ const Projects: React.FC<ProjectsProps> = ({ filter }) => {
     const handlePeekClick = async (peek: string | undefined) => {
         if (peek === selectedPeek) {
             setSelectedPeek(undefined);
+            localStorage.setItem('selectedPeek', '');
             return;
         }
 
         const mappedTitle = await getFormattedName(peek);
         setSelectedPeek(peek);
         setFormattedSelectedPeek(mappedTitle);
+        localStorage.setItem('selectedPeek', peek as string);
 
         window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
     };

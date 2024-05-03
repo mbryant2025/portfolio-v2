@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './styles/page-bottom.css';
 
 const PageBottom: React.FC = () => {
@@ -6,10 +7,12 @@ const PageBottom: React.FC = () => {
     return (
         <div className="page-bottom">
                 <div className="horizontal-line-bottom" />
-                <div className="bottom-text">
-                    <p>Michael Bryant</p>
-                </div>
-
+                <Link to="/" className="bottom-text-wrapper" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+                    <div className="bottom-text">
+                        <p>Michael Bryant</p>
+                    </div>
+                </Link>
+                
                 <div className="bottom-text-small">
                     {/* <p>LinkedIn</p> */}
                 </div>
