@@ -13,7 +13,7 @@ const TechnicalArticle: React.FC<TechnicalArticleProps> = ({ htmlFilePath }) => 
   const [htmlContent, setHtmlContent] = useState<string | null>(null);
   const [pageTitle, setPageTitle] = useState<string | null>(null);
   const [subtitle, setSubtitle] = useState<string | null>(null);
-  const [showTableOfContents, setShowTableOfContents] = useState<boolean>(false);
+  // const [showTableOfContents, setShowTableOfContents] = useState<boolean>(false);
   const [tableOfContents, setTableOfContents] = useState<JSX.Element[] | null>(null);
   const [gitHubLink, setGitHubLink] = useState<string | null>(null);
 
@@ -102,9 +102,9 @@ const TechnicalArticle: React.FC<TechnicalArticleProps> = ({ htmlFilePath }) => 
     });
   }, [tableOfContents]);
 
-  const toggleTableOfContents = () => {
-    setShowTableOfContents(!showTableOfContents);
-  };
+  // const toggleTableOfContents = () => {
+  //   setShowTableOfContents(!showTableOfContents);
+  // };
 
   return (
     <div className="articleContainer">
@@ -121,7 +121,7 @@ const TechnicalArticle: React.FC<TechnicalArticleProps> = ({ htmlFilePath }) => 
           </div>
         )}
       </div> */}
-      <div className={showTableOfContents ? "articleColumn" : "articleColumnWide"}>
+      <div className= "articleColumnWide">
         <FullWidthWidget>
           {gitHubLink && <img src="/img/github.png" alt="GitHub" className="github" onClick={() => window.open(gitHubLink, '_blank')} />}
           <div className="spacer"></div>
