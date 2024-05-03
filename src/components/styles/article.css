@@ -4,6 +4,13 @@
     color: white;
     margin-top: 50px;
     text-align: center;
+
+}
+
+@media (max-width: 768px) {
+    .articleTitle {
+        font-size: 40px;
+    }
 }
 
 .articleSubtitle {
@@ -12,6 +19,13 @@
     color: white;
     margin-top: 50px;
     text-align: center;
+}
+
+@media (max-width: 768px) {
+    .articleSubtitle {
+        font-size: 20px;
+        margin-top: 10px;
+    }
 }
 
 .tableOfContentsColumn {
@@ -32,6 +46,12 @@
     cursor: pointer;
     outline: none;
     background-color: transparent;
+}
+
+@media (max-width: 768px) {
+    .hamburgerButton {
+        display: none;
+    }
 }
 
 .hamburgerButton:hover {
@@ -64,6 +84,13 @@
     text-align: justify;
 }
 
+@media (max-width: 768px) {
+    .articleContent p {
+        font-size: 16px;
+        text-align: left;
+    }
+}
+
 .articleContent figcaption {
     font-size: 20px;
     
@@ -71,6 +98,15 @@
     margin-top: 50px;
     margin-bottom: 50px;
     text-align: center;
+    margin-top: -40px;
+
+}
+
+@media (max-width: 768px) {
+    .articleContent figcaption {
+        font-size: 16px;
+        margin-top: -45px;
+    }
 }
 
 .articleContent img {
@@ -78,20 +114,34 @@
     height: auto;
     margin-top: 50px;
     margin-bottom: 50px;
-    /* center horizontally */
     display: block;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .articleContent img {
+        width: 100%;
+    }
 }
 
 .articleContent iframe {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    max-width: 90%;
+    margin-bottom: 50px;
+}
+
+@media (max-width: 768px) {
+    .articleContent iframe {
+        margin-bottom: 50px;
+    }
 }
 
 .articleContent button {
-    background-color: #32a852;
+  background-color: #32a852;
   border-radius: 14px;
   margin: auto;
   width: 66%;
@@ -141,11 +191,21 @@ a:link {
 }
 
 .github {
-    max-width: 75px;
-    top: 25px;
+    max-width: 65px;
+    top: 35px;
     right: 25px;
     position: fixed;
     cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .github {
+        max-width: 50px;
+        position: fixed;
+        bottom: 10px;
+        
+
+    }
 }
 
 .github:hover {
