@@ -7,7 +7,14 @@ const PageBottom: React.FC = () => {
     return (
         <div className="page-bottom">
                 <div className="horizontal-line-bottom" />
-                <Link to="/" className="bottom-text-wrapper" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+                <Link to="/" className="bottom-text-wrapper" onClick={
+                    () => {
+                            setTimeout(() => {
+                                window.scrollTo({ top: 0, behavior: 'smooth' })
+                            }, 100);
+                            
+                        }
+                    }>
                     <div className="bottom-text">
                         <p>Michael Bryant</p>
                     </div>

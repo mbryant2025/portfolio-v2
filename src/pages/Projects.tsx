@@ -10,6 +10,12 @@ interface ProjectsProps {
     filter: string | undefined;
 }
 
+function scrollToTop() {
+    setTimeout(() => {
+        window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
+    }, 100);
+}
+
 const Projects: React.FC<ProjectsProps> = ({ filter }) => {
 
     const [formattedSelectedPeek, setFormattedSelectedPeek] = useState<string>('');
@@ -76,6 +82,7 @@ const Projects: React.FC<ProjectsProps> = ({ filter }) => {
         if (peek === selectedPeek) {
             setSelectedPeek(undefined);
             localStorage.setItem('selectedPeek', '');
+            scrollToTop();
             return;
         }
 
@@ -84,7 +91,8 @@ const Projects: React.FC<ProjectsProps> = ({ filter }) => {
         setFormattedSelectedPeek(mappedTitle);
         localStorage.setItem('selectedPeek', peek as string);
 
-        window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
+        scrollToTop();
+        
     };
 
     const filteredWidgets = selectedPeek
