@@ -15,7 +15,6 @@ def convert_image(image, output):
     for item in datas:
         # If not transparent
         if item[3] > 20:
-            print(item)
             new_image.append((255, 255, 255, item[3]))
 
         else:

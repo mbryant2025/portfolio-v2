@@ -18,6 +18,12 @@
     transform: scale(1.15);
 }
 
+@media (max-width: 768px) {
+    .back-button {
+        display: none;
+    }
+}
+
 .back-button-light {
     position: fixed;
     top: 0;

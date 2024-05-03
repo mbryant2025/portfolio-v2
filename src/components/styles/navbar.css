@@ -30,6 +30,8 @@
     z-index: 1000;
     background-color: #2d2d2d;
 
+    visibility: hidden;
+
 }
 
 .navbar a {
