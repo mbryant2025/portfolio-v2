@@ -10,10 +10,23 @@
       "image": "littlearn.png",
       "peek": [
         "cc",
+        "kicad",
         "react",
         "typescript",
         "electronics-design",
+        "docker"
+      ]
+    },
+    {
+      "title": "Quadraped Robot",
+      "subtitle": "ROS-based robot with 8 DOF",
+      "link": "/projects/robot-dog",
+      "image": "littlearn.png",
+      "peek": [
+        "ros",
+        "cc",
         "docker",
+        "fusion",
         "3d-printing"
       ]
     },
@@ -263,8 +276,16 @@
       "link": "/projects/slogo",
       "image": "slogo.png",
       "peek": [
-        "java",
-        "css"
+        "java"
+      ]
+    },
+    {
+      "title": "Cell Society",
+      "subtitle": "Simulates various cellular automata; for Duke CS308",
+      "link": "/projects/cell-society",
+      "image": "cell-society.png",
+      "peek": [
+        "java"
       ]
     },
     {
@@ -288,16 +309,6 @@
         "cc",
         "arduino",
         "3d-printing"
-      ]
-    },
-    {
-      "title": "Cell Society",
-      "subtitle": "Simulates various cellular automata; for Duke CS308",
-      "link": "/projects/cell-society",
-      "image": "cell-society.png",
-      "peek": [
-        "java",
-        "css"
       ]
     },
     {

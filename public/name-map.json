@@ -40,7 +40,9 @@
     "flask": "Flask",
     "ml": "Machine Learning",
     "sklearn": "scikit-learn",
-    "pytorch": "PyTorch"
+    "pytorch": "PyTorch",
+    "fusion": "Fusion 360",
+    "kicad": "KiCad"
 
 }
   
