@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import BackButton from '../components/BackButton';
 import ScreenMessage from '../components/ScreenMessage'
-import '../components/styles/coming-soon.css'
+import '../styles/coming-soon.css'
 import { Link } from 'react-router-dom';
 
 

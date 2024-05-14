@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles/columns.css'
+import '../styles/columns.css'
 
 interface TwoColumnViewProps {
     scrollWidgetsLeft: React.ReactNode;

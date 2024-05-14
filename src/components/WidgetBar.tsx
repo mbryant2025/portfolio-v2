@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles/widgets.css'
+import '../styles/widgets.css'
 
 interface WidgetBarProps {
     image: string;

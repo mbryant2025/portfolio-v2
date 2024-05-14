@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles/full-widget.css'
+import '../styles/full-widget.css'
 
 
 interface FullWidthWidgetProps {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { PeekWidget } from '../types';
 import { Link } from 'react-router-dom';
-import './styles/widgets.css';
+import '../styles/widgets.css';
 
 const WidgetPeekComponent: React.FC<PeekWidget> = ({ title, subtitle, link, image, peekImages, onClick }) => {
 

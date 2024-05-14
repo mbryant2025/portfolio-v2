@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import {Routes, Route } from 'react-router-dom';
 
 import Homepage from './pages/Homepage';
@@ -21,30 +21,8 @@ import TechnicalArticle from './components/TechnicalArticle';
 import ProgrammableTiles from './pages/depth-articles/Tiles';
 import SpokenDigit from './pages/depth-articles/SpokenDigit';
 
-import SociologyArcade from './pages/games/Sociology';
-import SociologyConnections from './pages/games/sociology/Connections';
-import SociologyWordHunt from './pages/games/sociology/WordHunt';
-
 
 const App: React.FC = () => {
-  const [filters, setFilters] = useState<string[]>([]);
-
-  useEffect(() => {
-    fetch('/name-map.json')
-      .then((response) => response.json())
-      .then((data) => {
-        const filters = Object.keys(data);
-        setFilters(filters);
-      })
-      .catch((error) => {
-        console.error('Error fetching filters:', error);
-      });
-  }, []);
-
-  // Removes some of the filters that will be hard coded
-  const omitted = ['soldering', 'computer', 'oscilloscopes', 'spice', 'smt', 'milling', 'lathes', 'altium', 'git'];
-
-  const filtersToDisplay = filters.filter((filter) => !omitted.includes(filter));
 
   return (
     <div>
@@ -53,26 +31,6 @@ const App: React.FC = () => {
         <Route path="/projects" element={<Projects filter={ undefined }/>} />
         <Route path="/skills" element={<Skills />} />
         <Route path="/coming-soon" element={<ComingSoon />} />
-        {filtersToDisplay.map((filter) => (
-          <Route
-            key={filter}
-            path={`/projects/${filter}`}
-            element={<Projects filter={filter} />}
-          />
-        ))}
-
-        {/* Hard code some routes due to not having projects labeled with common skills */}
-        <Route path="/projects/soldering" element={<Projects filter={ "electronics-design" }/>} />
-        <Route path="/projects/computer" element={<Projects filter={ "electronics-design" }/>} />
-        <Route path="/projects/oscilloscopes" element={<Projects filter={ "electronics-design" }/>} />
-        <Route path="/projects/altium" element={<Projects filter={ "electronics-design" }/>} />
-        <Route path="/projects/spice" element={<Projects filter={ "electronics-design" }/>} />
-        <Route path="/projects/smt" element={<Projects filter={ "electronics-design" }/>} />
-        <Route path="/projects/milling" element={<Projects filter={ "metalworking" }/>} />
-        <Route path="/projects/lathes" element={<Projects filter={ "metalworking" }/>} />
-
-        {/* For git, just redirect to projects with no filter */}
-        <Route path="/projects/git" element={<Projects filter={ undefined }/>} />
 
         <Route path="/projects/flight-tracker" element={<TechnicalArticle htmlFilePath= { "/articles/flight-tracker/flight-tracker.html" } />} />
         <Route path="/projects/ball-balancing-robot" element={<TechnicalArticle htmlFilePath= { "/articles/ball-balancing-robot/ball-balancing-robot.html" } />} />
@@ -101,10 +59,6 @@ const App: React.FC = () => {
         <Route path="/games/super-meme-bros" element={<SuperMemeBros />} />
         <Route path="/games/super-meme-bros/player" element={<SuperMemeBrosPlayer />} />
         <Route path="/games/eight-queens" element={<EightQueens />} />
-
-        <Route path="/games/sociology-arcade" element={<SociologyArcade />} />
-        <Route path="/games/sociology-arcade/connections" element={<SociologyConnections />} />
-        <Route path="/games/sociology-arcade/word-hunt" element={<SociologyWordHunt />} />
 
         <Route path="/games/snake" element={<Snake />} />
         <Route path="/games/snake/snake-plus" element={<SnakePlus />} />

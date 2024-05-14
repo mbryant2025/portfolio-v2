@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles/back.css';
+import '../styles/back.css';
 
 const BackButton: React.FC = () => {
   const handleGoBack = () => {

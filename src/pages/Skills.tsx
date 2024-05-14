@@ -2,7 +2,7 @@ import React from 'react';
 import ScrollableWidgetPanel from '../components/ScrollableWidgetPanel';
 import SkillsTable from '../components/SkillsTable';
 import BackButton from '../components/BackButton';
-import '../components/styles/skills.css'
+import '../styles/skills.css'
 import FullWidthWidget from '../components/FullWidthWidget';
 import Socials from '../components/Socials';
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import Projects from './Projects';
-import '../components/styles/homepage.css';
+import '../styles/homepage.css';
 import Navbar from '../components/Navbar';
 import PageBottom from '../components/PageBottom';
 

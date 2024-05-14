@@ -1,7 +1,7 @@
 import React from 'react';
 import { Widget } from '../types';
 import { Link } from 'react-router-dom';
-import './styles/widgets.css'
+import '../styles/widgets.css'
 
 const WidgetComponent: React.FC<Widget> = ({ title, subtitle, link, image }) => {
   return (

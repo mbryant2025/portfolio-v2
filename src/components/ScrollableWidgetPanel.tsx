@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles/scroll.css'
+import '../styles/scroll.css'
 
 interface ScrollableWidgetPanelProps {
   title: string;

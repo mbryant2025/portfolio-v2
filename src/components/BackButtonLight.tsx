@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles/back.css';
+import '../styles/back.css';
 
 const BackButtonLight: React.FC = () => {
   const handleGoBack = () => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../components/styles/navbar.css';
+import '../styles/navbar.css';
 
 interface NavbarProps {
     selected: string;

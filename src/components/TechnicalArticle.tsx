@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import FullWidthWidget from './FullWidthWidget';
 import BackButton from './BackButton';
-import './styles/article.css';
+import '../styles/article.css';
 import PageBottom from './PageBottom';
 
 interface TechnicalArticleProps {
