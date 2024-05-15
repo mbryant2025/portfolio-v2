@@ -1,6 +1,6 @@
 import { Unity, useUnityContext } from "react-unity-webgl";
 import BackButton from "../../../components/BackButton";
-import "../../../components/styles/super-meme-bros.css";
+import "../../../styles/super-meme-bros.css";
 import "./TemplateData/style.css";
 
 function SuperMemeBrosPlayer() {

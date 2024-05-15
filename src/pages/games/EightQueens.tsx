@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import BackButton from '../../components/BackButton';
-import '../../components/styles/queens.css';
+import '../../styles/queens.css';
 
 interface Square {
     row: number;

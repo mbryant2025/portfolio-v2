@@ -18,10 +18,24 @@
       ]
     },
     {
-      "title": "Quadraped Robot",
+      "title": "Duke Robotics AUV",
+      "subtitle": "Electral system for Duke Robotics Club",
+      "link": "https://duke-robotics.com/projects/",
+      "image": "https://firebasestorage.googleapis.com/v0/b/portfolio-4a3ea.appspot.com/o/articles%2Fduke-robotics%2Fduke-robotics.gif?alt=media&token=1ed7fafc-ecf9-496d-ac3a-bbe111972506",
+      "peek": [
+        "electronics-design",
+        "ros",
+        "cc",
+        "linux",
+        "python",
+        "docker"
+      ]
+    },
+    {
+      "title": "Robot Dog",
       "subtitle": "ROS-based robot with 8 DOF",
       "link": "/projects/robot-dog",
-      "image": "littlearn.png",
+      "image": "https://firebasestorage.googleapis.com/v0/b/portfolio-4a3ea.appspot.com/o/articles%2Frobot-dog%2Frobot-dog.gif?alt=media&token=e9640784-9f47-4a0e-82a5-18b8c5c45b0a",
       "peek": [
         "ros",
         "cc",
@@ -55,31 +69,6 @@
       ]
     },
     {
-      "title": "Duke Robotics AUV",
-      "subtitle": "Electral system for Duke Robotics Club",
-      "link": "https://duke-robotics.com/projects/",
-      "image": "drc.jpg",
-      "peek": [
-        "electronics-design",
-        "ros",
-        "cc",
-        "linux",
-        "python",
-        "docker"
-      ]
-    },
-    {
-      "title": "Univeral Inverse Solver",
-      "subtitle": "Image reconstruction using the prior implicit in a denoiser",
-      "link": "/projects/universal-inverse-solver",
-      "image": "inverse.png",
-      "peek": [
-        "python",
-        "ml",
-        "pytorch"
-      ]
-    },
-    {
       "title": "Ball Balancing Robot",
       "subtitle": "Computer vision ball tracking, dual PID controllers",
       "link": "/projects/ball-balancing-robot",
@@ -105,7 +94,7 @@
       "title": "UR5e 3D Printer",
       "subtitle": "Pipeline to convert STL files to Gazebo simulation of 3D printer",
       "link": "/projects/ur5e-3d-printer",
-      "image": "ur5e.png",
+      "image": "https://firebasestorage.googleapis.com/v0/b/portfolio-4a3ea.appspot.com/o/articles%2Fur5e-3d-printer%2Fur5e-3d-printer.gif?alt=media&token=28497049-1520-4b54-8df1-661226ab1874",
       "peek": [
         "ros",
         "python",
@@ -141,6 +130,17 @@
       "image": "oogasalad.png",
       "peek": [
         "java"      ]
+    },
+    {
+      "title": "Univeral Inverse Solver",
+      "subtitle": "Image reconstruction using the prior implicit in a denoiser",
+      "link": "/projects/universal-inverse-solver",
+      "image": "inverse.png",
+      "peek": [
+        "python",
+        "ml",
+        "pytorch"
+      ]
     },
     {
       "title": "PatientWatch",

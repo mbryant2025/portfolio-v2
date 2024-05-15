@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../components/styles/tiles.css';
+import '../../styles/tiles.css';
 
 import BackButtonLight from '../../components/BackButtonLight';
 

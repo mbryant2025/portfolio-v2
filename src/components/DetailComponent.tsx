@@ -6,6 +6,9 @@ import '../styles/detail-widget.css';
 
 const DetailComponent: React.FC<PeekWidget> = ({ title, subtitle, link, image, peekImages, onClick }) => {
 
+    // If image contains "https://firebasestorage.googleapis.com/", trim off everything before "https://firebasestorage.googleapis.com/"
+    const imgToShow = image.includes('https://firebasestorage.googleapis.com/') ? image.substring(image.lastIndexOf('https://firebasestorage.googleapis.com/')) : image;
+
     return (
         <div className="detail-widget">
 
@@ -41,7 +44,7 @@ const DetailComponent: React.FC<PeekWidget> = ({ title, subtitle, link, image, p
                 </div>
 
                 <Link to={link} className="detail-widget-image">
-                    <img src={image} alt={title} className="detail-widget-image" />
+                    <img src={imgToShow} alt={title} className="detail-widget-image" />
                 </Link>
             </div>
 

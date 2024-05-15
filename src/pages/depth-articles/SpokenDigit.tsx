@@ -1,6 +1,6 @@
 import React from 'react';
 import PDFViewer from '../../components/PDF';
-import '../../components/styles/spoken-digit.css';
+import '../../styles/spoken-digit.css';
 import BackButton from '../../components/BackButton';
 
 

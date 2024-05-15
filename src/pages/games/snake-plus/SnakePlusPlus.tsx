@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import BackButton from "../../../components/BackButton";
-import "../../../components/styles/snake.css";
+import "../../../styles/snake.css";
 
 // import React from 'react';
 

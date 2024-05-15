@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import BackButton from '../../components/BackButton';
-import '../../components/styles/maze.css';
+import '../../styles/maze.css';
 
 enum CellType {
     Wall,

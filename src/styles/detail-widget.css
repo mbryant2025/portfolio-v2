@@ -51,7 +51,6 @@
     width: 400px;
     height: 300px;
     max-height: 300px;
-    max-width: 300px;
     border-radius: 8px;
 }
 
@@ -59,7 +58,7 @@
     .detail-widget-image {
         margin: auto;
         height: 200px;
-        width: 200px;
+        width: 267px;
         margin-bottom: 20px;
     }
 }
