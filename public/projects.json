@@ -6,7 +6,7 @@
     {
       "title": "Programmable Magnetic Tiles",
       "subtitle": "Custom C-like language and interpreter running on ESP32, BLE connection to React IDE",
-      "link": "/projects/programmable-tiles",
+      "link": "/coming-soon",
       "image": "littlearn.png",
       "peek": [
         "cc",
@@ -20,7 +20,7 @@
     {
       "title": "Duke Robotics AUV",
       "subtitle": "Electral system for Duke Robotics Club",
-      "link": "https://duke-robotics.com/projects/",
+      "link": "/coming-soon",
       "image": "https://firebasestorage.googleapis.com/v0/b/portfolio-4a3ea.appspot.com/o/articles%2Fduke-robotics%2Fduke-robotics.gif?alt=media&token=1ed7fafc-ecf9-496d-ac3a-bbe111972506",
       "peek": [
         "electronics-design",
@@ -34,7 +34,7 @@
     {
       "title": "Robot Dog",
       "subtitle": "ROS-based robot with 8 DOF",
-      "link": "/projects/robot-dog",
+      "link": "/coming-soon",
       "image": "https://firebasestorage.googleapis.com/v0/b/portfolio-4a3ea.appspot.com/o/articles%2Frobot-dog%2Frobot-dog.gif?alt=media&token=e9640784-9f47-4a0e-82a5-18b8c5c45b0a",
       "peek": [
         "ros",
@@ -49,7 +49,7 @@
     {
       "title": "Dorm Window Display",
       "subtitle": "Custom display mounted in dorm window",
-      "link": "/projects/dorm-window-display",
+      "link": "/coming-soon",
       "image": "https://firebasestorage.googleapis.com/v0/b/portfolio-4a3ea.appspot.com/o/articles%2Fdorm-window-display%2Fdorm-window-display.gif?alt=media&token=4102fb50-d7b9-406c-9de6-e80a03bc54dd",
       "peek": [
         "electronics-design",
@@ -87,7 +87,7 @@
       "title": "Ball Balancing Robot",
       "subtitle": "Computer vision ball tracking, dual PID controllers",
       "link": "/projects/ball-balancing-robot",
-      "image": "ball-balancing.png",
+      "image": "https://firebasestorage.googleapis.com/v0/b/portfolio-4a3ea.appspot.com/o/articles%2Fball-balancing-robot%2Fball-balancing-robot.gif?alt=media&token=3a8f1152-693f-45e7-93f1-70c640475df4",
       "peek": [
         "cc",
         "opencv",
@@ -174,7 +174,7 @@
     {
       "title": "Spot the Spot",
       "subtitle": "Automatically detects and tracks available parking spots",
-      "link": "https://devpost.com/software/spot-the-spot",
+      "link": "/coming-soon",
       "image": "spot-the-spot.png",
       "peek": [
         "python",
@@ -213,7 +213,7 @@
     {
       "title": "Baby Crib Alert System",
       "subtitle": "Baby crib fall detection and alert system",
-      "link": "https://devpost.com/software/babii",
+      "link": "/coming-soon",
       "image": "babii.jpeg",
       "peek": [
         "python",
@@ -226,7 +226,7 @@
     {
       "title": "Step Stats",
       "subtitle": "iOS app to plot workouts and calculate statistics",
-      "link": "https://github.com/mbryant2025/Step-Stats",
+      "link": "/coming-soon",
       "image": "step-stats.PNG",
       "peek": [
         "swift"
@@ -245,7 +245,7 @@
     {
       "title": "Super Meme Bros.",
       "subtitle": "Meme-hunting game where the memes have implications",
-      "link": "https://github.com/mbryant2025/SuperMemeBros",
+      "link": "/coming-soon",
       "image": "super-meme-bros.png",
       "peek": [
         "unity",
@@ -267,7 +267,7 @@
     {
       "title": "Banagrams Bot",
       "subtitle": "I would never have thought of these monster words",
-      "link": "https://github.com/mbryant2025/BananaBot",
+      "link": "/coming-soon",
       "image": "banana.JPG",
       "peek": [
         "rust"
@@ -306,7 +306,7 @@
     {
       "title": "Ping Pong Robot",
       "subtitle": "Scans area and auto-aims balls at targets",
-      "link": "https://github.com/mbryant2025/Ping-Pong-Robot",
+      "link": "/coming-soon",
       "image": "ping-pong-robot.JPG",
       "peek": [
         "cc",
@@ -329,7 +329,7 @@
     {
       "title": "Ngram",
       "subtitle": "Analyzes Google Books NGram data for patterns",
-      "link": "https://github.com/mbryant2025/NGram",
+      "link": "/coming-soon",
       "image": "ngram.png",
       "peek": [
         "java"
@@ -349,7 +349,7 @@
     {
       "title": "Pointillism",
       "subtitle": "Genetic algorithm to approximate images with circles",
-      "link": "https://github.com/mbryant2025/Pointillism",
+      "link": "/coming-soon",
       "image": "pointillism.png",
       "peek": [
         "python"
@@ -368,7 +368,7 @@
     {
       "title": "Wordler",
       "subtitle": "Bot for solving Wordle",
-      "link": "https://github.com/mbryant2025/Wordler",
+      "link": "/coming-soon",
       "image": "wordler.png",
       "peek": [
         "python"
@@ -377,7 +377,7 @@
     {
       "title": "Filler Bot",
       "subtitle": "I was tired of losing at this game so I combated my skill issue with cheating",
-      "link": "https://github.com/mbryant2025/filler-bot",
+      "link": "/coming-soon",
       "image": "filler.png",
       "peek": [
         "rust"
@@ -386,7 +386,7 @@
     {
       "title": "Baseball Simulator",
       "subtitle": "Simulates an entire baseball season. I put myself on Babe Ruth's team.",
-      "link": "https://github.com/mbryant2025/BaseballSimulator",
+      "link": "/coming-soon",
       "image": "baseball.png",
       "peek": [
         "cc"
@@ -405,7 +405,7 @@
     {
       "title": "Snake+++",
       "subtitle": "Various games of snake with increasing level of curse",
-      "link": "https://michaelcbryant.com/#/games",
+      "link": "/coming-soon",
       "image": "snake.png",
       "peek": [
         "js"
@@ -414,7 +414,7 @@
     {
       "title": "Bee Bot",
       "subtitle": "Solves the New York Times Spelling Bee",
-      "link": "https://github.com/mbryant2025/BeeBot",
+      "link": "/coming-soon",
       "image": "spelling-bee.jpeg",
       "peek": [
         "c"
@@ -443,8 +443,8 @@
     {
       "title": "Bird Feeder",
       "subtitle": "Miter-saw-only design",
-      "link": "/coming-soon",
-      "image": "bird-feeder.JPG",
+      "link": "/projects/bird-feeder",
+      "image": "bird-feeder-wide.JPG",
       "peek": [
         "woodworking"
       ]
@@ -489,7 +489,7 @@
     {
       "title": "Digits Bot",
       "subtitle": "Solver for New York Times Digits game",
-      "link": "https://github.com/mbryant2025/digits",
+      "link": "/coming-soon",
       "image": "digits.png",
       "peek": [
         "python"
@@ -498,7 +498,7 @@
     {
       "title": "Mandelbrot Generator",
       "subtitle": "Generates images of the Mandelbrot set",
-      "link": "https://github.com/mbryant2025/mandelbrot",
+      "link": "/coming-soon",
       "image": "mandelbrot.png",
       "peek": [
         "python"

@@ -1,24 +1,27 @@
-# Total Projects: 45
+# Total Projects: 47
 
 ## Complete (15)
-- Programmable Magnetic Tiles
 - Flight Tracker
 - Spoken Digit Recognition
-- Univeral Inverse Solver
 - Ball Balancing Robot
 - PyEquations Python Package
 - UR5e 3D Printer
 - Satellite Antenna
 - Plane GAN
+- Univeral Inverse Solver
 - PatientWatch
 - Vision Guided Robot
 - Blue Devil Horns
 - Slogo
 - Cell Society
 - Maze Solver
+- Bird Feeder
 
-## Todo (30)
+## Todo (32)
+- Programmable Magnetic Tiles
 - Duke Robotics AUV
+- Robot Dog
+- Dorm Window Display
 - Board Game Maker
 - Spot the Spot
 - michaelcbryant.com
@@ -41,7 +44,6 @@
 - Bee Bot
 - Speed of Light Model
 - 3D Printer Enclosure
-- Bird Feeder
 - Countdown Timer
 - Duke D
 - WiFi Yagi Antenna
