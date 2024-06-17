@@ -15,9 +15,11 @@
     "axios": "^1.4.0",
     "firebase": "^10.12.0",
     "fs": "^0.0.1-security",
+    "leaflet": "^1.9.4",
     "mathjax": "^3.2.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-leaflet": "^4.2.1",
     "react-mathjax2": "^0.0.2",
     "react-pdf": "^7.6.0",
     "react-router-dom": "^6.13.0",
@@ -55,6 +57,7 @@
     ]
   },
   "devDependencies": {
+    "@types/leaflet": "^1.9.12",
     "@types/three": "^0.152.1",
     "css-loader": "^6.8.1",
     "style-loader": "^3.3.3"

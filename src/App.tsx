@@ -20,6 +20,7 @@ import EightQueens from './pages/games/EightQueens';
 import TechnicalArticle from './components/TechnicalArticle';
 import ProgrammableTiles from './pages/depth-articles/Tiles';
 import SpokenDigit from './pages/depth-articles/SpokenDigit';
+import TravelMap from './pages/TravelMap';
 
 
 const App: React.FC = () => {
@@ -30,6 +31,7 @@ const App: React.FC = () => {
         <Route path="/" element={<Homepage />} />
         <Route path="/projects" element={<Projects filter={ undefined }/>} />
         <Route path="/skills" element={<Skills />} />
+        <Route path="/travel-map" element={<TravelMap />} />
         <Route path="/coming-soon" element={<ComingSoon />} />
 
         <Route path="/projects/flight-tracker" element={<TechnicalArticle htmlFilePath= { "/articles/flight-tracker/flight-tracker.html" } />} />
