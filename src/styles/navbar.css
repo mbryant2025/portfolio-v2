@@ -1,9 +1,8 @@
 .navbar {
-    color: white;
     padding: 10px;
     /* position: fixed; */
     position: absolute;
-    width: 100%;
+    width: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -29,15 +28,19 @@
     left: 0;
     z-index: 1000;
     background-color: #2d2d2d;
-
-    visibility: hidden;
-
 }
 
 .navbar a {
-    color: white;
     font-size: 18px;
     margin: 10px;
+}
+
+.light-text a {
+    color: white;
+}
+
+.dark-text a {
+    color: black;
 }
 
 .navbar li {

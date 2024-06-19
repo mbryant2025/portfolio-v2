@@ -14,7 +14,7 @@ const Homepage: React.FC = () => {
       
         <div className="splash-screen-contents">
 
-          <Navbar selected="Home" animate={true} />
+          <Navbar selected="Home" animate={true} lightText={true} />
 
           <div className="splash-screen-overlay-text">
             <h1 className="splash-screen-text">Hi! I'm Michael.</h1>

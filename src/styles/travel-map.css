@@ -1,0 +1,47 @@
+.travel-map {
+    /* full screen */
+    height: 100vh;
+    /* no vertical scroll */
+    overflow-y: hidden;
+    /* make it so you cant scroll */
+    
+    
+}
+
+.map-container {
+    /* two columns */
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+
+}
+
+.side-bar {
+    /* sticky side bar */
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    padding-left: 15px;
+    padding-right: 10px;
+    border-right: 1px solid #ddd;
+    color: white;
+}
+
+.nav-background {
+    /* background color */
+    background-color: #2d2d2d;
+    /* full width */
+    width: 100%;
+    /* height of navbar */
+    height: 65px;
+    /* top of screen */
+    top: 0;
+    /* left of screen */
+    left: 0;
+    /* z-index */
+    z-index: 1000;
+    /* fixed position */
+    position: fixed;
+    /* hidden */
+    visibility: hidden;
+}

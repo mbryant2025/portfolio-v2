@@ -5,12 +5,13 @@ import '../styles/navbar.css';
 interface NavbarProps {
     selected: string;
     animate: boolean;
+    lightText?: boolean;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ selected, animate }) => {
+const Navbar: React.FC<NavbarProps> = ({ selected, animate, lightText }) => {
 
     return (
-        <nav className="navbar">
+        <nav className={`navbar ${lightText ? 'light-text' : 'dark-text'}`}>
             <div className="navbar-background"></div>
             <ul className="navbar-list">
                 {<li className={selected === 'Home' ? 'is-selected' : ''}>
