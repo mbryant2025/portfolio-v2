@@ -158,14 +158,23 @@ const TravelMap: React.FC = () => {
           highlightFeature(e);
           if (feature.properties && feature.properties.NAME && feature.properties.STATE) {
             const popupContent = `${feature.properties.NAME}, ${stateFipsToAbbreviation[feature.properties.STATE]} (${feature.id})`;
-            layer.bindPopup(popupContent).openPopup();
+            // layer.bindPopup(popupContent).openPopup();
           }
         },
         mouseout: function (e: L.LeafletMouseEvent) {
-          layer.closePopup();
+          // layer.closePopup();
           // Set the weight back to 0.15
           resetHighlight(e);
         },
+        // On click, copy the county FIPS code to the clipboard
+        click: function (e: L.LeafletMouseEvent) {
+          const textArea = document.createElement("textarea");
+          textArea.value = feature.id;
+          document.body.appendChild(textArea);
+          textArea.select();
+          document.execCommand('copy');
+          document.body.removeChild(textArea);
+        }
       });
     }
 
@@ -250,7 +259,7 @@ const TravelMap: React.FC = () => {
 
           <h2>{selectedYear} Stats:</h2>
 
-          <h3>States:</h3>
+          <h3>States + DC:</h3>
           <table>
             {/* <thead>
                       <tr>
