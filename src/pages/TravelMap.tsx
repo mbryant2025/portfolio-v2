@@ -36,10 +36,10 @@ const TravelMap: React.FC = () => {
   const [selectedYear, setSelectedYear] = useState("All Time");
   const [possibleYears, setPossibleYears] = useState<string[]>([]);
   const [selectedType, setSelectedType] = useState("All");
-  const [livedCounties, setLivedCounties] = useState<string[]>([]);
-  const [stayedCounties, setStayedCounties] = useState<string[]>([]);
-  const [visitedCounties, setVisitedCounties] = useState<string[]>([]);
-  const [traveledCounties, setTraveledCounties] = useState<string[]>([]);
+  const [livedCounties, setLivedCounties] = useState<Set<string>>(new Set());
+  const [stayedCounties, setStayedCounties] = useState<Set<string>>(new Set());
+  const [visitedCounties, setVisitedCounties] = useState<Set<string>>(new Set());
+  const [traveledCounties, setTraveledCounties] = useState<Set<string>>(new Set());
 
   document.body.classList.add('no-scroll');
 
@@ -90,22 +90,28 @@ const TravelMap: React.FC = () => {
     } else if (rawData[selectedYear]) {
       if (rawData[selectedYear].lived) {
         lived.push(...rawData[selectedYear].lived);
+        stayed.push(...rawData[selectedYear].lived);
+        visited.push(...rawData[selectedYear].lived);
+        traveled.push(...rawData[selectedYear].lived);
       }
       if (rawData[selectedYear].stayed) {
         stayed.push(...rawData[selectedYear].stayed);
+        visited.push(...rawData[selectedYear].stayed);
+        traveled.push(...rawData[selectedYear].stayed);
       }
       if (rawData[selectedYear].visited) {
         visited.push(...rawData[selectedYear].visited);
+        traveled.push(...rawData[selectedYear].visited);
       }
       if (rawData[selectedYear].traveled) {
         traveled.push(...rawData[selectedYear].traveled);
       }
     }
 
-    setLivedCounties(lived);
-    setStayedCounties(stayed);
-    setVisitedCounties(visited);
-    setTraveledCounties(traveled);
+    setLivedCounties(new Set(lived));
+    setStayedCounties(new Set(stayed));
+    setVisitedCounties(new Set(visited));
+    setTraveledCounties(new Set(traveled));
 
   }, [rawData, selectedYear, selectedType]);
 
@@ -158,11 +164,11 @@ const TravelMap: React.FC = () => {
           highlightFeature(e);
           if (feature.properties && feature.properties.NAME && feature.properties.STATE) {
             const popupContent = `${feature.properties.NAME}, ${stateFipsToAbbreviation[feature.properties.STATE]} (${feature.id})`;
-            // layer.bindPopup(popupContent).openPopup();
+            layer.bindPopup(popupContent).openPopup();
           }
         },
         mouseout: function (e: L.LeafletMouseEvent) {
-          // layer.closePopup();
+          layer.closePopup();
           // Set the weight back to 0.15
           resetHighlight(e);
         },
@@ -188,25 +194,25 @@ const TravelMap: React.FC = () => {
       style: function (feature) {
         if (feature && feature.id) {
           const id = feature.id as string;
-          if ((selectedType === "All" || selectedType === "Lived") && livedCounties.includes(id)) {
+          if ((selectedType === "All" || selectedType === "Lived") && livedCounties.has(id)) {
             return {
               ...stateStyle,
               fillColor: colorCodes.lived,
               fillOpacity: 0.5
             };
-          } else if ((selectedType === "All" || selectedType === "Stayed") && stayedCounties.includes(id)) {
+          } else if ((selectedType === "All" || selectedType === "Stayed") && stayedCounties.has(id)) {
             return {
               ...stateStyle,
               fillColor: colorCodes.stayed,
               fillOpacity: 0.5
             };
-          } else if ((selectedType === "All" || selectedType === "Visited") && visitedCounties.includes(id)) {
+          } else if ((selectedType === "All" || selectedType === "Visited") && visitedCounties.has(id)) {
             return {
               ...stateStyle,
               fillColor: colorCodes.visited,
               fillOpacity: 0.5
             };
-          } else if ((selectedType === "All" || selectedType === "Traveled") && traveledCounties.includes(id)) {
+          } else if ((selectedType === "All" || selectedType === "Traveled") && traveledCounties.has(id)) {
             return {
               ...stateStyle,
               fillColor: colorCodes.traveled,
@@ -271,55 +277,68 @@ const TravelMap: React.FC = () => {
               {/* Totals are calculated using the fact that the first two digits of the FIPS code are the state code */}
               <tr>
                 <td>Total</td>
-                <td>{new Set([...livedCounties, ...stayedCounties, ...visitedCounties, ...traveledCounties].map((county) => county.slice(0, 2))).size}</td>
+                <td>
+                  {(() => {
+                    const combinedArray = [
+                      ...Array.from(livedCounties),
+                      ...Array.from(stayedCounties),
+                      ...Array.from(visitedCounties),
+                      ...Array.from(traveledCounties),
+                    ];
+                    const slicedSet = new Set(combinedArray.map((county) => county.slice(0, 2)));
+                    return slicedSet.size;
+                  })()}
+                </td>
               </tr>
               <tr>
                 <td>Lived</td>
-                <td>{new Set(livedCounties.map((county) => county.slice(0, 2))).size}</td>
+                <td>
+                  {new Set(Array.from(livedCounties).map((county) => county.slice(0, 2))).size}
+                </td>
               </tr>
               <tr>
                 <td>Stayed</td>
-                <td>{new Set(stayedCounties.map((county) => county.slice(0, 2))).size}</td>
+                <td>
+                  {new Set(Array.from(stayedCounties).map((county) => county.slice(0, 2))).size}
+                </td>
               </tr>
               <tr>
                 <td>Visited</td>
-                <td>{new Set(visitedCounties.map((county) => county.slice(0, 2))).size}</td>
+                <td>
+                  {new Set(Array.from(visitedCounties).map((county) => county.slice(0, 2))).size}
+                </td>
               </tr>
               <tr>
                 <td>Traveled</td>
-                <td>{new Set(traveledCounties.map((county) => county.slice(0, 2))).size}</td>
+                <td>
+                  {new Set(Array.from(traveledCounties).map((county) => county.slice(0, 2))).size}
+                </td>
               </tr>
             </tbody>
           </table>
 
           <h3>Counties:</h3>
           <table>
-            {/* <thead>
-                      <tr>
-                          <th>Category</th>
-                          <th>Count</th>
-                      </tr>
-                  </thead> */}
             <tbody>
               <tr>
                 <td>Total</td>
-                <td>{new Set([...livedCounties, ...stayedCounties, ...visitedCounties, ...traveledCounties]).size}</td>
+                <td>{new Set([...Array.from(livedCounties), ...Array.from(stayedCounties), ...Array.from(visitedCounties), ...Array.from(traveledCounties)]).size}</td>
               </tr>
               <tr>
                 <td>Lived</td>
-                <td>{new Set(livedCounties).size}</td>
+                <td>{livedCounties.size}</td>
               </tr>
               <tr>
                 <td>Stayed</td>
-                <td>{new Set(stayedCounties).size}</td>
+                <td>{stayedCounties.size}</td>
               </tr>
               <tr>
                 <td>Visited</td>
-                <td>{new Set(visitedCounties).size}</td>
+                <td>{visitedCounties.size}</td>
               </tr>
               <tr>
                 <td>Traveled</td>
-                <td>{new Set(traveledCounties).size}</td>
+                <td>{traveledCounties.size}</td>
               </tr>
             </tbody>
           </table>
