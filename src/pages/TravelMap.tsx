@@ -307,19 +307,19 @@ const TravelMap: React.FC = () => {
               </tr>
               <tr>
                 <td>Lived</td>
-                <td>{livedCounties.length}</td>
+                <td>{new Set(livedCounties).size}</td>
               </tr>
               <tr>
                 <td>Stayed</td>
-                <td>{stayedCounties.length}</td>
+                <td>{new Set(stayedCounties).size}</td>
               </tr>
               <tr>
                 <td>Visited</td>
-                <td>{visitedCounties.length}</td>
+                <td>{new Set(visitedCounties).size}</td>
               </tr>
               <tr>
                 <td>Traveled</td>
-                <td>{traveledCounties.length}</td>
+                <td>{new Set(traveledCounties).size}</td>
               </tr>
             </tbody>
           </table>
