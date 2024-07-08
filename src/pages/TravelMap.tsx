@@ -3,7 +3,20 @@ import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import Navbar from '../components/Navbar';
 import '../styles/travel-map.css';
+import { Line } from 'react-chartjs-2';
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+  ArcElement,
+} from 'chart.js';
 
+ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, ArcElement);
 
 const stateStyle = {
   color: "#000000",
@@ -24,7 +37,7 @@ const stateFipsToAbbreviation: Record<string, string> = {
   "24": "MD", "25": "MA", "26": "MI", "27": "MN", "28": "MS", "29": "MO", "30": "MT", "31": "NE", "32": "NV", "33": "NH",
   "34": "NJ", "35": "NM", "36": "NY", "37": "NC", "38": "ND", "39": "OH", "40": "OK", "41": "OR", "42": "PA", "44": "RI",
   "45": "SC", "46": "SD", "47": "TN", "48": "TX", "49": "UT", "50": "VT", "51": "VA", "53": "WA", "54": "WV", "55": "WI",
-  "56": "WY",
+  "56": "WY", "72": "PR"
 };
 
 const fileName = "travel.json";
@@ -33,22 +46,38 @@ const TravelMap: React.FC = () => {
   const mapRef = useRef(null);
   const [geoJSONData, setGeoJSONData] = useState(null);
   const [rawData, setRawData] = useState<any>(null);
-  const [selectedYear, setSelectedYear] = useState("All Time");
+  const [selectedYear, setSelectedYear] = useState(localStorage.getItem("selectedYear") || "All Time");
   const [possibleYears, setPossibleYears] = useState<string[]>([]);
-  const [selectedType, setSelectedType] = useState("All");
+  const [selectedType, setSelectedType] = useState(localStorage.getItem("selectedType") || "All");
   const [livedCounties, setLivedCounties] = useState<Set<string>>(new Set());
   const [stayedCounties, setStayedCounties] = useState<Set<string>>(new Set());
   const [visitedCounties, setVisitedCounties] = useState<Set<string>>(new Set());
   const [traveledCounties, setTraveledCounties] = useState<Set<string>>(new Set());
+  const [showMap, setShowMap] = useState(true);
+  const [showSidebar, setShowSidebar] = useState(window.innerWidth > 768);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
-  document.body.classList.add('no-scroll');
+  // Update isMobile state when window width changes
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1000);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [setIsMobile, isMobile]);
+
+  // Store the selected year and type in local storage
+  useEffect(() => {
+    localStorage.setItem("selectedYear", selectedYear);
+    localStorage.setItem("selectedType", selectedType);
+  }, [selectedYear, selectedType]);
 
   // Load data from file
   useEffect(() => {
     fetch(fileName)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         setRawData(data);
         setPossibleYears(["All Time", ...Object.keys(data).reverse()]);
       });
@@ -131,7 +160,7 @@ const TravelMap: React.FC = () => {
       return;
     }
 
-    const map = L.map(mapRef.current).setView([37.8, -96], 5);
+    const map = L.map(mapRef.current).setView([39.2, -95], 5);
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 19,
@@ -233,129 +262,243 @@ const TravelMap: React.FC = () => {
 
   return (
     <div className="travel-map">
-      <Navbar selected="Travel Map" animate={true} lightText={false} />
-      <div className="map-container">
+      <Navbar selected="Travel Map" animate={true} lightText={!showMap} />
 
-        <div className="side-bar">
-          <h1>Travel Map</h1>
 
-          <h2>Years:</h2>
-          {/* Dropdown */}
-          <select onChange={(e) => {
+      {showSidebar && <div className="side-bar">
+        <h1>Travel Map</h1>
+
+        <h2>Years:</h2>
+        {/* Dropdown */}
+        <select className="select"
+          value={selectedYear}
+          onChange={(e) => {
             setSelectedYear(e.target.value);
           }}>
-            {possibleYears.map((year) => {
-              return <option value={year}>{year}
-              </option>;
-            })}
-          </select>
+          {possibleYears.map((year) => {
+            return <option value={year}>{year}
+            </option>;
+          })}
+        </select>
 
-          <h2>Type:</h2>
+        <h2>Type:</h2>
 
-          <select onChange={(e) => {
+        <select className="select"
+          value={selectedType}
+          onChange={(e) => {
             setSelectedType(e.target.value);
           }
           }>
-            <option value="All">All</option>
-            <option value="Lived">Lived</option>
-            <option value="Stayed">Stayed</option>
-            <option value="Visited">Visited</option>
-            <option value="Traveled">Traveled</option>
-          </select>
+          <option value="All">All</option>
+          <option value="Lived">Lived</option>
+          <option value="Stayed">Stayed</option>
+          <option value="Visited">Visited</option>
+          <option value="Traveled">Traveled</option>
+        </select>
 
-          <h2>{selectedYear} Stats:</h2>
+        <h2>Key</h2>
+        <table className="table">
+          <tbody>
+            <tr onClick={() => setSelectedType(selectedType === "Lived" ? "All" : "Lived")} style={{ cursor: "pointer" }}>
+              <td style={{ backgroundColor: colorCodes.lived, width: "10px" }}></td>
+              <td>Lived</td>
+            </tr>
+            <tr onClick={() => setSelectedType(selectedType === "Stayed" ? "All" : "Stayed")} style={{ cursor: "pointer" }}>
+              <td style={{ backgroundColor: colorCodes.stayed, width: "10px" }}></td>
+              <td>Stayed</td>
+            </tr>
+            <tr onClick={() => setSelectedType(selectedType === "Visited" ? "All" : "Visited")} style={{ cursor: "pointer" }}>
+              <td style={{ backgroundColor: colorCodes.visited, width: "10px" }}></td>
+              <td>Visited</td>
+            </tr>
+            <tr onClick={() => setSelectedType(selectedType === "Traveled" ? "All" : "Traveled")} style={{ cursor: "pointer" }}>
+              <td style={{ backgroundColor: colorCodes.traveled, width: "10px" }}></td>
+              <td>Traveled</td>
+            </tr>
+          </tbody>
+        </table>
 
-          <h3>States + DC:</h3>
-          <table>
-            {/* <thead>
+        <h2>{selectedYear} Stats:</h2>
+
+        <button className="select" onClick={() => { setShowMap(!showMap); if (!showMap) { window.location.reload(); } }}>{`Show ${showMap ? "Plots" : "Map"}`}</button>
+
+        <h3>States + DC:</h3>
+        <table className="table">
+          {/* <thead>
                       <tr>
                           <th>Category</th>
                           <th>Count</th>
                       </tr>
                   </thead> */}
-            <tbody>
-              {/* Totals are calculated using the fact that the first two digits of the FIPS code are the state code */}
-              <tr>
-                <td>Total</td>
-                <td>
-                  {(() => {
-                    const combinedArray = [
-                      ...Array.from(livedCounties),
-                      ...Array.from(stayedCounties),
-                      ...Array.from(visitedCounties),
-                      ...Array.from(traveledCounties),
-                    ];
-                    const slicedSet = new Set(combinedArray.map((county) => county.slice(0, 2)));
-                    return slicedSet.size;
-                  })()}
-                </td>
-              </tr>
-              <tr>
-                <td>Lived</td>
-                <td>
-                  {new Set(Array.from(livedCounties).map((county) => county.slice(0, 2))).size}
-                </td>
-              </tr>
-              <tr>
-                <td>Stayed</td>
-                <td>
-                  {new Set(Array.from(stayedCounties).map((county) => county.slice(0, 2))).size}
-                </td>
-              </tr>
-              <tr>
-                <td>Visited</td>
-                <td>
-                  {new Set(Array.from(visitedCounties).map((county) => county.slice(0, 2))).size}
-                </td>
-              </tr>
-              <tr>
-                <td>Traveled</td>
-                <td>
-                  {new Set(Array.from(traveledCounties).map((county) => county.slice(0, 2))).size}
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <tbody>
+            {/* Totals are calculated using the fact that the first two digits of the FIPS code are the state code */}
+            <tr>
+              <td>Total</td>
+              <td>
+                {(() => {
+                  const combinedArray = [
+                    ...Array.from(livedCounties),
+                    ...Array.from(stayedCounties),
+                    ...Array.from(visitedCounties),
+                    ...Array.from(traveledCounties),
+                  ];
+                  const slicedSet = new Set(combinedArray.map((county) => county.slice(0, 2)));
+                  return slicedSet.size;
+                })()}
+              </td>
+            </tr>
+            <tr>
+              <td>Lived</td>
+              <td>
+                {new Set(Array.from(livedCounties).map((county) => county.slice(0, 2))).size}
+              </td>
+            </tr>
+            <tr>
+              <td>Stayed</td>
+              <td>
+                {new Set(Array.from(stayedCounties).map((county) => county.slice(0, 2))).size}
+              </td>
+            </tr>
+            <tr>
+              <td>Visited</td>
+              <td>
+                {new Set(Array.from(visitedCounties).map((county) => county.slice(0, 2))).size}
+              </td>
+            </tr>
+            <tr>
+              <td>Traveled</td>
+              <td>
+                {new Set(Array.from(traveledCounties).map((county) => county.slice(0, 2))).size}
+              </td>
+            </tr>
+          </tbody>
+        </table>
 
-          <h3>Counties:</h3>
-          <table>
-            <tbody>
-              <tr>
-                <td>Total</td>
-                <td>{new Set([...Array.from(livedCounties), ...Array.from(stayedCounties), ...Array.from(visitedCounties), ...Array.from(traveledCounties)]).size}</td>
-              </tr>
-              <tr>
-                <td>Lived</td>
-                <td>{livedCounties.size}</td>
-              </tr>
-              <tr>
-                <td>Stayed</td>
-                <td>{stayedCounties.size}</td>
-              </tr>
-              <tr>
-                <td>Visited</td>
-                <td>{visitedCounties.size}</td>
-              </tr>
-              <tr>
-                <td>Traveled</td>
-                <td>{traveledCounties.size}</td>
-              </tr>
-            </tbody>
-          </table>
+        <h3>Counties:</h3>
+        <table className="table">
+          <tbody>
+            <tr>
+              <td>Total</td>
+              <td>{new Set([...Array.from(livedCounties), ...Array.from(stayedCounties), ...Array.from(visitedCounties), ...Array.from(traveledCounties)]).size}</td>
+            </tr>
+            <tr>
+              <td>Lived</td>
+              <td>{livedCounties.size}</td>
+            </tr>
+            <tr>
+              <td>Stayed</td>
+              <td>{stayedCounties.size}</td>
+            </tr>
+            <tr>
+              <td>Visited</td>
+              <td>{visitedCounties.size}</td>
+            </tr>
+            <tr>
+              <td>Traveled</td>
+              <td>{traveledCounties.size}</td>
+            </tr>
+          </tbody>
+        </table>
 
-          <button>View Plots</button>
+      </div>}
+
+      {<button className={`sidebar-button ${!showSidebar ? "sidebar-button-left" : ""}`} onClick={() => setShowSidebar(!showSidebar)}>
+        {isMobile ? (showSidebar ? "▼" : "▲") : (showSidebar ? "◀" : "▶")}</button>}
 
 
+      <div className="map-container">
 
-        </div>
+        {showMap && <div className="map" ref={mapRef} id="map"
+          style={{ height: "calc(100vh + 20px)", width: "100%", marginTop: "-10px", marginLeft: "-10px", position: "absolute", overflow: "hidden" }}
+        ></div>}
 
+        {!showMap && <div className='plots'>
+          <div style={{ width: '80%', margin: '0 auto' }}>
+            <h2 style={{ color: "white" }}>County Visits By Year</h2>
+            <Line
+              data={{
+                labels: Object.keys(rawData).sort((a, b) => Number(a) - Number(b)),
+                datasets: [
+                  {
+                    label: 'Lived',
+                    data: Object.keys(rawData).sort((a, b) => Number(a) - Number(b)).map((year) => new Set(rawData[year].lived ? rawData[year].lived : []).size),
+                    borderColor: colorCodes.lived,
+                    fill: false,
+                  },
+                  {
+                    label: 'Stayed',
+                    data: Object.keys(rawData).sort((a, b) => Number(a) - Number(b)).map((year) => new Set([...rawData[year].lived ? rawData[year].lived : [], ...rawData[year].stayed ? rawData[year].stayed : []]).size),
+                    borderColor: colorCodes.stayed,
+                    fill: false,
+                  },
+                  {
+                    label: 'Visited',
+                    data: Object.keys(rawData).sort((a, b) => Number(a) - Number(b)).map((year) => new Set([...rawData[year].lived ? rawData[year].lived : [], ...rawData[year].stayed ? rawData[year].stayed : [], ...rawData[year].visited ? rawData[year].visited : []]).size),
+                    borderColor: colorCodes.visited,
+                    fill: false,
+                  },
+                  {
+                    label: 'Traveled',
+                    data: Object.keys(rawData).sort((a, b) => Number(a) - Number(b)).map((year) => new Set([...rawData[year].lived ? rawData[year].lived : [], ...rawData[year].stayed ? rawData[year].stayed : [], ...rawData[year].visited ? rawData[year].visited : [], ...rawData[year].traveled ? rawData[year].traveled : []]).size),
+                    borderColor: colorCodes.traveled,
+                    fill: false,
+                  },
+                ]
+              }}
+              options={{
+                scales: {
+                  y: {
+                    beginAtZero: true
+                  }
+                }
+              }}
+            />
 
-        <div className='map' ref={mapRef} id="map"
-          style={{ height: "100vh", width: "100%", marginTop: "-10px" }}
-        ></div>
+            <h2 style={{ color: "white" }}>State Visits By Year</h2>
+            <Line
+              data={{
+                labels: Object.keys(rawData).sort((a, b) => Number(a) - Number(b)),
+                datasets: [
+                  {
+                    label: 'Lived',
+                    data: Object.keys(rawData).sort((a, b) => Number(a) - Number(b)).map((year) => new Set([...Array.from(rawData[year].lived ? rawData[year].lived : []).map((county) => (county as string).slice(0, 2))]).size),
+                    borderColor: colorCodes.lived,
+                    fill: false,
+                  },
+                  {
+                    label: 'Stayed',
+                    data: Object.keys(rawData).sort((a, b) => Number(a) - Number(b)).map((year) => new Set([...Array.from(rawData[year].lived ? rawData[year].lived : []).map((county) => (county as string).slice(0, 2)), ...Array.from(rawData[year].stayed ? rawData[year].stayed : []).map((county) => (county as string).slice(0, 2))]).size),
+                    borderColor: colorCodes.stayed,
+                    fill: false,
+                  },
+                  {
+                    label: 'Visited',
+                    data: Object.keys(rawData).sort((a, b) => Number(a) - Number(b)).map((year) => new Set([...Array.from(rawData[year].lived ? rawData[year].lived : []).map((county) => (county as string).slice(0, 2)), ...Array.from(rawData[year].stayed ? rawData[year].stayed : []).map((county) => (county as string).slice(0, 2)), ...Array.from(rawData[year].visited ? rawData[year].visited : []).map((county) => (county as string).slice(0, 2))]).size),
+                    borderColor: colorCodes.visited,
+                    fill: false,
+                  },
+                  {
+                    label: 'Traveled',
+                    data: Object.keys(rawData).sort((a, b) => Number(a) - Number(b)).map((year) => new Set([...Array.from(rawData[year].lived ? rawData[year].lived : []).map((county) => (county as string).slice(0, 2)), ...Array.from(rawData[year].stayed ? rawData[year].stayed : []).map((county) => (county as string).slice(0, 2)), ...Array.from(rawData[year].visited ? rawData[year].visited : []).map((county) => (county as string).slice(0, 2)), ...Array.from(rawData[year].traveled ? rawData[year].traveled : []).map((county) => (county as string).slice(0, 2))]).size),
+                    borderColor: colorCodes.traveled,
+                    fill: false,
+                  },
+                ]
+              }}
+              options={{
+                scales: {
+                  y: {
+                    beginAtZero: true
+                  }
+                }
+              }}
+            />
+
+          </div>
+
+        </div>}
 
       </div>
-
     </div>
   );
 };

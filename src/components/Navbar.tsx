@@ -18,13 +18,9 @@ const Navbar: React.FC<NavbarProps> = ({ selected, animate, lightText }) => {
                     <Link to="/">Home</Link>
                 </li>}
                 
-                {<li className={selected === 'About' ? 'is-selected' : ''}>
+                {/* {<li className={selected === 'Games' ? 'is-selected' : ''}>
                     <Link to="/games">Games</Link>
-                </li>}
-
-                {<li className={selected === 'About' ? 'is-selected' : ''}>
-                    <Link to="/skills">About</Link>
-                </li>}
+                </li>} */}
 
                 {<li className={selected === 'Travel Map' ? 'is-selected' : ''}>
                     <Link to="/travel-map">Travel Map</Link>

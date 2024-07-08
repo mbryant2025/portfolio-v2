@@ -60,3 +60,26 @@ body {
 .button:hover {
   background-color: #36d661;
 }
+
+.select {
+  background-color: white;
+  font-family: "Raleway", sans-serif;
+  border-radius: 2px;
+  margin: auto;
+  width: 66%;
+  color: black;
+  cursor: pointer;
+  min-height: 25px;
+  white-space:nowrap;
+  text-decoration: none;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+.select:hover {
+  background-color: #bcbcbc;
+}
+
+.table td:nth-child(2) {
+  padding-left: 20px;
+}

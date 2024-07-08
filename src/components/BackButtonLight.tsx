@@ -22,7 +22,7 @@ const BackButtonLight: React.FC = () => {
 
   return (
     <div>
-      <button onClick={handleGoBack} className="back-button-light">&lt;</button>
+      <img src={`${process.env.PUBLIC_URL}/img/back-arrow.png`} alt="" className="back-button" onClick={handleGoBack} />
     </div>
   );
 };
