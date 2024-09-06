@@ -6,7 +6,7 @@
     {
       "title": "Programmable Magnetic Tiles",
       "subtitle": "Custom C-like language and interpreter running on ESP32, BLE connection to React IDE",
-      "link": "/coming-soon",
+      "link": "/projects/programmable-magna-tiles",
       "image": "littlearn.png",
       "peek": [
         "cc",
@@ -49,7 +49,7 @@
     {
       "title": "Dorm Window Display",
       "subtitle": "Custom display mounted in dorm window",
-      "link": "/coming-soon",
+      "link": "/projects/dorm-window-display",
       "image": "https://firebasestorage.googleapis.com/v0/b/portfolio-4a3ea.appspot.com/o/articles%2Fdorm-window-display%2Fdorm-window-display.gif?alt=media&token=4102fb50-d7b9-406c-9de6-e80a03bc54dd",
       "peek": [
         "electronics-design",

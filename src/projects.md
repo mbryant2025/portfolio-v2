@@ -1,6 +1,8 @@
 # Total Projects: 47
 
-## Complete (15)
+## Complete (17)
+- Programmable Magnetic Tiles
+- Dorm Window Display
 - Flight Tracker
 - Spoken Digit Recognition
 - Ball Balancing Robot
@@ -17,11 +19,9 @@
 - Maze Solver
 - Bird Feeder
 
-## Todo (32)
-- Programmable Magnetic Tiles
+## Todo (30)
 - Duke Robotics AUV
 - Robot Dog
-- Dorm Window Display
 - Board Game Maker
 - Spot the Spot
 - michaelcbryant.com

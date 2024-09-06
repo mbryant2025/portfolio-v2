@@ -5,22 +5,111 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TITLE</title>
-    <subtitle>DATE</subtitle>
+    <title>Dorm Window Display</title>
+    <subtitle>April 2024</subtitle>
     <github>GITHUB-LINK</github>
 </head>
 
 <body>
 
-    <h2>SECTION-HEADING</h2>
+    <h2>About</h2>
 
-    <p>PARAGRAPH</p>
+    <p>
+        The Smart Dorm Window Display is a custom window-mounted display that is controlled by a web app. Viewable from the outside, the display can be used to play games, show live Duke scores, and even Rick Roll passersbys.
+    </p>
 
-    <img src="IMAGE">
+    <img src="https://firebasestorage.googleapis.com/v0/b/portfolio-4a3ea.appspot.com/o/articles%2Fdorm-window-display%2Fdorm-window-display.gif?alt=media&token=4102fb50-d7b9-406c-9de6-e80a03bc54dd">
 
-    <figcaption>CAPTION</figcaption>
+    <figcaption>Montage of various features of the display, including Duke scores, snake, the dino game, Bad Apple, and the Rick Roll.</figcaption>
 
-    <button onclick="window.location.href = '/#/games/maze-solver';">Run Simulator</button>
+    <h2>Hardware</h2>
+
+    <p>
+        The display has a resolution of 27x20, amounting to 540 LEDs. The display is controlled by a Raspberry Pi 4, which interfaces with one end of the individually-addressable
+         5V WS2812B LED strips. The display is powered by a CPU power supply, which admittedly is a bit overkill for the project, but was on hand. It also powers the Pi via a modified MOLEX connector.
+    </p>
+
+    <p>
+        The display breaks into three panels for easy transportation and to fit in the window panels.
+        In powering 500+ LEDs, there is significant concern about voltage drop accross the strip. However, we ideally want only one power connection. Therefore, I devised a power injection scheme that uses the 5V rail of the CPU power supply to inject power at the end of each panel through the existing LED strip connectors.
+    </p>
+
+    <p>
+        To aid in the looks of the display, we laser cut some foam core dividers to separate each LED. We used some white paper to diffuse the light, and the result is a very clean look.
+        Additionally, all LED strip locations were carefully measured and adhered to the foam core to keep all pixels aligned.
+    </p>
+
+    <img src="https://firebasestorage.googleapis.com/v0/b/portfolio-4a3ea.appspot.com/o/articles%2Fdorm-window-display%2Ffinalizing.JPG?alt=media&token=58f8ce1b-ad57-4329-bfbf-034eddac79a3">
+    <figcaption>The fidelity of the display exponentially increases when the LEDs are aligned</figcaption>
+
+    <img src="https://firebasestorage.googleapis.com/v0/b/portfolio-4a3ea.appspot.com/o/articles%2Fdorm-window-display%2Fpaper-cover.png?alt=media&token=059e69c4-bb5f-4de8-8147-19fe7c521dc2">
+    <figcaption>Wrapping the panels in white paper for diffusion</figcaption>
+
+    <p>
+        All in all, the whole system is comprised of over 400 solder joints, as we spliced in ~1 inch spacer wires to account for the window panes.
+    </p>
+
+    <img src="https://firebasestorage.googleapis.com/v0/b/portfolio-4a3ea.appspot.com/o/articles%2Fdorm-window-display%2Fcomplete.JPG?alt=media&token=533fdeab-9767-4d9e-808e-abdde9c366fa">
+    <figcaption>Complete display. Note: the diffusion isn't as effective indoors!</figcaption>
+
+    <h2>Software</h2>
+
+    <p>
+        The software stack for the display consists of multiple components: the boot sequence of the Pi, the display driver, the backend server, and the applications.
+    </p>
+
+    <p>
+        The boot sequence involves starting the whols stack on boot. This done through a cron job that runs a bash script that starts the backend server and the display driver.
+    </p>
+
+    <p>
+        The display driver is written in Python and uses the rpi_ws281x library to interface with the LED strips. The driver is responsible for taking in a 2D array of RGB values and displaying them on the LED strip.
+        One complexity f the driver is that the LEDs are wired in a snaking patter, so it accounts for that in the display. A difficult challenge appeared with conflicting Python versions required by the rpi_ws281x library and the native version of Python 3 on Ubuntu. A workaround was devised to use a virtual environment to run the driver.
+    </p>
+
+    <img src="https://firebasestorage.googleapis.com/v0/b/portfolio-4a3ea.appspot.com/o/articles%2Fdorm-window-display%2Frainbow.JPG?alt=media&token=84e2f215-1aad-4a9b-bc83-34d1af0fbd75">
+    <figcaption>Testing the display driver with a rainbow pattern</figcaption>
+
+    <p>
+        The web app was optimized for mobile and includes controls for the display, menu system, and games. The games provide their own controls, which are changed per the application. The socket connection was handled by socket.io, which was used to send player inputs to the server on the Pi.
+    </p>
+
+    <p>
+        Further, the system would display a login code on the display to ensure that only users in the vicinity could control the display. This was done to prevent malicious users from controlling the display from afar.
+    </p>
+
+    <img src="https://firebasestorage.googleapis.com/v0/b/portfolio-4a3ea.appspot.com/o/articles%2Fdorm-window-display%2Fno-align.png?alt=media&token=bbd20211-a1ef-4909-a779-b8405be7ec2c">
+    <figcaption>Three-digit login code. It's hard to read as the LEDs were not mounted at the time.</figcaption>
+
+    <img src="https://firebasestorage.googleapis.com/v0/b/portfolio-4a3ea.appspot.com/o/articles%2Fdorm-window-display%2Fmobile.png?alt=media&token=9a32040e-a720-48d0-8ea3-effbe6c74666">
+    <figcaption>Mobile web app for controlling the display</figcaption>
+
+    <p>
+        The applications were developed making use of a TKinter testing GUI. The applications included many games such as Snake, the Dino game, simon, and maze.
+        These games required player inputs from the web app, which were sent to the backend server through websockets. The backend server then sent the inputs to the display driver via the display API, which updated the display accordingly.
+        The applications themselves were run in a lightweight OS-esque environment to handle the different applications, game logic and player inputs.
+        I developed a bash script for web scraping goduke.com, which provides a uniform format for all Duke sports scores. This was used to display the scores on the display. The rest of the applications were developed by the other team members.
+    </p>
+
+    <img src="https://firebasestorage.googleapis.com/v0/b/portfolio-4a3ea.appspot.com/o/articles%2Fdorm-window-display%2Fdino.png?alt=media&token=887b93b0-2dba-4a5a-8a3b-6cf4ab732684">
+    <figcaption>Dino game in TKinter testing GUI</figcaption>
+
+    <img src="https://firebasestorage.googleapis.com/v0/b/portfolio-4a3ea.appspot.com/o/articles%2Fdorm-window-display%2Frick.png?alt=media&token=3804a139-2dc9-4d77-970b-6d36c61ca266">
+    <figcaption>The Rick Roll was optimized for the displayed and stored as a pickle file</figcaption>
+
+    <h2>Recognition</h2>
+
+    <p>
+        This project was recognized by the Duke University Pratt School of Engineering as a notable project and was covered by the Pratt Media Team. See the article below:
+    </p>
+
+    <button onclick="window.open('https://pratt.duke.edu/news/full-stack-iot-device-class/', '_blank')">Read Article</button>
+
+    <h2>Role</h2>
+
+    <p>This project was made by a group of three students for Duke's new graduate class: Full-Stack IOT Systems.
+        My role on the team was to congiure the Raspberry Pi, figure out the wiring, write the display driver, and scrape for the Duke scores.
+    </p>
 
 </body>
 
