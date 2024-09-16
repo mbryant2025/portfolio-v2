@@ -11,3 +11,13 @@
 
 
 }
+
+.white-text {
+    color: white;
+}
+
+.narrow {
+    max-width: 85%;
+    margin-left: 7.5%;
+    margin-right: 7.5%;
+}

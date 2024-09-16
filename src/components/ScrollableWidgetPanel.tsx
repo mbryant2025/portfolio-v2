@@ -4,11 +4,12 @@ import '../styles/scroll.css'
 interface ScrollableWidgetPanelProps {
   title: string;
   children: React.ReactNode;
+  narrow?: boolean;
 }
 
-const ScrollableWidgetPanel: React.FC<ScrollableWidgetPanelProps> = ({ title, children }) => {
+const ScrollableWidgetPanel: React.FC<ScrollableWidgetPanelProps> = ({ title, children, narrow }) => {
   return (
-    <div>
+    <div className={`white-text ${narrow ? 'narrow' : ''}`}>
       <h1 className="title">{title}</h1>
       {children}
     </div>

@@ -262,7 +262,7 @@ const TravelMap: React.FC = () => {
 
   return (
     <div className="travel-map">
-      <Navbar selected="Travel Map" animate={true} lightText={!showMap} />
+      <Navbar selected="Travel Map" animate={false} lightText={!showMap} />
 
 
       {showSidebar && <div className="side-bar">

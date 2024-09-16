@@ -2,7 +2,7 @@ import React from 'react';
 import {Routes, Route } from 'react-router-dom';
 
 import Homepage from './pages/Homepage';
-import Skills from './pages/Skills';
+import About from './pages/About';
 import Projects from './pages/Projects';
 import Games from './pages/Games';
 import ComingSoon from './pages/ComingSoon';
@@ -30,7 +30,7 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/projects" element={<Projects filter={ undefined }/>} />
-        <Route path="/skills" element={<Skills />} />
+        <Route path="/about" element={<About />} />
         <Route path="/travel-map" element={<TravelMap />} />
         <Route path="/coming-soon" element={<ComingSoon />} />
 
