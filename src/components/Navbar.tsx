@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/navbar.css';
 
@@ -14,7 +14,7 @@ const Navbar: React.FC<NavbarProps> = ({ selected, animate, lightText }) => {
 
     const [hasScrolled, setHasScrolled] = React.useState(false);
 
-    React.useEffect(() => {
+    useEffect(() => {
         if(!animate) {
             return;
         }
@@ -28,7 +28,7 @@ const Navbar: React.FC<NavbarProps> = ({ selected, animate, lightText }) => {
 
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+    }, [animate]);
 
     return (
         <nav className={`navbar ${lightText ? 'light-text' : 'dark-text'} ${animate ? 'navbar-background' : ''}`}
