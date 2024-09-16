@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import ScrollableWidgetPanel from '../components/ScrollableWidgetPanel';
-import BackButton from '../components/BackButton';
 import OptionalColumns from '../components/OptionalColumns';
 import '../styles/about.css'
 import PageBottom from '../components/PageBottom';
