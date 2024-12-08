@@ -1,6 +1,5 @@
 import React from 'react';
 import SectionTitle from './SectionTitle';
-import RowEntry from './RowEntry';
 import '../styles/fun.css'
 
 

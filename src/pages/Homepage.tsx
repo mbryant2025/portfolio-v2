@@ -5,7 +5,6 @@ import Navbar from '../components/Navbar';
 import PageBottom from '../components/PageBottom';
 import Education from '../components/Education';
 import Work from '../components/Work';
-import Publications from '../components/Publications';
 import Fun from '../components/Fun';
 
 const Homepage: React.FC = () => {
