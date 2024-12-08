@@ -13,12 +13,11 @@ def convert_image(image, output):
     new_image = []
     
     for item in datas:
-        # If not transparent
-        if item[3] > 20:
-            new_image.append((255, 255, 255, item[3]))
+        if item[0] > 100 and item[1] > 100 and item[2] > 100:
+            new_image.append((0, 0, 0, 0))
 
         else:
-            new_image.append(item)
+            new_image.append((255,255,255,255))
 
     # Update image data
     img.putdata(new_image)

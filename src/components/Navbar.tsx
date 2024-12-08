@@ -39,11 +39,11 @@ const Navbar: React.FC<NavbarProps> = ({ selected, animate, lightText }) => {
                 {<li className={selected === 'Home' ? 'is-selected' : ''}>
                     <Link to="/">Home</Link>
                 </li>}
-                
+
                 {<li className={selected === 'About' ? 'is-selected' : ''}>
                     <Link to="/about">About</Link>
                 </li>}
-
+                
                 {<li className={selected === 'Travel Map' ? 'is-selected' : ''}>
                     <Link to="/travel-map">Travel Map</Link>
                 </li>}

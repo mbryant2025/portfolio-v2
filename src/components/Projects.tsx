@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import ScrollableWidgetPanel from '../components/ScrollableWidgetPanel';
-import DetailComponent from '../components/DetailComponent';
-import DetailView from '../components/DetailView';
-import WidgetBar from '../components/WidgetBar';
+import ScrollableWidgetPanel from './ScrollableWidgetPanel';
+import DetailComponent from './DetailComponent';
+import DetailView from './DetailView';
+import WidgetBar from './WidgetBar';
 import { PeekWidget } from '../types';
 import getFormattedName from '../mapNames';
 
@@ -10,9 +10,9 @@ interface ProjectsProps {
     filter: string | undefined;
 }
 
-function scrollToTop() {
+function scrollToTopOfProjects(top = 0) {
     setTimeout(() => {
-        window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
+        window.scrollTo({ top: top, behavior: 'smooth' });
     }, 100);
 }
 
@@ -23,6 +23,7 @@ const Projects: React.FC<ProjectsProps> = ({ filter }) => {
     const [selectedPeek, setSelectedPeek] = useState<string | undefined>('');
     const [peekCommonPathPrefix, setPeekCommonPathPrefix] = useState<string>('');
     const [peekExtension, setPeekExtension] = useState<string>('');
+    const detailViewRef = React.createRef<HTMLDivElement>();
 
     // Load selected peek from local storage once when the component mounts
     useEffect(() => {
@@ -37,6 +38,13 @@ const Projects: React.FC<ProjectsProps> = ({ filter }) => {
             });
         }
     }, []);
+
+    // Get the y position of the detail view on load
+    const getDetailViewYPosition = () => {
+        const pos = detailViewRef.current?.getBoundingClientRect().top;
+        console.log('pos:', pos);
+        return pos ? window.scrollY + pos - 100 : 0;
+    }
 
     useEffect(() => {
         const fetchFormattedName = async () => {
@@ -82,7 +90,7 @@ const Projects: React.FC<ProjectsProps> = ({ filter }) => {
         if (peek === selectedPeek) {
             setSelectedPeek(undefined);
             localStorage.setItem('selectedPeek', '');
-            scrollToTop();
+            scrollToTopOfProjects(getDetailViewYPosition());
             return;
         }
 
@@ -91,7 +99,7 @@ const Projects: React.FC<ProjectsProps> = ({ filter }) => {
         setFormattedSelectedPeek(mappedTitle);
         localStorage.setItem('selectedPeek', peek as string);
 
-        scrollToTop();
+        scrollToTopOfProjects(getDetailViewYPosition());
         
     };
 
@@ -102,8 +110,10 @@ const Projects: React.FC<ProjectsProps> = ({ filter }) => {
     const peekImage = peekCommonPathPrefix + selectedPeek + peekExtension
 
     return (
-        <div>            
-            <DetailView title={'Projects'}
+        <div 
+        ref={detailViewRef}
+        >            
+            <DetailView title={'Personal Projects'}
                 widgetBar = {selectedPeek !== undefined && (
                     <WidgetBar image={peekImage} title={formattedSelectedPeek} onClick={() => handlePeekClick(undefined)} />
                 )}

@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/columns.css'
+import SectionTitle from './SectionTitle';
 
 interface DetailViewProps {
     scrollWidgets: React.ReactNode;
@@ -10,7 +11,7 @@ interface DetailViewProps {
 const DetailView: React.FC<DetailViewProps> = ({ scrollWidgets, widgetBar, title }) => {
     return (
         <div>
-            <h1 className="title">{title}</h1>
+            <SectionTitle title={title} />
             {widgetBar}
             {scrollWidgets}
         </div>

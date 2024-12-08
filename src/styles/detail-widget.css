@@ -3,6 +3,10 @@
     margin: 80px;
 }
 
+.detail-widget:hover .horizontal-line {
+    border: 1px solid #32a852;
+}
+
 @media (max-width: 768px) {
     .detail-widget {
         margin: 20px;
@@ -69,6 +73,7 @@
     margin-top: 20px;
     border-radius: 1px;
     margin-bottom: 20px;
+    transition:cubic-bezier(1, 0, 0, 1) 0.3s border;
 }
 
 .peeking-images-detail {

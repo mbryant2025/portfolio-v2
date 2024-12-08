@@ -10,45 +10,45 @@ const DetailComponent: React.FC<PeekWidget> = ({ title, subtitle, link, image, p
     const imgToShow = image.includes('https://firebasestorage.googleapis.com/') ? image.substring(image.lastIndexOf('https://firebasestorage.googleapis.com/')) : image;
 
     return (
-        <div className="detail-widget">
+        <Link to={link}>
+            <div className="detail-widget">
 
-            <div className="link-wrapper">
-                <div className="detail-widget-text">
+                <div className="link-wrapper">
+                    <div className="detail-widget-text">
 
-                    <Link to={link} className="detail-widget-title">
                         <p className="detail-widget-title">{title}</p>
-                    </Link>
 
-                    <div className="horizontal-line" />
+                        <div className="horizontal-line" />
 
-                    <div className="peeking-images-detail">
-                        {peekImages.map((peekImage: string | undefined) => (
-                            peekImage && (
-                                <img
-                                    key={peekImage}
-                                    src={peekImage}
-                                    alt=""
-                                    className="peeking-image"
-                                    onClick={() =>
-                                        onClick(
-                                            peekImage.substring(
-                                                peekImage.lastIndexOf('/') + 1,
-                                                peekImage.lastIndexOf('.')
+                        <div className="peeking-images-detail">
+                            {peekImages.map((peekImage: string | undefined) => (
+                                peekImage && (
+                                    <img
+                                        key={peekImage}
+                                        src={peekImage}
+                                        alt=""
+                                        className="peeking-image"
+                                        onClick={(e) => {
+                                            e.preventDefault();
+                                            onClick(
+                                                peekImage.substring(
+                                                    peekImage.lastIndexOf('/') + 1,
+                                                    peekImage.lastIndexOf('.')
+                                                )
                                             )
-                                        )
-                                    }
-                                />
-                            )
-                        ))}
+                                        }
+                                        }
+                                    />
+                                )
+                            ))}
+                        </div>
                     </div>
+
+                    <img src={imgToShow} alt={title} className="detail-widget-image" />
                 </div>
 
-                <Link to={link} className="detail-widget-image">
-                    <img src={imgToShow} alt={title} className="detail-widget-image" />
-                </Link>
             </div>
-
-        </div>
+        </Link>
     );
 };
 

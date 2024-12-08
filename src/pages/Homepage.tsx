@@ -1,8 +1,12 @@
 import React from 'react';
-import Projects from './Projects';
+import Projects from '../components/Projects';
 import '../styles/homepage.css';
 import Navbar from '../components/Navbar';
 import PageBottom from '../components/PageBottom';
+import Education from '../components/Education';
+import Work from '../components/Work';
+import Publications from '../components/Publications';
+import Fun from '../components/Fun';
 
 const Homepage: React.FC = () => {
 
@@ -14,7 +18,7 @@ const Homepage: React.FC = () => {
       
         <div className="splash-screen-contents">
 
-          <Navbar selected="Home" animate={true} lightText={true} />
+          <Navbar selected="Education" animate={true} lightText={true} />
 
           <div className="splash-screen-overlay-text">
             <h1 className="splash-screen-text">Hi! I'm Michael.</h1>
@@ -32,8 +36,14 @@ const Homepage: React.FC = () => {
         </div>
       </div>
 
+      <Education />
+      <Work />
+      {/* <Publications /> */}
+
 
       <Projects filter={undefined} />
+
+      <Fun />
 
       <PageBottom />
     </div>
