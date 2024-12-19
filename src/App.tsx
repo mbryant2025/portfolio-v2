@@ -21,6 +21,7 @@ import TechnicalArticle from './components/TechnicalArticle';
 import ProgrammableTiles from './pages/depth-articles/Tiles';
 import SpokenDigit from './pages/depth-articles/SpokenDigit';
 import TravelMap from './pages/TravelMap';
+import FitnessMapperPrivacyPolicy from './pages/FitnessMapperPrivacy';
 
 
 const App: React.FC = () => {
@@ -70,6 +71,7 @@ const App: React.FC = () => {
         <Route path="/games/snake/snake-plus-plus-plus" element={<SnakePlusPlusPlus />} />
         <Route path="/games/snake/snake-minus-minus-minus" element={<SnakeMinusMinusMinus />} />
 
+        <Route path="/fitness-mapper-privacy-policy" element={<FitnessMapperPrivacyPolicy />} />
 
       </Routes>
     </div>
