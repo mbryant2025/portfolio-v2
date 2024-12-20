@@ -1,5 +1,3 @@
-import React from "react";
-
 const FitnessMapperPrivacyPolicy = () => {
   return (
     <div style={{ fontFamily: "Arial, sans-serif", padding: "20px", backgroundColor: "white" }}>
@@ -94,7 +92,7 @@ const FitnessMapperPrivacyPolicy = () => {
       <h2>8. Contact Us</h2>
       <p>If you have any questions or concerns about this Privacy Policy, please contact:</p>
       <ul>
-        <li><strong>Email:</strong> mbryant2025@gmail.com</li>
+        <li><strong>Email:</strong> mbryant2025@yahoo.com</li>
         <li><strong>Website:</strong> michaelcbryant.com</li>
       </ul>
 
