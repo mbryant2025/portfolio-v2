@@ -1,7 +1,8 @@
 # Total Projects: 47
 
-## Complete (17)
+## Complete (18)
 - Programmable Magnetic Tiles
+- Fitness Mapper
 - Dorm Window Display
 - Flight Tracker
 - Spoken Digit Recognition
@@ -19,14 +20,13 @@
 - Maze Solver
 - Bird Feeder
 
-## Todo (30)
+## Todo (29)
 - Duke Robotics AUV
 - Robot Dog
 - Board Game Maker
 - Spot the Spot
 - michaelcbryant.com
 - Baby Crib Alert System
-- Step Stats
 - Acoustics PCBs
 - Super Meme Bros.
 - RC Forklift

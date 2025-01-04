@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Mapper</title>
+    <subtitle>September 2024, December 2024</subtitle>
+</head>
+
+<body>
+
+    <h2>Overview</h2>
+
+    <p>Fitness Mapper reads workouts recorded with your Apple Watch and generates a map of everywhere you've been! It also lists all of your workouts, where you can apply various sorts and filters.</p>
+
+    <img src="https://firebasestorage.googleapis.com/v0/b/portfolio-4a3ea.appspot.com/o/articles%2Ffitness-mapper%2Ffitness-mapper-screenshots.png?alt=media&token=a175c6a6-cef4-4df3-ae1e-83746f03da16">
+
+    <figcaption>Some screenshots from the app!</figcaption>
+
+    <button onclick="window.location.href = 'https://apps.apple.com/us/app/fitness-mapper/id6739706690';">View on Apple App Store</button>
+
+    <h2>Technical</h2>
+
+    <p>Fitness Mapper is built in SwiftUI, as it leverages many native features. Most notably, this includes reading health and fitness data. All workouts are scanned for workout routes, and these are cached.</p>
+
+    <p>Due to variability in device and OS, different workouts have data like heartrate stored in different ways. Fitness Mapper leverages multiple forms of accessing this health data -- and this information is not stored after the app is closed.</p>
+
+    <p>Fitness Mapper has many performance considerations, given that users can plot potentially thousands of workouts. By far, the most expensive operation is extracting the routes from a given workout. Additionally, it is strongly preferred to only query for workouts once. Thus, this information is cached upon read. As a result, you'll notice that there is no load time beyond the initial workout fetching and route generation, even if the user changes dramatic features, such as the route line color or the included workout type.</p>
+
+</body>
+
+</html>

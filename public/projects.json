@@ -4,6 +4,28 @@
   "peekExtension": ".png",
   "widgetData": [
     {
+      "title": "Dorm Window Display",
+      "subtitle": "Custom display mounted in dorm window",
+      "link": "/projects/dorm-window-display",
+      "image": "https://firebasestorage.googleapis.com/v0/b/portfolio-4a3ea.appspot.com/o/articles%2Fdorm-window-display%2Fdorm-window-display.gif?alt=media&token=4102fb50-d7b9-406c-9de6-e80a03bc54dd",
+      "peek": [
+        "electronics-design",
+        "python",
+        "linux",
+        "raspberry-pi",
+        "js"
+      ]
+    },
+    {
+      "title": "Fitness Mapper",
+      "subtitle": "iOS app to plot workouts",
+      "link": "/projects/fitness-mapper",
+      "image": "https://firebasestorage.googleapis.com/v0/b/portfolio-4a3ea.appspot.com/o/articles%2Ffitness-mapper%2Ffitness-mapper-screenshots.png?alt=media&token=a175c6a6-cef4-4df3-ae1e-83746f03da16",
+      "peek": [
+        "swift"
+      ]
+    },
+    {
       "title": "Programmable Magnetic Tiles",
       "subtitle": "Custom C-like language and interpreter running on ESP32, BLE connection to React IDE",
       "link": "/projects/programmable-magna-tiles",
@@ -47,19 +69,6 @@
       ]
     },
     {
-      "title": "Dorm Window Display",
-      "subtitle": "Custom display mounted in dorm window",
-      "link": "/projects/dorm-window-display",
-      "image": "https://firebasestorage.googleapis.com/v0/b/portfolio-4a3ea.appspot.com/o/articles%2Fdorm-window-display%2Fdorm-window-display.gif?alt=media&token=4102fb50-d7b9-406c-9de6-e80a03bc54dd",
-      "peek": [
-        "electronics-design",
-        "python",
-        "linux",
-        "raspberry-pi",
-        "js"
-      ]
-    },
-    {
       "title": "Flight Tracker",
       "subtitle": "Ground plane antenna and SDR to decode ADS-B transmissions, locally hosted WAN server",
       "link": "/projects/flight-tracker",
@@ -73,17 +82,6 @@
       ]
     },
     {
-      "title": "Spoken Digit Recognition",
-      "subtitle": "GMMs and MLE Classifier to recognize spoken digits",
-      "link": "/projects/spoken-digit-recognition",
-      "image": "digits_classification.png",
-      "peek": [
-        "python",
-        "ml",
-        "sklearn"
-      ]
-    },
-    {
       "title": "Ball Balancing Robot",
       "subtitle": "Computer vision ball tracking, dual PID controllers",
       "link": "/projects/ball-balancing-robot",
@@ -93,6 +91,17 @@
         "opencv",
         "arduino",
         "3d-printing"
+      ]
+    },
+    {
+      "title": "Spoken Digit Recognition",
+      "subtitle": "GMMs and MLE Classifier to recognize spoken digits",
+      "link": "/projects/spoken-digit-recognition",
+      "image": "digits_classification.png",
+      "peek": [
+        "python",
+        "ml",
+        "sklearn"
       ]
     },
     {
@@ -221,15 +230,6 @@
         "flask",
         "raspberry-pi",
         "3d-printing"
-      ]
-    },
-    {
-      "title": "Step Stats",
-      "subtitle": "iOS app to plot workouts and calculate statistics",
-      "link": "/coming-soon",
-      "image": "step-stats.PNG",
-      "peek": [
-        "swift"
       ]
     },
     {
