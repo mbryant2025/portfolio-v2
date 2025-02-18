@@ -26,8 +26,8 @@ const stateStyle = {
 
 const colorCodes = {
   lived: "#ff0000", //red
-  stayed: "#147006", //green
-  visited: "#ff00ff", //purple
+  stayed: "#32a852", //green
+  visited: "#FE9900", //orange
   traveled: "#0000ff" //blue
 }
 
@@ -192,7 +192,7 @@ const TravelMap: React.FC = () => {
         mouseover: function (e: L.LeafletMouseEvent) {
           highlightFeature(e);
           if (feature.properties && feature.properties.NAME && feature.properties.STATE) {
-            const popupContent = `${feature.properties.NAME}, ${stateFipsToAbbreviation[feature.properties.STATE]} (${feature.id})`;
+            const popupContent = `${feature.properties.NAME}, ${stateFipsToAbbreviation[feature.properties.STATE]}`;
             layer.bindPopup(popupContent).openPopup();
           }
         },
@@ -227,25 +227,25 @@ const TravelMap: React.FC = () => {
             return {
               ...stateStyle,
               fillColor: colorCodes.lived,
-              fillOpacity: 0.5
+              fillOpacity: 0.8
             };
           } else if ((selectedType === "All" || selectedType === "Stayed") && stayedCounties.has(id)) {
             return {
               ...stateStyle,
               fillColor: colorCodes.stayed,
-              fillOpacity: 0.5
+              fillOpacity: 0.8
             };
           } else if ((selectedType === "All" || selectedType === "Visited") && visitedCounties.has(id)) {
             return {
               ...stateStyle,
               fillColor: colorCodes.visited,
-              fillOpacity: 0.5
+              fillOpacity: 0.8
             };
           } else if ((selectedType === "All" || selectedType === "Traveled") && traveledCounties.has(id)) {
             return {
               ...stateStyle,
               fillColor: colorCodes.traveled,
-              fillOpacity: 0.5
+              fillOpacity: 0.8
             };
           }
         }
