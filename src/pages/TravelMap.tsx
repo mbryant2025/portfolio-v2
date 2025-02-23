@@ -310,7 +310,7 @@ const TravelMap: React.FC = () => {
     return () => {
       map.remove();
     };
-  }, [geoJSONData, livedCounties, stayedCounties, visitedCounties, traveledCounties, selectedType]);
+  }, [geoJSONData, livedCounties, stayedCounties, visitedCounties, traveledCounties, selectedType, rawData]);
 
   return (
     <div className="travel-map">
