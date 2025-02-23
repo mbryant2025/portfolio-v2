@@ -160,7 +160,7 @@ const TravelMap: React.FC = () => {
       return;
     }
 
-    const map = L.map(mapRef.current).setView([39.2, -95], 5);
+    const map = L.map(mapRef.current).setView([39.2, -100], 5);
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 19,
@@ -192,7 +192,59 @@ const TravelMap: React.FC = () => {
         mouseover: function (e: L.LeafletMouseEvent) {
           highlightFeature(e);
           if (feature.properties && feature.properties.NAME && feature.properties.STATE) {
-            const popupContent = `${feature.properties.NAME}, ${stateFipsToAbbreviation[feature.properties.STATE]}`;
+            let popupContent = `${feature.properties.NAME}, ${stateFipsToAbbreviation[feature.properties.STATE]}`;
+            // Also include the year(s) the county was lived, stayed, visited, or traveled to
+            const yearsLivedHere = new Set();
+            const yearsStayedHere = new Set();
+            const yearsVisitedHere = new Set();
+            const yearsTraveledHere = new Set();
+
+            if (livedCounties.has(feature.id)) {
+              for (const year in rawData) {
+                if (rawData[year].lived && rawData[year].lived.includes(feature.id)) {
+                  yearsLivedHere.add(year);
+                }
+              }
+            }
+            if (stayedCounties.has(feature.id)) {
+              for (const year in rawData) {
+                if (rawData[year].stayed && rawData[year].stayed.includes(feature.id)) {
+                  yearsStayedHere.add(year);
+                }
+              }
+            }
+            if (visitedCounties.has(feature.id)) {
+              for (const year in rawData) {
+                if (rawData[year].visited && rawData[year].visited.includes(feature.id)) {
+                  yearsVisitedHere.add(year);
+                }
+              }
+            }
+            if (traveledCounties.has(feature.id)) {
+              for (const year in rawData) {
+                if (rawData[year].traveled && rawData[year].traveled.includes(feature.id)) {
+                  yearsTraveledHere.add(year);
+                }
+              }
+            }
+
+            if (yearsLivedHere.size > 0) {
+              popupContent += `<br>Lived: ${Array.from(yearsLivedHere).join(", ")}`;
+            }
+            if (yearsStayedHere.size > 0) {
+              popupContent += `<br>Stayed: ${Array.from(yearsStayedHere).join(", ")}`;
+            }
+            if (yearsVisitedHere.size > 0) {
+              popupContent += `<br>Visited: ${Array.from(yearsVisitedHere).join(", ")}`;
+            }
+            if (yearsTraveledHere.size > 0) {
+              popupContent += `<br>Traveled: ${Array.from(yearsTraveledHere).join(", ")}`;
+            }
+
+
+
+
+
             layer.bindPopup(popupContent).openPopup();
           }
         },
@@ -296,7 +348,7 @@ const TravelMap: React.FC = () => {
           <option value="Traveled">Traveled</option>
         </select>
 
-        <h2>Key</h2>
+        <h2>Key:</h2>
         <table className="table">
           <tbody>
             <tr onClick={() => setSelectedType(selectedType === "Lived" ? "All" : "Lived")} style={{ cursor: "pointer" }}>
