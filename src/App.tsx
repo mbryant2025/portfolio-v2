@@ -23,6 +23,8 @@ import SpokenDigit from './pages/depth-articles/SpokenDigit';
 import TravelMap from './pages/TravelMap';
 import FitnessMapperPrivacyPolicy from './pages/FitnessMapperPrivacy';
 import FitnessMapperSupportPage from './pages/FitnessMapperSupport';
+import JetWalletPrivacyPolicy from './pages/JetWalletPrivacy';
+import JetWalletSupportPage from './pages/JetWalletSupport';
 
 
 const App: React.FC = () => {
@@ -75,6 +77,8 @@ const App: React.FC = () => {
 
         <Route path="/fitness-mapper-privacy-policy" element={<FitnessMapperPrivacyPolicy />} />
         <Route path="/fitness-mapper-support" element={<FitnessMapperSupportPage />} />
+        <Route path="/jetwallet-privacy-policy" element={<JetWalletPrivacyPolicy />} />
+        <Route path="/jetwallet-support" element={<JetWalletSupportPage />} />
 
       </Routes>
     </div>
